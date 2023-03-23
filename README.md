@@ -3,16 +3,18 @@
 ![](https://i.postimg.cc/N0nGNtzh/photo-2023-03-08-00-43-38.jpg)
 
 ## Agenda
-- Open for the Application(Mentor Selection): **March 22 ~ April 7st**
-- Round 1_ANN. & Online Hacking Start: **April 8th ~ May 6th**
-- 4 online workshops / mentorship sessions: **Every Wednesday Night**
-- Round 1_Code & Demo Submission Deadline: **May 6th 23:59PM Local Time**
-- 1st Round_Screening: **May 7 ~ 13th** *25+ Teams will be pre-selected for Demo Day
-- Team Announcement for Live-Hacking: **May 14th**
-- Round 2_Live-Hacking: **June 9 ~ 11th 10:59AM Local Tim**e
-- Final Demo Day: **June 11th 13:00 PM Local Time** ~ (20min. Max / Team)
-- TOP10 Announcement: Demo Day (on-site / Live-streamed)
-- After-party at the same venue: ~ 23:59 PM Local Time
+
+|  Date   |      Agenda      |  
+|:----------|:-------------:|
+| March 22 - April 7 |  Open for the Application(Mentor Selection) | 
+| April 8 - May 6 | Round 1 ANN. & Online Hacking Start | 
+| May 6, 23:59PM(GMT+9)| Round 1 Code & Demo Submission Deadline | 
+| May 7 - May 13| 1st Round_Screening |
+| May 14 | Team Announcement for Live-Hacking |
+| June 9 - 11, ~10:59AM(GMT+9) | Round 2 Live Hacking |
+| June 11, 13:00 PM(GMT+9) | Final Demo Day(20min. Max / Team) |
+| Demo Day | TOP10 Announcement (on-site / Live-streamed) |
+| June 11, ~23:59PM(GMT+9) | After party at the same venue |
 
 ## Venue
 
