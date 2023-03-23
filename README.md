@@ -82,13 +82,42 @@ All prize will be given as **DOT**. Be aware that price of token is volatile.
 In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on Demo Day.
 (4): 100% Payout on Demo Day*
 
+## Challenge Topics
+
+> Each challenge topic is suggested by the mentor respectively. Once the applicants choose a topic, the suggestor of the topic becomes the mentor.
+
+- **Topic 1: Open Track - Build A Polkadot Native Project (Mentor: Parity Tech)**
+
+    In this category, we hope that you will be creative and 1) build the custom chain that you think is most useful to other builders of the Substrate ecosystem! (You may find all live-parachains from Parachain Info or Polkadot Open Stack) 2) build a cross-chain dApp using at least three SDK/Tools to make it interoperable among live-parachains. 
+    
+- **Topic 2: Build A DApp with ink! Contract (Mentor: Astar)**
+
+    In this category, we want you to push the limits of what’s possible. Be creative, break things, make us laugh, make us cry. Test suites, visualizations, Wasm interoperability, and everything in between qualifies for this category. Shock us with your brilliance.
+    
+- **Topic 3: Build a Connected Contract DApp (Mentor: Moonbeam)**
+
+    Build a connected contract/cross-dapp using Moonbeam and any GMP protocol. Moonbeam is the best place to build a cross-chain / connected contract thanks to its extensive interoperability. Moonbeam’s interoperability within Polkadot is enabled by Polkadot's native GMP, called XCM.
+    
+- **Topic 4: Use JS to Build NFT Games (Mentor: Unique Network)**
+    
+    This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more
+    
+- **Use Fat Contract to Build De-fi DApp (Mentor: Phala Network)**
+
+    Support asymmetric encryption/decryption feature (Mentor: SubWallet)
+
+
+
 ## Workshop and Office Hours 
 
-TBD
+4 Online Workshops every Wednesday night
+
 
 ## Contact 
 
-TBD
+[Telegram Official](https://t.me/hackadot/1)
+[Notion]()
+[Twitter]()
 
 ## Other Information
 
