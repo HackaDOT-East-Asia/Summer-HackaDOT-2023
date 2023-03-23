@@ -20,6 +20,18 @@
 
 [SKY 31 Convention](sky31convention.com)
 
+## Directory
+
+`docs`: This directory will include Hackathon related helpful documents
+
+`teams`: All hackathon registered team project will be included. 
+
+```
+Hackathon-2023
+    ㄴ docs // Helpful resources 
+    ㄴ teams // All registered team
+```
+
 ## Registration
 
 1. Starting from today, **fork this code repository** to your team members' local repositories.
