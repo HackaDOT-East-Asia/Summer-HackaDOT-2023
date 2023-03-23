@@ -73,12 +73,14 @@ The judges' scores will determine the eventual winners of the corresponding priz
 
 ## Prize
 
-All prize will be given as **DOT**. Be aware that price of token is volatile. 
+All prize will be given as **DOT**. Be note that price of token is volatile. 
 
-1. First Prize(x1): 5000 DOT
-2. Second Prize(x1): 2500 DOT
-3. Third Prize(x1): 1500 DOT
-4. TOP4-10 Finalists (x7): 1000 DOT
+|  Prize  | DOT Amount |  
+|:----------|:-------------:|
+| First Prize(x1) |  5000 DOT | 
+| Second Prize(x1) | 2500 DOT | 
+| Third Prize(x1) | 1500 DOT | 
+| TOP4 10 Finalists (x7) | 1000 DOT |
 
 ***(1-3): 50% Payout on Demo Day + 50% through an Interview in 90 days**.
 In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on Demo Day.
