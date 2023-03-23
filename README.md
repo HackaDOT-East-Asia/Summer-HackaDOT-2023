@@ -24,7 +24,7 @@
 
 `docs`: This directory will include Hackathon related helpful documents
 
-`teams`: All hackathon registered team project will be included. 
+`teams`: All hackathon registered team project will be included. [Details](https://github.com/HackaDOT-East-Asia/hackathon-2023/blob/main/README.md#registration) can be seen here
 
 ```
 Hackathon-2023
