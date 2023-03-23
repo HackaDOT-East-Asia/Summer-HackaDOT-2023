@@ -116,7 +116,9 @@ In 90 days, judges will vote on TOP3 projects, whether they are continuously con
 ## Contact 
 
 [Telegram Official](https://t.me/hackadot/1)
+
 [Notion]()
+
 [Twitter]()
 
 ## Other Information
