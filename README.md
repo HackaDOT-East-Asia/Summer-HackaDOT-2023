@@ -20,7 +20,7 @@
 
 [SKY 31 Convention](sky31convention.com)
 
-## Directory
+## Repo Directory
 
 `docs`: This directory will include Hackathon related helpful documents
 
