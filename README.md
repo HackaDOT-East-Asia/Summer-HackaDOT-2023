@@ -94,9 +94,10 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 | Third Prize(x1) | 1500 DOT | 
 | TOP4 10 Finalists (x7) | 1000 DOT |
 
-***(1-3): 50% Payout on Demo Day + 50% through an Interview in 90 days**.
-In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on Demo Day.
-(4): 100% Payout on Demo Day*
+*Important Notes*
+- 50% Payout on Demo Day + 50% through an Interview in 90 days. In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on **Demo Day**.
+
+- Top4 will have 100% payout on **Demo Day**
 
 ## Challenge Topics
 
