@@ -7,7 +7,7 @@
 |  Date   |      Agenda      |  
 |:----------|:-------------:|
 | April 5 - April 26 |  Open for the Application (Mentor Selection) | 
-| May 1 | Online Orientation | 
+| May 1, 22:00PM(GMT+9) | Online Orientation | 
 | May 1 - May 26 | 4 Weeks Online Hacking & Workshop Start | 
 | May 26, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
 | May 26 - May 31| Finalists Screening |
