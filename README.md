@@ -25,7 +25,7 @@
 
 `docs`: This directory will include Hackathon related helpful documents
 
-`teams`: All hackathon registered team project will be included. [Details](https://github.com/HackaDOT-East-Asia/hackathon-2023/blob/main/README.md#registration) can be seen here
+`teams`: All hackathon registered team project will be included.
 
 ```
 Hackathon-2023
@@ -33,7 +33,7 @@ Hackathon-2023
     ㄴ teams // All registered team
 ```
 
-## Registration
+## How to submit your project
 
 1. Starting from today, **fork this code repository** to your team members' local repositories.
 2. First, create a directory within teams, named after your team, and put an empty file or a README to briefly introduce your team. 
@@ -52,9 +52,15 @@ L 00-Team
     L README.md
 ```
 
-## Deadline
+## How to submit your project before deadline
 
-TBD
+### Deadline
+
+Submit your project unitl **May 26, 23:59PM(GMT+9)**.
+
+### Submit Guidline
+
+Write something
 
 ## Judging Criteria
 
