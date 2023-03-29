@@ -33,7 +33,7 @@ Hackathon-2023
     ㄴ teams // All registered team
 ```
 
-## How to submit your project
+## Project Registration Guideline
 
 1. Starting from today, **fork this code repository** to your team members' local repositories.
 2. First, create a directory within teams, named after your team, and put an empty file or a README to briefly introduce your team. 
@@ -52,7 +52,7 @@ L 00-Team
     L README.md
 ```
 
-## How to submit your project before deadline
+## Project Submission Guideline (BEFORE THE DEADLINE)
 
 ### Deadline
 
