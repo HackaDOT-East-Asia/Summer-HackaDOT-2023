@@ -6,19 +6,19 @@
 
 |  Date   |      Agenda      |  
 |:----------|:-------------:|
-| March 22 - April 7 |  Open for the Application(Mentor Selection) | 
-| April 8 - May 6 | Round 1 ANN. & Online Hacking Start | 
-| May 6, 23:59PM(GMT+9)| Round 1 Code & Demo Submission Deadline | 
-| May 7 - May 13| 1st Round_Screening |
-| May 14 | Team Announcement for Live-Hacking |
-| June 9 - 11, ~10:59AM(GMT+9) | Round 2 Live Hacking |
-| June 11, 13:00 PM(GMT+9) | Final Demo Day(20min. Max / Team) |
+| April 5 - April 26 |  Open for the Application (Mentor Selection) | 
+| May 1 | Online Orientation | 
+| May 1 - May 26 | 4 Weeks Online Hacking & Workshop Start | 
+| May 26, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
+| May 26 - May 31| Finalists Screening |
+| May 31 | Team Announcement for Live-Demoday |
+| June 9, 15:00 PM(GMT+9) | Final Demo Day & After-party |
 | Demo Day | TOP10 Announcement (on-site / Live-streamed) |
-| June 11, ~23:59PM(GMT+9) | After party at the same venue |
 
 ## Venue
 
 [Weple 168](https://www.instagram.com/weple168/)
+![image](https://user-images.githubusercontent.com/39883171/228560347-0061fe90-fbc3-499b-8130-0baff38c35e1.png)
 
 ## Repo Directory
 
