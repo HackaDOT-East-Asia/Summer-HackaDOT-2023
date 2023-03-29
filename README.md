@@ -134,7 +134,7 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
 [Telegram Official](https://t.me/hackadot/1)
 
-[Notion]()
+[Hacker's Guide](https://web3foundation.notion.site/A-Hacker-s-Guide-to-the-Polkadot-Galaxy-902a55db98444aa4b9f3911ce3038f5f)
 
 [Twitter]()
 
