@@ -1,1 +1,2 @@
-# Topic 4: Build a ZK-DApp on Polkadot (Mentor: TBD, Manta Network)
+# Topic 4: Build a ZK-DApp on Polkadot
+> Mentor: Manta Network
