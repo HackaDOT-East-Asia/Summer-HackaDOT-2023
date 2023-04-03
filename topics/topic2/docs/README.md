@@ -1,4 +1,4 @@
-# Helpful resources
+# Helpful Resources
 
 This doc includes useful references of how to start building a DApp with ink!
 
