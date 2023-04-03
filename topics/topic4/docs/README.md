@@ -1,1 +1,1 @@
-# Helpful resources
+# Helpful Resources
