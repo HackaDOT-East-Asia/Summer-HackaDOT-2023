@@ -1,5 +1,5 @@
 # Topic 2: Build a DApp with WASM Contract
-> Mentor: Astar
+> Mentor: Astar Network
 
 In this category, we want you to push the limits of what’s possible. Be creative, break things, make us laugh, make us cry. Test suites, visualizations, Wasm interoperability, and everything in between qualifies for this category. Shock us with your brilliance.
 
