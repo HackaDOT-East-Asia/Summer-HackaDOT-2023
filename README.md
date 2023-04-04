@@ -59,7 +59,7 @@ topics
 
 Submit your project unitl **May 26, 23:59PM(GMT+9)**.
 
-### Submit Guidline
+### Submit Guideline
 
 Write something
 
