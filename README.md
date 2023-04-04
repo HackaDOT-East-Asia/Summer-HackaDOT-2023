@@ -40,16 +40,17 @@ Hackathon-2023
 3. Submit a PR to reserve a directory as your team space. Please note that we will rename the directory by **adding a number before the team name**. **Please pull down**.
 4. Afterwards, all code related to the participating projects should be stored in the directory named after your team under the teams directory. 
 
-- Overall 
+- Repository Overview 
 
 ```
-teams
-L 00-Team 
-    L src/
-        L substrate/ // substrate related code
-        L ui/ // frontend related code
-    L docs/ // put videos, ppt, pdf here
-    L README.md
+topics
+ㄴ topic*
+    ㄴ docs(Helpful resources to get start with)
+    ㄴ teams(All teams' project)
+        ㄴ src(Source code)
+        ㄴ utils(e.g logo)
+        ㄴ README.md
+README.md
 ```
 
 ## Project Submission Guideline (BEFORE THE DEADLINE)
