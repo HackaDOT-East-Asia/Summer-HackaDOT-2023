@@ -21,37 +21,37 @@
 
 ![image](https://user-images.githubusercontent.com/39883171/228563089-79f6fbd3-88fc-412b-bb64-ea4f29fa3520.png)
 
-## Repo Directory
-
-`docs`: This directory will include Hackathon related helpful documents
-
-`teams`: All hackathon registered team project will be included.
-
-```
-Hackathon-2023
-    ㄴ docs // Helpful resources 
-    ㄴ teams // All registered team
-```
-
-## Project Registration Guideline
-
-1. Starting from today, **fork this code repository** to your team members' local repositories.
-2. First, create a directory within teams, named after your team, and put an empty file or a README to briefly introduce your team. 
-3. Submit a PR to reserve a directory as your team space. Please note that we will rename the directory by **adding a number before the team name**. **Please pull down**.
-4. Afterwards, all code related to the participating projects should be stored in the directory named after your team under the teams directory. 
-
-- Repository Overview 
+## Repository Overview
 
 ```
 topics
 ㄴ topic*
     ㄴ docs(Helpful resources to get start with)
     ㄴ teams(All teams' project)
-        ㄴ src(Source code)
-        ㄴ utils(e.g logo)
-        ㄴ README.md
+        ㄴ A(team name)
+            ㄴ src(Source code)
+            ㄴ utils(e.g logo)
+            ㄴ README.md
 README.md
 ```
+
+## Project Registration Guideline
+
+1. Starting from today, **fork this code repository** to your team members' local repositories.
+2. First, go to the topic you've selected and create a directory within _**teams**_, named after your team, and put an empty file or a README to briefly introduce your team. 
+
+For example,
+```
+Assume your topic is `Open Track` and name of your team is `HackaDOT`
+topics
+ㄴ topic1
+    ㄴ docs
+    ㄴ teams
+        ㄴ HackaDOT
+
+```
+3. Submit a PR to reserve a directory as your team space. If the name is duplicated, we will inform you to change to other name.
+4. Afterwards, all code related to the participating projects should be stored in the directory named after your team under the teams directory. 
 
 ## Project Submission Guideline (BEFORE THE DEADLINE)
 
