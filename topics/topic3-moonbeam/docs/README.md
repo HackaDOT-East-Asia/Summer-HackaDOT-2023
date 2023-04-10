@@ -2,9 +2,9 @@
 
 This doc includes how to build on Moobeam and using GMP protocol
 
-## What is Moonbeam
+## Moonbeam Network
 
-Moobeam is the most EVM-compatible blockchain in Polkadot ecosystem. The Moonbeam platform extends the base Ethereum feature set with additional features such as on-chain governance, staking, and cross-chain integrations.
+[Moonbeam](https://moonbeam.network) is the most EVM-compatible blockchain in Polkadot ecosystem. The Moonbeam platform extends the base Ethereum feature set with additional features such as on-chain governance, staking, and cross-chain integrations.
 
 [Learning About Moonbeam](https://docs.moonbeam.network/learn/)
 
@@ -20,5 +20,9 @@ Connected contracts refer to the cooperation of smart contracts on the “backen
 
 ### Documentation
 [What Are Cross-Chain Connected Contracts](https://moonbeam.network/blog/cross-chain-smart-contracts/)
+
 [Cross-Chain Connected COntracts with Wormhole](https://moonbeam.network/blog/connected-contracts-wormhole/)
+
 [Cross-Chain Connected Contracts with Axelar](https://moonbeam.network/blog/connected-contracts-axelar/)
+
+[Designing Multichain-Aware dApps for Connected Contracts](https://moonbeam.network/blog/multichain-connected-contracts-dapps/)
