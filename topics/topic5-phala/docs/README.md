@@ -6,4 +6,4 @@ The vision of our [Phala](https://wiki.phala.network/en-us/general/phala-network
 
 ## What is Phat Contract
 
-[Phat Contract](https://wiki.phala.network/en-us/build/general/intro/) is an innovative programming model enabling [Off-chain compuation](https://medium.com/phala-network/fat-contract-introduce-off-chain-computation-to-smart-contract-dfc5839d5fb8). Phat Contract uses Rust-based ink! language. [Take a look at Phat Contract's implenmentation](https://github.com/Phala-Network/awesome-phat-contracts) and [the team's workshop for the contract!](https://github.com/Phala-Network/fat-contract-workshop)
+[Phat Contract](https://wiki.phala.network/en-us/build/general/intro/) is an innovative programming model enabling [Off-chain compuation](https://medium.com/phala-network/fat-contract-introduce-off-chain-computation-to-smart-contract-dfc5839d5fb8). Phat Contract uses Rust-based ink! language. [Take a look at Phat Contract's implementations](https://github.com/Phala-Network/awesome-phat-contracts) and [the team's workshop for the contract!](https://github.com/Phala-Network/fat-contract-workshop)
