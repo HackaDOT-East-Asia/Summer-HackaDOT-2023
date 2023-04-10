@@ -6,7 +6,7 @@
 
 |  Date   |      Agenda      |  
 |:----------|:-------------:|
-| April 5 - April 26 |  Open for the Application (Mentor Selection) | 
+| April 5 - April 23 |  Open for the Application (Mentor Selection) | 
 | May 1, 22:00PM(GMT+9) | Online Orientation | 
 | May 1 - May 26 | 4 Weeks Online Hacking & Workshop Start | 
 | May 26, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
@@ -111,7 +111,7 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
 > Each challenge topic is suggested by the mentor respectively. Once the applicants choose a topic, the suggestor of the topic becomes the mentor.
 
-- **Topic 1: Open Track - Build A Polkadot Native Project (Mentor: Parity Tech)**
+- **Topic 1: Open Track - Build A Parachain (Mentor: Parity Tech)**
 
     In this category, we hope that you will be creative and 1) build the custom chain that you think is most useful to other builders of the Substrate ecosystem! (You may find all live-parachains from Parachain Info or Polkadot Open Stack) 2) build a cross-chain dApp using at least three SDK/Tools to make it interoperable among live-parachains. 
     
@@ -127,7 +127,7 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
     
     This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more
     
-- **Use Fat Contract to Build De-fi DApp (Mentor: Phala Network)**
+- **Topic 5: Use Phat Contract to Build De-fi DApp (Mentor: Phala Network)**
 
     Support asymmetric encryption/decryption feature (Mentor: SubWallet)
 
@@ -135,8 +135,11 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
 ## Workshop and Office Hours 
 
-4 Online Workshops every Wednesday night
+- April 24th - May 28th 
+Online Workshop sessions with Parity & Live-ecosystem Project Teams
 
+- May 28 th - June 9th
+Rest of the week will be _office hours_
 
 ## Contact 
 
@@ -145,8 +148,6 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 ## Other Information
 
 [Hacker's Guide](https://web3foundation.notion.site/A-Hacker-s-Guide-to-the-Polkadot-Galaxy-902a55db98444aa4b9f3911ce3038f5f)
-
-- Maybe mentor info?
 
 
 
