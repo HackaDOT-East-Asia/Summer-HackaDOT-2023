@@ -12,4 +12,4 @@ With Moonbeam, developers can build applications that connect to any contract on
 - Smart contract deployed to a Moonbeam network.
 - Use a GMP protocol to take any kind of cross-chain action.
 
-All handly resources can be found [here](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic3-moonbeam/docs)
+All handy resources can be found [here](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic3-moonbeam/docs)
