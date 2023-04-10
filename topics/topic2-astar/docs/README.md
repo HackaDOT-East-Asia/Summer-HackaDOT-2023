@@ -25,13 +25,11 @@ Astart has provided a great tool, Swanky Suite, to build Wasm smart contract. **
 
 #### - Documentation
 
-[Swanky Suite](https://docs.astar.network/docs/build/wasm/swanky-suite/)
+[Swanky Suite](https://docs.astar.network/docs/build/wasm/swanky-suite/) aims to be an "all-in-one" tool for Wasm smart contract developers.
 
-#### - Repository
+[Swanky CLI](https://github.com/AstarNetwork/swanky-cli) is a Node.js based CLI application that abstracts away and extends the functionality of Polkadot.js, cargo contract, and other Wasm developer tools.
 
-[Swanky CLI](https://github.com/AstarNetwork/swanky-cli)
-
-[Swanky Node](https://github.com/AstarNetwork/swanky-node)
+[Swanky Node](https://github.com/AstarNetwork/swanky-node) is a Substrate based blockchain configured to enable pallet-contracts (a smart contract module), and other features that assist local development of Wasm smart contracts.
 
 ### XVM SDK
 
