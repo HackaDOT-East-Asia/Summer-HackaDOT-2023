@@ -6,13 +6,9 @@ This doc includes how to build on Moobeam and using GMP protocol
 
 [Moonbeam](https://moonbeam.network) is the most EVM-compatible blockchain in Polkadot ecosystem. The Moonbeam platform extends the base Ethereum feature set with additional features such as on-chain governance, staking, and cross-chain integrations.
 
-[Learning About Moonbeam](https://docs.moonbeam.network/learn/)
-
 ## Building on Moonbeam
 
-Learn how to build a new application or deploy existing Solidity/Vyper smart contracts to Moonbeam, Moonriver, or the Moonbase Alpha TestNet.
-
-[How to build on Moonbeam](https://docs.moonbeam.network/builders/)
+[Learn how to build a new application](https://docs.moonbeam.network/builders/) or deploy existing Solidity/Vyper smart contracts to Moonbeam, Moonriver, or the Moonbase Alpha TestNet.
 
 ## Cross-Chain Connected Contracts
 
