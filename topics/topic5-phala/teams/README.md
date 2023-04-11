@@ -1,6 +1,6 @@
 # Teams
 
-*Directory for the teams related to topic 1*
+*Directory for the teams related to topic 5*
 
 ## Guideline
 
