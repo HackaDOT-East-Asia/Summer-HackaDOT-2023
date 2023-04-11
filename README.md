@@ -125,11 +125,15 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
     
 - **[Topic 4: Use JS to Build NFT Games (Mentor: Unique Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic4-unique)**
     
-    This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more
+    This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more.
     
-- **[Topic 5: Use Phat Contract to Build De-fi DApp (Mentor: Phala Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic6-subwallet)**
+- **[Topic 5: Use Phat Contract to Build De-fi DApp (Mentor: Phala Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic5-phala)**
+    
+    By organizing a decentralized network of computation nodes around the world, it offers high-performance services without relying on any cloud vendor. Phala workers run the programs in Secure Enclaves, a privacy technology already embedded into modern processors, enabling versatile and confidential execution. Together, this creates the infrastructure for a powerful, secure, and scalable trustless computing cloud.
 
-    Support asymmetric encryption/decryption feature (Mentor: SubWallet)
+- **[Topic 6: Support asymmetric encryption/decryption feature (Mentor: SubWallet)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic6-subwallet)**
+
+    Support asymmetric encryption/decryption feature
 
 
 
