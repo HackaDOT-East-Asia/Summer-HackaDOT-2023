@@ -50,7 +50,7 @@ topics
         ㄴ HackaDOT
             ㄴ src(e.g All code related)
             ㄴ docs(e.g logo image, project description pdf file)
-            ㄴ README.md
+            ㄴ README.md(e.g overview of project, how to run your code)
 
 ```
 3. Submit a PR to reserve a directory as your team space. If the name is duplicated, we will inform you to change to other name.
@@ -60,7 +60,7 @@ topics
 
 ### Deadline
 
-Submit your project unitl **May 26, 23:59PM(GMT+9)**.
+Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/calendar/render?action=TEMPLATE&text=Summer+HackaDOT+2023+Deadline&dates=20230430T150000Z%2F20230526T145900Z)**.
 
 ### Submit Guideline
 
