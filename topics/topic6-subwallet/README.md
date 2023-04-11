@@ -51,4 +51,6 @@ The encrypted message is the concatenation of the following elements:
 macValue (32 bytes): mac value computed at step 5
 encrypted (remaining bytes): encrypted message (step 4)
 
+See the following [PR](https://github.com/Koniverse/SubWallet-Extension/issues/516)
+
 All handy resources can be found [here](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic6-subwallet/docs)
