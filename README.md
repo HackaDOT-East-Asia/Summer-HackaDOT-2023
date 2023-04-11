@@ -48,6 +48,9 @@ topics
     ㄴ docs
     ㄴ teams
         ㄴ HackaDOT
+            ㄴ src(e.g All code related)
+            ㄴ docs(e.g logo image, project description pdf file)
+            ㄴ README.md
 
 ```
 3. Submit a PR to reserve a directory as your team space. If the name is duplicated, we will inform you to change to other name.
