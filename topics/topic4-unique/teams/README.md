@@ -1,6 +1,6 @@
 # Teams
 
-*Directory for the teams related to topic 4*
+*Directory for the teams related to topic 4*. **Work will only be evaluated if pushed to the `main` branch in Github, all other branches will be ignored.**
 
 ## Guideline
 
@@ -22,6 +22,8 @@ teams
     ㄴ docs
     ㄴ README.md
 ```
+3. PR
+- Send PR to commit to `main` branch
 
 ## Deadline
 
