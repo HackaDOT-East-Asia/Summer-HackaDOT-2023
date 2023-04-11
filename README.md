@@ -61,7 +61,7 @@ Submit your project unitl **May 26, 23:59PM(GMT+9)**.
 
 ### Submit Guideline
 
-Write something
+To Be Announced
 
 ## Judging Criteria
 
