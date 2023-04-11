@@ -127,7 +127,7 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
     
     This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more.
     
-- **[Topic 5: Use Phat Contract to Build De-fi DApp (Mentor: Phala Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic5-phala)**
+- **[Topic 5: Use Phat Contract to Build DeFi DApp (Mentor: Phala Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic5-phala)**
     
     By organizing a decentralized network of computation nodes around the world, it offers high-performance services without relying on any cloud vendor. Phala workers run the programs in Secure Enclaves, a privacy technology already embedded into modern processors, enabling versatile and confidential execution. Together, this creates the infrastructure for a powerful, secure, and scalable trustless computing cloud.
 
