@@ -21,24 +21,10 @@
 
 ![image](https://user-images.githubusercontent.com/39883171/228563089-79f6fbd3-88fc-412b-bb64-ea4f29fa3520.png)
 
-## Repository Overview
-
-```
-topics
-ㄴ topic*
-    ㄴ docs(Helpful resources to get start with)
-    ㄴ teams(All teams' project)
-        ㄴ A(team name)
-            ㄴ src(Source code)
-            ㄴ utils(e.g logo)
-            ㄴ README.md
-README.md
-```
-
 ## Project Registration Guideline
 
 1. Starting from today, **fork this code repository** to your team members' local repositories.
-2. First, go to the topic you've selected and create a directory within _**teams**_, named after your team, and put an empty file or a README to briefly introduce your team. 
+2. First, go to the topic you've selected and create a directory within _**teams**_, named after your team with some folders as requested
 
 For example,
 ```
