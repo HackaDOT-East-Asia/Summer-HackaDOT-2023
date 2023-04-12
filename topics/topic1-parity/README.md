@@ -7,6 +7,6 @@ We don't expect fully productional level, but at least, you should be able to
 
 **1) build a parachain** 
 
-**2) test your Substrate-based chain** using various developing tools like [Zombienet](https://github.com/paritytech/zombienet)**. 
+**2) test your Substrate-based chain** using various developing tools like [Zombienet](https://github.com/paritytech/zombienet). 
 
 All handy resources can be found [here](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic1-parity/docs)
