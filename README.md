@@ -34,17 +34,25 @@
 
 Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/calendar/render?action=TEMPLATE&text=Summer+HackaDOT+2023+Deadline&dates=20230430T150000Z%2F20230526T145900Z)**.
 
-### Submit Guideline
+### Submit Guideline Template
 
-- Make a short demo video (approx 5min - 10min)
-- Docs with description of your project
-    - Summary
+```
+Teams
+ㄴ src
+ㄴ docs
+ㄴ README.md
+```
+
+- `src`
+    - Source code of your project(Front-end, Substrate, etc...)
+- `docs` 
+    - Summary of your project
     - Problem Statements & Solution
     - Milestones of your project(**This is very important as this is evaluation criteria for 40% of your winning prize**)
     - Demo video link
-- `README.md` with short description of your team and project
-    - Team introduction(Backround of your team)
-    - How to run your code
+- `README.md` 
+    - Short description of your team(Team Background)
+    - Short description of your project + How to run your code
 
 ## Judging Criteria
 
