@@ -7,10 +7,11 @@
 |  Date   |      Agenda      |  
 |:----------|:-------------:|
 | April 5 - April 23 |  Open for the Application (Mentor Selection) | 
-| May 1, 22:00PM(GMT+9) | Online Orientation | 
-| May 1 - May 26 | 4 Weeks Online Hacking & Workshop Start | 
-| May 26, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
-| May 26 - May 31| Finalists Screening |
+| April 30, 29:00PM(GMT+9) | Online Orientation | 
+| May 2 - May 12 | Online Workshop |
+| May 16 - May 24 | Office Hours | 
+| May 28, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
+| May 28 - May 31| Finalists Screening |
 | May 31 | Team Announcement for Live-Demoday |
 | June 9, 15:00 PM(GMT+9) | Final Demo Day & After-party |
 | Demo Day | TOP10 Announcement (on-site / Live-streamed) |
@@ -122,11 +123,14 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
 ## Workshop and Office Hours 
 
-- April 24th - May 28th 
-Online Workshop sessions with Parity & Live-ecosystem Project Teams
+- April 30 
+Orientation
 
-- May 28 th - June 9th
-Rest of the week will be _office hours_
+- May 2 - May 12
+Online Workshop for each challenge topics
+
+- May 16  - May 24
+Office hours
 
 ## Contact 
 
