@@ -44,8 +44,9 @@ Teams
     - Milestones of your project(**This is very important as this is evaluation criteria for 40% of your winning prize**)
     - Demo video link
 - `README.md` 
-    - Short description of your team(Team Background)
-    - Short description of your project + How to run your code
+    - Short Description of your project
+    - How to run your code
+    - Description of your team(Team Background)
 
 ## Judging Criteria
 
@@ -81,15 +82,13 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
 |  Prize  | DOT Amount |  
 |:----------|:-------------:|
-| First Prize(x1) |  5000 DOT | 
-| Second Prize(x1) | 2500 DOT | 
-| Third Prize(x1) | 1500 DOT | 
-| TOP4 10 Finalists (x7) | 1000 DOT |
+| First Prize(x1) |  2000 DOT | 
+| Second Prize(x1) | 1500 DOT | 
+| Third Prize(x1) | 1000 DOT | 
+| TOP4 10 Finalists (x7) | Remainders |
 
 *Important Notes*
-- 50% Payout on Demo Day + 50% through an Interview in 90 days. In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on **Demo Day**.
-
-- Top4 will have 100% payout on **Demo Day**
+- 60% Payout on Demo Day + 40% through an Interview in 90 days. In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on **Demo Day**.
 
 ## Challenge Topics
 
