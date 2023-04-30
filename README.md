@@ -22,33 +22,6 @@
 
 ![image](https://user-images.githubusercontent.com/39883171/228563089-79f6fbd3-88fc-412b-bb64-ea4f29fa3520.png)
 
-## Project Submission Guideline
-
-### Deadline
-
-Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/calendar/render?action=TEMPLATE&text=Summer+HackaDOT+2023+Deadline&dates=20230430T150000Z%2F20230526T145900Z)**.
-
-### Submit Guideline Template
-
-```
-Teams
-ㄴ src
-ㄴ docs
-ㄴ README.md
-```
-
-- `src`
-    - Source code of your project(Front-end, Substrate, etc...)
-- `docs` 
-    - Summary of your project
-    - Problem Statements & Solution
-    - Milestones of your project(**This is very important as this is evaluation criteria for 40% of your winning prize**)
-    - Demo video link
-- `README.md` 
-    - Short Description of your project
-    - How to run your code
-    - Description of your team(Team Background)
-
 ## Judging Criteria
 
 Eligible submissions will be evaluated by a panel of judges selected by the organizer [Section 8.1]. Judges may be third party employees and may change before or during the evaluation period. Judging may take place in one or more rounds with one or more judging panels, at the discretion of the administrator.
