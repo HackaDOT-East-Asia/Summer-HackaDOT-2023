@@ -1,4 +1,4 @@
-## Team Space Guideline
+# Team Space Guideline
 
 1. **Fork this repository** to your local repositories.
 2. Go to the _**teams**_ section and create team space named after your team 
