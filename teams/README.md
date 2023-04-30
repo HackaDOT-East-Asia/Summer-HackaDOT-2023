@@ -1,7 +1,3 @@
-# Teams
-
-*Directory for the teams related to topic 1*
-
 ## Guideline
 
 1. You should create folder named after your team name (e.g `HackaDOT`). 
