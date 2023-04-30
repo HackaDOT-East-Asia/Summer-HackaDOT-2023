@@ -24,25 +24,11 @@
 ## Project Registration Guideline
 
 1. Starting from today, **fork this code repository** to your team members' local repositories.
-2. First, go to the topic you've selected and create a directory within _**teams**_, named after your team with some folders as requested
-
-For example,
-```
-Assume your topic is `Open Track` and name of your team is `HackaDOT`
-topics
-ㄴ topic1
-    ㄴ docs
-    ㄴ teams
-        ㄴ HackaDOT
-            ㄴ src(e.g All code related)
-            ㄴ docs(e.g logo image, project description pdf file)
-            ㄴ README.md(e.g overview of project, how to run your code)
-
-```
-3. Submit a PR to reserve a directory as your team space. If the name is duplicated, we will inform you to change to other name.
+2. First, go to the _**teams**_ section and create team space named after your team with some folders as requested `topic*-team_name`
+3. Submit a PR to reserve a directory as your team space.
 4. Afterwards, all code related to the participating projects should be stored in the directory named after your team under the teams directory. 
 
-## Project Submission Guideline (BEFORE THE DEADLINE)
+## Project Submission Guideline
 
 ### Deadline
 
@@ -50,7 +36,15 @@ Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/cale
 
 ### Submit Guideline
 
-To Be Announced
+- Make a short demo video (approx 5min - 10min)
+- Docs with description of your project
+    - Summary
+    - Problem Statements & Solution
+    - Milestones of your project(**This is very important as this is evaluation criteria for 40% of your winning prize**)
+    - Demo video link
+- `README.md` with short description of your team and project
+    - Team introduction(Backround of your team)
+    - How to run your code
 
 ## Judging Criteria
 
