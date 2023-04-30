@@ -119,19 +119,6 @@ All prize will be given as **DOT**. Be note that price of token is volatile.
 
     Support asymmetric encryption/decryption feature
 
-
-
-## Workshop and Office Hours 
-
-- April 30 
-Orientation
-
-- May 2 - May 12
-Online Workshop for each challenge topics
-
-- May 16  - May 24
-Office hours
-
 ## Contact 
 
 [Telegram Official](https://t.me/hackadot/1)
