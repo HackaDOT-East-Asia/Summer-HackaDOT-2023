@@ -1,28 +1,8 @@
-## Guideline
+## Team Space Guideline
 
-1. You should create folder named after your team name (e.g `HackaDOT`). 
-
-2. Create 
-- `src`: All code related to your project. 
-- `docs`: Any kind of supporting docs of your project
-    - Detailed decription of your project(`*.pdf`)
-    - logo images(`*.png`)
-- `README.md`: Overview of your project
-    - Description of your project
-    - How to run you code
-
-```
-teams
-ㄴ HackaDOT
-    ㄴ src
-    ㄴ docs
-    ㄴ README.md
-```
-
-3. PR
-- Send PR to commit for your update to `main` branch.
-- **Work will only be evaluated if pushed to the `main` branch in Github, all other branches will be ignored.**
-
-## Deadline
-
-Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/calendar/render?action=TEMPLATE&text=Summer+HackaDOT+2023+Deadline&dates=20230430T150000Z%2F20230526T145900Z)**.
+1. **Fork this repository** to your local repositories.
+2. Go to the _**teams**_ section and create team space named after your team 
+(e.g `topic1-HACKADOT2023`)
+3. Submit a PR to reserve a directory as your team space and we will commit your project based on your PR.
+4. Work will only be evaluated if pushed to the `main` branch in Github, all other branches will be ignored. **Be sure to commit your project on `main` branch!**
+5. Check out [Submit Guideline Template](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023#submit-guideline-template) before the deadline

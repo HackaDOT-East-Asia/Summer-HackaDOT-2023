@@ -21,13 +21,6 @@
 
 ![image](https://user-images.githubusercontent.com/39883171/228563089-79f6fbd3-88fc-412b-bb64-ea4f29fa3520.png)
 
-## Project Registration Guideline
-
-1. Starting from today, **fork this code repository** to your team members' local repositories.
-2. First, go to the _**teams**_ section and create team space named after your team with some folders as requested `topic*-team_name`
-3. Submit a PR to reserve a directory as your team space.
-4. Afterwards, all code related to the participating projects should be stored in the directory named after your team under the teams directory. 
-
 ## Project Submission Guideline
 
 ### Deadline
