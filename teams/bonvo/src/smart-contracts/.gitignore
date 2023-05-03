@@ -1,0 +1,15 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+temp
+.idea
+
+#Hardhat files
+cache
+artifacts
+
+#sec notes
+sec-review.md
