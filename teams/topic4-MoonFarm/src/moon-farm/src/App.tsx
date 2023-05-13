@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="text-3xl font-bold underline">Moon Farm</h1>
+        <p>commit 0</p>
       </header>
     </div>
   );
