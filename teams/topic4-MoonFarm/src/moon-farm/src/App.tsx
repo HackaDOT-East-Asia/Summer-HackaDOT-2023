@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1 className="text-3xl font-bold underline">Moon Farm1</h1>
 
-        <p>commit 0</p>
+        <p>commit 1</p>
       </header>
     </div>
   );
