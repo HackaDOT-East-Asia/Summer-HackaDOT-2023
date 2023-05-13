@@ -38,6 +38,16 @@ yarn compile:all
 
 - Team Background
 
+  We were a team of four competing this hackathon.
+
+  - <strong>mashharuki</strong>
+    - Role  
+      Fullstack engineer
+    - Contributed part in this product  
+      Frontend & backend
+    - Background  
+      I have been working in Japan as an engineer since 2019.   I started working with blockchain in late 2020, after I realized how interesting Dapp development is, I have been participating in hackathons to hone my development skills.
+
 - Team member's LinkedIn and Github Page
 
 |Name|LinkedIn|Github|other|
