@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="Moon Farm">
-        <h1>Moon Farm</h1>
+        <h1 className="text-3xl font-bold underline">
+          Moon Farm
+        </h1>
       </header>
     </div>
   );
