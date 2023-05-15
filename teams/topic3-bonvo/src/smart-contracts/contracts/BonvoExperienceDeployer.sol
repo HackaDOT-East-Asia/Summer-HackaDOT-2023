@@ -3,7 +3,7 @@ pragma solidity ^0.8.18;
 
 import "@rmrk-team/evm-contracts/contracts/implementations/nativeTokenPay/RMRKEquippableImpl.sol";
 
-contract SimpleEquippable is RMRKEquippableImpl {
+contract BonvoExperienceDeployer is RMRKEquippableImpl {
     constructor(
         string memory name_,
         string memory symbol_,
