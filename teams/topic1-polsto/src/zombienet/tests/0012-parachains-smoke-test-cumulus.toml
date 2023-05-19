@@ -1,0 +1,35 @@
+[settings]
+timeout = 1000
+bootnode = false
+# provider = "Podman"
+
+[relaychain]
+default_image = "{{ZOMBIENET_INTEGRATION_TEST_IMAGE}}"
+chain = "rococo-local"
+
+[relaychain.genesis.runtime.runtime_genesis_config.configuration.config]
+  max_validators_per_core = 2
+  needed_approvals = 2
+
+  [[relaychain.nodes]]
+  name = "alice"
+
+  [[relaychain.nodes]]
+  name = "bob"
+
+
+[[parachains]]
+id = 100
+add_to_genesis = true
+
+  [[parachains.collator_groups]]
+    count = 2
+    [parachains.collator_groups.collator]
+    name = "collator"
+    command = "polkadot-parachain"
+    args = ["-lparachain=debug"]
+
+[types.Header]
+number = "u64"
+parent_hash = "Hash"
+post_state = "Hash"

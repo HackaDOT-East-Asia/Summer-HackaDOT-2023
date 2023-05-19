@@ -1,0 +1,24 @@
+[settings]
+timeout = 1000
+# provider = "Podman"
+
+[relaychain]
+default_image = "{{ZOMBIENET_INTEGRATION_TEST_IMAGE}}"
+chain = "rococo-local"
+#default_command = "../polkadot/target/release/polkadot"
+
+  [[relaychain.nodes]]
+  name = "alice"
+
+  [[relaychain.nodes]]
+  name = "bob"
+
+[[parachains]]
+id = 100
+add_to_genesis = true
+
+  [parachains.collator]
+  name = "collator01"
+  image = "{{COL_IMAGE}}"
+  command = "adder-collator"
+  #command = "../polkadot/target/testnet/adder-collator"

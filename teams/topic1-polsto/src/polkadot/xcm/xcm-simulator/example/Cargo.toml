@@ -1,0 +1,27 @@
+[package]
+name = "xcm-simulator-example"
+description = "Examples of xcm-simulator usage."
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.0.0" }
+scale-info = { version = "2.1.2", features = ["derive"] }
+
+frame-system = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+pallet-balances = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-std = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+xcm = { path = "../../" }
+xcm-simulator = { path = "../" }
+xcm-executor = { path = "../../xcm-executor" }
+xcm-builder = { path = "../../xcm-builder" }
+pallet-xcm = { path = "../../pallet-xcm" }
+polkadot-core-primitives = { path = "../../../core-primitives" }
+polkadot-runtime-parachains = { path = "../../../runtime/parachains" }
+polkadot-parachain = { path = "../../../parachain" }

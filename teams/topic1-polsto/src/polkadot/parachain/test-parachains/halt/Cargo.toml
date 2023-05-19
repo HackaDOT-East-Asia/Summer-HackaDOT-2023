@@ -1,0 +1,16 @@
+[package]
+name = "test-parachain-halt"
+description = "Test parachain which executes forever"
+build = "build.rs"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+
+[build-dependencies]
+substrate-wasm-builder = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+[features]
+default = [ "std" ]
+std = []

@@ -1,0 +1,37 @@
+[package]
+name = "polkadot-parachain"
+description = "Types and utilities for creating and working with parachains"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+# note: special care is taken to avoid inclusion of `sp-io` externals when compiling
+# this crate for WASM. This is critical to avoid forcing all parachain WASM into implementing
+# various unnecessary Substrate-specific endpoints.
+parity-scale-codec = { version = "3.1.5", default-features = false, features = [ "derive" ] }
+scale-info = { version = "2.1.2", default-features = false, features = ["derive"] }
+sp-std = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.37" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.37" }
+frame-support = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.37" }
+polkadot-core-primitives = { path = "../core-primitives", default-features = false }
+derive_more = "0.99.11"
+
+# all optional crates.
+serde = { version = "1.0.137", default-features = false, features = [ "derive" ], optional = true }
+
+[features]
+default = ["std"]
+wasm-api = []
+std = [
+	"parity-scale-codec/std",
+	"scale-info/std",
+	"serde/std",
+	"sp-std/std",
+	"sp-runtime/std",
+	"sp-core/std",
+	"polkadot-core-primitives/std",
+	"frame-support/std",
+]
+runtime-benchmarks = []

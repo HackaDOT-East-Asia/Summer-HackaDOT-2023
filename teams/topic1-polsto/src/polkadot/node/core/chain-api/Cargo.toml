@@ -1,0 +1,23 @@
+[package]
+name = "polkadot-node-core-chain-api"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+gum = { package = "tracing-gum", path = "../../gum" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+polkadot-primitives = { path = "../../../primitives" }
+polkadot-node-metrics = { path = "../../metrics" }
+polkadot-node-subsystem = {path = "../../subsystem" }
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sc-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+[dev-dependencies]
+futures = { version = "0.3.21", features = ["thread-pool"] }
+maplit = "1.0.2"
+parity-scale-codec = "3.1.5"
+polkadot-node-primitives = { path = "../../primitives" }
+polkadot-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
