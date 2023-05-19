@@ -1,7 +1,10 @@
-BWG LS Unit 1
-STO platform
+# BWG LS Unit 1
+## STO platform
 
-structure
-ㄴ src : source code project here
+## structure
+```
+Teams
+ㄴ src : source code here
 ㄴ docs
 ㄴ README.md
+```
