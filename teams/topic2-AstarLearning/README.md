@@ -6,7 +6,9 @@
 
 ## 2. Short Description of our project
 
+Astar Learning is a product that help to provide a mechanism for engineers and non-engineers to actively share knowledge and learn from each other on the Astar Network.  
 
+Since there are still very few DApps that are linked to smart contracts that run on !If we can link it with Dapp Staking in the future, we will be able to secure financial resources for rewards and create a semi-permanent learning content application.
 
 ## 3. How to run 
 
