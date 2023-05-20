@@ -48,23 +48,23 @@ yarn compile:all
     - Background  
       I have been working in Japan as an engineer since 2019.   I started working with blockchain in late 2020, after I realized how interesting Dapp development is, I have been participating in hackathons to hone my development skills.
    - <strong>YasuYasu_onFire</strong>
-    - Role  
+      - Role  
       
-    - Contributed part in this product  
+      - Contributed part in this product  
       
-    - Background  
+      - Background  
    - <strong>toaruY</strong>
-    - Role  
+      - Role  
       
-    - Contributed part in this product  
+      - Contributed part in this product  
       
-    - Background  
+      - Background  
    - <strong>tiriebiz</strong>
-    - Role  
-      Frontend
-    - Contributed part in this product  
-      Frontend
-    - Background  
+      - Role  
+        Frontend
+      - Contributed part in this product  
+        Frontend
+      - Background  
       
 - Team member's LinkedIn and Github Page
 
