@@ -76,9 +76,9 @@ yarn compile:nft
         
 - Team member's LinkedIn and Github Page
 
-|Name|LinkedIn|Github|other|
-|:----|:----|:----|:----|
-|mashharuki|[LinkedIn](https://www.linkedin.com/in/haruki-kondo-517073204/)|[Github](https://github.com/mashharuki)|[Twitter](https://twitter.com/HARUKI05758694)|
-|YasuYasu_onFire|[LinkedIn](https://www.linkedin.com/in/yasuo-suzuki-89b82920a/?trk=public-profile-join-page)|[Github](https://github.com/YasuYasuonFire)|[Twitter](https://twitter.com/YasuYasu_onFire)|
-|toaruY |[LinkedIn](https://www.linkedin.com/in/yutaro-sakamoto-588158276/)|[Github](https://github.com/Yutar0-Sakam0t0)|[]()|
-|tiriebiz|[LinkedIn](https://www.linkedin.com/in/tiriebiz/)|[Github](https://github.com/tiriebiz)|[Twitter](https://twitter.com/tiriebiz)|
+  |Name|LinkedIn|Github|other|
+  |:----|:----|:----|:----|
+  |mashharuki|[LinkedIn](https://www.linkedin.com/in/haruki-kondo-517073204/)|[Github](https://github.com/mashharuki)|[Twitter](https://twitter.com/HARUKI05758694)|
+  |YasuYasu_onFire|[LinkedIn](https://www.linkedin.com/in/yasuo-suzuki-89b82920a/?trk=public-profile-join-page)|[Github](https://github.com/YasuYasuonFire)|[Twitter](https://twitter.com/YasuYasu_onFire)|
+  |toaruY |[LinkedIn](https://www.linkedin.com/in/yutaro-sakamoto-588158276/)|[Github](https://github.com/Yutar0-Sakam0t0)|[]()|
+  |tiriebiz|[LinkedIn](https://www.linkedin.com/in/tiriebiz/)|[Github](https://github.com/tiriebiz)|[Twitter](https://twitter.com/tiriebiz)|
