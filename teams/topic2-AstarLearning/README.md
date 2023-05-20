@@ -65,7 +65,8 @@ yarn compile:all
       - Contributed part in this product  
         Frontend
       - Background  
-      
+        I have over 10 years of experience as a CIO in Japanese small and medium-sized software companies. After working as a CTO for Japanese several startups, I am currently focusing on DX support companies since April 2022, and exploring the possibilities of web3.
+        
 - Team member's LinkedIn and Github Page
 
 |Name|LinkedIn|Github|other|
