@@ -47,7 +47,25 @@ yarn compile:all
       Frontend & backend
     - Background  
       I have been working in Japan as an engineer since 2019.   I started working with blockchain in late 2020, after I realized how interesting Dapp development is, I have been participating in hackathons to hone my development skills.
-
+   - <strong>YasuYasu_onFire</strong>
+    - Role  
+      
+    - Contributed part in this product  
+      
+    - Background  
+   - <strong>toaruY</strong>
+    - Role  
+      
+    - Contributed part in this product  
+      
+    - Background  
+   - <strong>tiriebiz</strong>
+    - Role  
+      Frontend
+    - Contributed part in this product  
+      Frontend
+    - Background  
+      
 - Team member's LinkedIn and Github Page
 
 |Name|LinkedIn|Github|other|
@@ -55,4 +73,4 @@ yarn compile:all
 |mashharuki|[LinkedIn](https://www.linkedin.com/in/haruki-kondo-517073204/)|[Github](https://github.com/mashharuki)|[Twitter](https://twitter.com/HARUKI05758694)|
 |YasuYasu_onFire|[LinkedIn](https://www.linkedin.com/in/yasuo-suzuki-89b82920a/?trk=public-profile-join-page)|[Github](https://github.com/YasuYasuonFire)|[]()|
 |toaruY |[LinkedIn](https://www.linkedin.com/in/yutaro-sakamoto-588158276/)|[Github](https://github.com/Yutar0-Sakam0t0)|[]()|
-|tiriebiz|[LinkedIn]()|[Github](https://github.com/tiriebiz)|[]()|
+|tiriebiz|[LinkedIn](https://www.linkedin.com/in/tiriebiz/)|[Github](https://github.com/tiriebiz)|[Twitter](https://twitter.com/tiriebiz)|
