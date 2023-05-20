@@ -55,4 +55,4 @@ yarn compile:all
 |mashharuki|[LinkedIn](https://www.linkedin.com/in/haruki-kondo-517073204/)|[Github](https://github.com/mashharuki)|[Twitter](https://twitter.com/HARUKI05758694)|
 |YasuYasu_onFire|[LinkedIn](https://www.linkedin.com/in/yasuo-suzuki-89b82920a/?trk=public-profile-join-page)|[Github](https://github.com/YasuYasuonFire)|[]()|
 |toaruY |[LinkedIn](https://www.linkedin.com/in/yutaro-sakamoto-588158276/)|[Github](https://github.com/Yutar0-Sakam0t0)|[]()|
-||[LinkedIn]()|[Github]()|[]()|
+|tiriebiz|[LinkedIn]()|[Github](https://github.com/tiriebiz)|[]()|
