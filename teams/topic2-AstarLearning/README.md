@@ -14,7 +14,7 @@ Since there are still very few DApps that are linked to smart contracts that run
 
 - install modules
 
-Please run `yarn` command on a root directory.
+  Please run `yarn` command on a root directory.
 
 ```bash
 yarn
@@ -22,7 +22,7 @@ yarn
 
 - run frontend
 
-Please run `yarn frontend:start` command on a root directory and access to [http://localhost:3000](http://localhost:3000)
+  Please run `yarn frontend:start` command on a root directory and access to [http://localhost:3000](http://localhost:3000)
 
 ```bash
 yarn frontend:start
@@ -30,7 +30,7 @@ yarn frontend:start
 
 - compile smartcontract (content & NFT)
 
-Please run `yarn compile:all` command on a root directory .
+  Please run `yarn compile:all` command on a root directory .
 
 ```bash
 yarn compile:content
