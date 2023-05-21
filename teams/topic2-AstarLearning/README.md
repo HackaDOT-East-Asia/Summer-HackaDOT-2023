@@ -66,6 +66,7 @@ Since there are still very few DApps that are linked to smart contracts that run
       - Contributed part in this product  
         Frontend & backend
       - Background  
+        I have worked as a system engineer in a Japanese company for seven years. I recently entered the web3 industry and am currently aiming to comprehensive producer in this field.
    - <strong>tiriebiz</strong>
       - Role  
         Frontend
