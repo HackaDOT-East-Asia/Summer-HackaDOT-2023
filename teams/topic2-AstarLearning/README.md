@@ -10,35 +10,35 @@ Astar Learning is a product that help to provide a mechanism for engineers and n
 
 Since there are still very few DApps that are linked to smart contracts that run on !If we can link it with Dapp Staking in the future, we will be able to secure financial resources for rewards and create a semi-permanent learning content application.
 
-## 3. How to run 
+## 3. How to run 【Shibuya Netnetwork】
 
 - install modules
 
   Please run `yarn` command on a root directory.
 
-```bash
-yarn
-```
+  ```bash
+  yarn
+  ```
 
 - run frontend
 
   Please run `yarn frontend:start` command on a root directory and access to [http://localhost:3000](http://localhost:3000)
 
-```bash
-yarn frontend:start
-```
+  ```bash
+  yarn frontend:start
+  ```
 
 - compile smartcontract (content & NFT)
 
   Please run `yarn compile:all` command on a root directory .
 
-```bash
-yarn compile:content
-```
+  ```bash
+  yarn compile:content
+  ```
 
-```bash
-yarn compile:nft
-```
+  ```bash
+  yarn compile:nft
+  ```
 
 ## 4. Description of our team (Team Background with both LinkedIn and Github Page)
 
