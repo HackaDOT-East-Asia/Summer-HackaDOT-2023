@@ -13,7 +13,7 @@
 
 ### Deadline
 
-Submit your project unitl **[May 26, 23:59PM(GMT+9)](https://www.google.com/calendar/render?action=TEMPLATE&text=Summer+HackaDOT+2023+Deadline&dates=20230430T150000Z%2F20230526T145900Z)**.
+**May 28, 23:59PM(GMT+9)**.
 
 ### Submit Guideline Template
 
