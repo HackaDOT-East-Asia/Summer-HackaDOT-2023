@@ -3,6 +3,7 @@
 # Short Description of your project
 ## Purpose of this dApp
 - Making all dApps sustainable by providing a DAO layer as a protocol
+- [The purpose of this protocol is summarized in this article.](https://realtakahashi-work.medium.com/dao-oriented-protocol-aiming-to-make-all-apps-sustainable-47501a4b8d04)
 ## List of features
 - Common interface
 - Member management
@@ -21,7 +22,7 @@
  ------------------ -------------------- -------------------- 
  | Member Manager | | Proposal Manager | | Election Manager |
  ------------------ -------------------- --------------------
-　　　　　　　　　　　　　↓         ↓    
+                     ↓            ↓    
     -----------------------  -----------------------
     | Your Own Contract 1 |  | Your Own Contract 2 |
     -----------------------  -----------------------
@@ -72,8 +73,12 @@ NEXT_PUBLIC_BLOCKCHAIN_URL=ws://127.0.0.1:9944
 2. Run "yarn install" to install the required components.
 3. Run "yarn dev" and access "localhost:3000" in your browser.
 # Description of your team(Team Background with both LinkedIn and Github Page)
+## Purpose Of Development
+- I develop dApps with two purposes. The reason is as follows.
+  - The first is about DAOs. I believe DAO is an effective tool for sustainable community management. To create a framework that can be easily used by any dApp that needs a DAO mechanism.
+  - The second is to design a mechanism to reuse WASM contracts. I tried it again this time, but I still don't think this design is the best. I will continue this challenge.
 ## Member List
-- Shin Takahashi
+- Shin Takahashi(Astar Network Technical Ambassador)
 ## Web Sites
 - [LinkedIn](https://jp.linkedin.com/in/%E7%9C%9F-%E9%AB%98%E6%A9%8B-255404170)
 - [Github](https://github.com/realtakahashi)
