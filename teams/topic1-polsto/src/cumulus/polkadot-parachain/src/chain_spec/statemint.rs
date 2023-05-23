@@ -81,6 +81,7 @@ pub fn statemint_development_config() -> StatemintChainSpec {
 					get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
 					get_account_id_from_seed::<sr25519::Public>("Bob//stash"),
 				],
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000.into(),
 			)
 		},
@@ -132,6 +133,7 @@ pub fn statemint_local_config() -> StatemintChainSpec {
 					get_account_id_from_seed::<sr25519::Public>("Eve//stash"),
 					get_account_id_from_seed::<sr25519::Public>("Ferdie//stash"),
 				],
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000.into(),
 			)
 		},
@@ -187,6 +189,7 @@ pub fn statemint_config() -> StatemintChainSpec {
 					),
 				],
 				vec![],
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000u32.into(),
 			)
 		},
@@ -207,6 +210,7 @@ pub fn statemint_config() -> StatemintChainSpec {
 fn statemint_genesis(
 	invulnerables: Vec<(AccountId, StatemintAuraId)>,
 	endowed_accounts: Vec<AccountId>,
+	root_key: AccountId,
 	id: ParaId,
 ) -> statemint_runtime::GenesisConfig {
 	statemint_runtime::GenesisConfig {
@@ -244,6 +248,7 @@ fn statemint_genesis(
 		polkadot_xcm: statemint_runtime::PolkadotXcmConfig {
 			safe_xcm_version: Some(SAFE_XCM_VERSION),
 		},
+		sudo: statemint_runtime::SudoConfig { key: Some(root_key) },
 	}
 }
 
@@ -272,6 +277,7 @@ pub fn statemine_development_config() -> StatemineChainSpec {
 					get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
 					get_account_id_from_seed::<sr25519::Public>("Bob//stash"),
 				],
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000.into(),
 			)
 		},
@@ -323,6 +329,7 @@ pub fn statemine_local_config() -> StatemineChainSpec {
 					get_account_id_from_seed::<sr25519::Public>("Eve//stash"),
 					get_account_id_from_seed::<sr25519::Public>("Ferdie//stash"),
 				],
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000.into(),
 			)
 		},
@@ -377,6 +384,7 @@ pub fn statemine_config() -> StatemineChainSpec {
 					),
 				],
 				Vec::new(),
+				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				1000.into(),
 			)
 		},
@@ -392,6 +400,7 @@ pub fn statemine_config() -> StatemineChainSpec {
 fn statemine_genesis(
 	invulnerables: Vec<(AccountId, AuraId)>,
 	endowed_accounts: Vec<AccountId>,
+	root_key: AccountId,
 	id: ParaId,
 ) -> statemine_runtime::GenesisConfig {
 	statemine_runtime::GenesisConfig {
@@ -431,6 +440,7 @@ fn statemine_genesis(
 		polkadot_xcm: statemine_runtime::PolkadotXcmConfig {
 			safe_xcm_version: Some(SAFE_XCM_VERSION),
 		},
+		sudo: statemine_runtime::SudoConfig { key: Some(root_key) },
 	}
 }
 

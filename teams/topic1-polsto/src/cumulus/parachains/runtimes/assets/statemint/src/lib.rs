@@ -431,6 +431,12 @@ impl InstanceFilter<RuntimeCall> for ProxyType {
 	}
 }
 
+impl pallet_sudo::Config for Runtime {
+    type RuntimeEvent = RuntimeEvent;
+    type RuntimeCall = RuntimeCall;
+}
+
+
 impl pallet_proxy::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type RuntimeCall = RuntimeCall;
@@ -623,6 +629,8 @@ construct_runtime!(
 		// The main stage.
 		Assets: pallet_assets::{Pallet, Call, Storage, Event<T>} = 50,
 		Uniques: pallet_uniques::{Pallet, Call, Storage, Event<T>} = 51,
+		
+		Sudo: pallet_sudo::{Pallet, Call, Storage, Event<T>, Config<T>} = 254,
 	}
 );
 
