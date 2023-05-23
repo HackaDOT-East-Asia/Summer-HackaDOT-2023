@@ -5,7 +5,7 @@ youtube
 
 ## Description
 We have implemented several features as a STO platform that can tokenize income-generating underlying assets as parachains. The features we implement can be explained in the following 3 ways
-* Security of token issuance : Custom Multi-sig Account
+* Security of token issuance : Custom Multisig Account
 * Token transfer due to Issuance, Distribution separation : XCM
 * Distribution of revenue from Income-generating securities : Wasm(Smart contract)
 
