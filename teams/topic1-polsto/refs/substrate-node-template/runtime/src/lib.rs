@@ -53,6 +53,7 @@ pub use sp_runtime::{Perbill, Permill};
 pub use pallet_template;
 pub use pallet_publish_platform;
 pub use pallet_contracts;
+pub use bwg_multisig;
 
 /// An index to a block.
 pub type BlockNumber = u32;
@@ -304,6 +305,24 @@ impl pallet_template::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 }
 
+parameter_types! {
+	// One storage item; key size is 32; value is size 4+4+16+32 bytes = 56 bytes.
+	pub const DepositBase: Balance = deposit(1, 88);
+	// Additional storage item size of 32 bytes.
+	pub const DepositFactor: Balance = deposit(0, 32);
+	pub const MaxSignatories: u32 = 100;
+}
+
+impl bwg_multisig::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type RuntimeCall = RuntimeCall;
+	type Currency = Balances;
+	type DepositBase = DepositBase;
+	type DepositFactor = DepositFactor;
+	type MaxSignatories = MaxSignatories;
+	type WeightInfo = bwg_multisig::weights::SubstrateWeight<Runtime>;
+}
+
 impl pallet_publish_platform::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type AssetId = AssetId;
@@ -399,6 +418,7 @@ construct_runtime!(
 		TemplateModule: pallet_template,
 		PublishPlatform: pallet_publish_platform,
 		Contracts: pallet_contracts,
+		Multisig: bwg_multisig,
 	}
 );
 
@@ -447,6 +467,7 @@ mod benches {
 		[pallet_timestamp, Timestamp]
 		[pallet_template, TemplateModule]
 		[pallet_publish_platform, PublishPlatform]
+		[bwg_multisig, Multisig]
 	);
 }
 
