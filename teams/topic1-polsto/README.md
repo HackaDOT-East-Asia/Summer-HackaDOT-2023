@@ -41,7 +41,7 @@ npm run build
 
 ### set zombienet config
 fix and use src/zombienet/examples/9999-polsto-config.toml
-  - set conficuration for each chains
+  - set configuration for each chains
 
 ### run
 ./\<zombienet runfile> spawn \<configfile> -p native
@@ -52,7 +52,7 @@ example
 ```
 
 ## About Team LS Unit
-Our team members belong to LS Unit. LS Unit is a research and development team to discover new IT businesses. LS Unit is currently developing an on-chain data analysis solution.
+Our team members belong to LS Unit of Bankware Global. LS Unit is a research and development team to discover new IT businesses. LS Unit is currently developing an on-chain data analysis solution.
 With the announcement of Korea’s STO guidelines, we have been devising a platform to tokenize real-world underlying assets since the beginning of this year.
 We are well aware of the charm of Substrate and various advantages of Polkadot blockchain ecosystems such as XCM, and we would like to actively use them.
 The output we are submitting to Hackadot is a demo version that implements some of the features of the platform we are envisioning.
