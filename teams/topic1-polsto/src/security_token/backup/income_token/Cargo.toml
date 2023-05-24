@@ -10,6 +10,8 @@ ink = { version = "4.0.0-beta", default-features = false }
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
 scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
+trait_erc20 = { path = "../trait_erc20", default-features = false }
+
 [lib]
 name = "income_token"
 path = "lib.rs"
@@ -24,5 +26,6 @@ std = [
     "ink/std",
     "scale/std",
     "scale-info/std",
+    "trait_erc20/std",
 ]
 ink-as-dependency = []

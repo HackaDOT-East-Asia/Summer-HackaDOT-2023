@@ -10,12 +10,15 @@ ink = { version = "4.0.0-beta", default-features = false }
 scale = { package = "parity-scale-codec", version = "3.2.2", default-features = false, features = ["derive"] }
 scale-info = { version = "2.1.1", default-features = false, features = ["derive"] }
 
+# Contract traits
+trait_erc20 = { path = "./trait_erc20", default-features = false }
+
 [lib]
 name = "security_token"
 path = "lib.rs"
 crate-type = [
 	# Used for normal contract Wasm blobs.
-	"cdylib",
+    "cdylib",
 ]
 
 [features]
@@ -30,3 +33,8 @@ ink-as-dependency = []
 [profile.release]
 overflow-checks = false     # Disable integer overflow checks.
 lto = false                 # Enable full link-time optimization.
+
+[workspace]
+members = [
+    "trait_erc20",
+]
