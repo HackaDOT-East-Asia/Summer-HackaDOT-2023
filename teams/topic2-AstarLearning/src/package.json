@@ -1,0 +1,25 @@
+{
+  "name": "AstarLearning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mashharuki/AstarLearning.git",
+  "author": "mashharuki",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "run-node": "yarn workspace backend run-node",
+    "compile:all": "yarn workspace backend compile:all",
+    "compile:flipper": "yarn workspace backend compile:flipper",
+    "compile:nft": "yarn workspace backend compile:nft",
+    "compile:content": "yarn workspace backend compile:content",
+    "build:nft": "yarn workspace backend build:nft",
+    "build:content": "yarn workspace backend build:content",
+    "test:nft": "yarn workspace backend test:nft",
+    "test:content": "yarn workspace backend test:content",
+    "frontend:start": "yarn workspace frontend dev",
+    "frontend:build": "yarn workspace frontend build"
+  }
+}
