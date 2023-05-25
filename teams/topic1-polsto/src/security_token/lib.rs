@@ -161,7 +161,7 @@ mod security_token {
                 for (_index, _subscriber) in subscribers.iter().enumerate() {
                     let amount = subscription_amounts[_index];
                     let supply = amount * total_supply / total_subscription_amount;
-    
+                    ink::env::debug_println!("supply:{}", supply);
                     this.balances.insert(&_subscriber, &supply);
         
                     this.env().emit_event(Mint { to: *_subscriber, value: supply });
@@ -380,10 +380,11 @@ mod security_token {
 
             if let Some(mut records) = self.balance_changed_record.get(holder) {
                 records.push(block_number);
+                self.balance_changed_record.insert(holder, &records);   
             } else {
                 let mut records = Vec::new();
                 records.push(block_number);
-
+                
                 self.balance_changed_record.insert(holder, &records);
             }       
         }
@@ -405,7 +406,7 @@ mod security_token {
             let this_contract = self.env().account_id();
             let mut base_erc20: ink::contract_ref!(BaseErc20) = token.into();
 
-            if base_erc20.allowance(from, this_contract) > amount {
+            if base_erc20.allowance(from, this_contract) < amount {
                 return Err(Error::NotEnoughIncomeToken);
             }
             
@@ -419,16 +420,17 @@ mod security_token {
                 amount_per_block: amount / u128::try_from(end_block - start_block + 1).unwrap(), 
                 total_supply,
             };
-
-            if let Some(mut incomes) = self.incomes.get(token) {
-                incomes.push(income);
+            ink::env::debug_println!("amount_per_block:{}", income.amount_per_block);
+            if let Some(mut account_incomes) = self.incomes.get(token) {
+                account_incomes.push(income);
+                self.incomes.insert(&token, &account_incomes);
             } else {
                 let mut incomes = Vec::new();
                 incomes.push(income);
 
                 self.incomes.insert(&token, &incomes);
             }
-
+            
             Ok(())
         }
 
@@ -446,12 +448,14 @@ mod security_token {
             let mut total_dividend_income = 0;
 
             ink::env::debug_println!("records.len:{}", records_len);
-            ink::env::debug_println!("incomes.len:{}, last_withdraw_offset:{}", incomes.len(), last_withdraw_offset);
+            ink::env::debug_println!("incomes.len:{}", incomes.len());
+            ink::env::debug_println!("last_withdraw_offset:{}", last_withdraw_offset);
             for _income in incomes.iter().skip(usize::try_from(last_withdraw_offset).unwrap()) {
                 for (_index, _record) in records.iter().enumerate() {
                     let _start_block = *records.get(_index).unwrap();
                     let _end_block = if _index + 1 == records_len { block_number } else { *records.get(_index + 1).unwrap() - 1 };
                     ink::env::debug_println!("_start_block:{}, _end_block:{}", _start_block, _end_block);
+                    ink::env::debug_println!("_income.end_block :{}, _income.start_block:{}", _income.start_block , _income.end_block);
                     if _start_block > _income.end_block || _end_block < _income.start_block {
                         continue;
                     }
