@@ -29,7 +29,6 @@
 
 ```
 # How to run your code
-- My dApp is both a protocol and a framework, so it doesn't make much sense to have it work on its own. So here I will explain how to implement a dApp using this protocol and how to run the example "flipper_oriented_dao" locally.
 ## How to implement using this protocol
 1. Implement the traits implemented in "protocol/logics/traits/contract_base/contract_base.rs" in your contract.
 2. We will implement the following two contract functions to interface with other contracts within this protocol:
@@ -72,6 +71,15 @@ NEXT_PUBLIC_BLOCKCHAIN_URL=ws://127.0.0.1:9944
 ```
 2. Run "yarn install" to install the required components.
 3. Run "yarn dev" and access "localhost:3000" in your browser.
+## How To Test
+### Protocol
+- There is a test code implemented with typescript in the path below.
+- By checking this code, it is possible to understand how the basics of the protocol work.
+- Path:teams/topic2-DAO_Oriented_Protocol/src/dao_oriented_protocol/protocol/test
+## Exapmple "DAO Oriented Flipper
+- There is a test code implemented with typescript in the path below.
+- By checking this code, it is possible to understand how the basics of the example dapp work.
+- Path:teams/topic2-DAO_Oriented_Protocol/src/dao_oriented_protocol/example/flipper_oriented_dao/contracts/test
 # Description of your team(Team Background with both LinkedIn and Github Page)
 ## Purpose Of Development
 - I develop dApps with two purposes. The reason is as follows.
