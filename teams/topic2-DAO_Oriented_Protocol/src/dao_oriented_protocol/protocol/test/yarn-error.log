@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/shin.takahashi/.nodebrew/node/v18.2.0/bin/node /Users/shin.takahashi/.yarn/releases/yarn-1.22.19.cjs init
+
+PATH: 
+  /Users/shin.takahashi/.yarn/bin:/Users/shin.takahashi/.config/yarn/global/node_modules/.bin:/usr/local/opt/go@1.16/bin:/Users/shin.takahashi/.nodebrew/current/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/shin.takahashi/.yarn/bin:/Users/shin.takahashi/.config/yarn/global/node_modules/.bin:/usr/local/opt/go@1.16/bin:/Users/shin.takahashi/.nodebrew/current/bin:/Users/shin.takahashi/.cargo/bin:/Users/shin.takahashi/.foundry/bin:/Users/shin.takahashi/.foundry/bin:/Users/shin.takahashi/.foundry/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/shin.takahashi/.yarn/releases/yarn-1.22.19.cjs:131557:13)
+      at Interface.emit (node:events:527:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1123:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:272:20)
+      at ReadStream.emit (node:events:527:28)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:527:28)
+      at addChunk (node:internal/streams/readable:324:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

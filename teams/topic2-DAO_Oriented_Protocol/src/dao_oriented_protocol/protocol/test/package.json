@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "test.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@727-ventures/typechain-types": "^1.0.0-beta.1",
+    "@polkadot/extension-dapp": "^0.46.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

@@ -1,0 +1,35 @@
+[package]
+name = "default_member"
+version = "0.1.0"
+authors = ["shin.takahashi"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.0.0", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+
+openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
+contract_helper = { path = "../../logics", default-features = false }
+# communication_base = { version = "0.1.0", path = "../communication_base", default-features = false, features = ["ink-as-dependency"] }
+default_contract = { version = "0.1.0", path = "../default_contract", default-features = false, features = ["ink-as-dependency"] }
+
+[lib]
+name = "default_member"
+path = "src/lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"cdylib",
+]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+    "contract_helper/std",
+]
+ink-as-dependency = []
