@@ -7,11 +7,18 @@ import "@rmrk-team/evm-contracts/contracts/RMRK/utils/RMRKCollectionMetadata.sol
 import "./access/PlatformGated.sol";
 import "./interfaces/IBonvoExperience.sol";
 
-contract BonvoExperience is IBonvoExperience, Ownable, RMRKCollectionMetadata, PlatformGated, RMRKEquippable {
+contract BonvoExperience is
+    IBonvoExperience,
+    Ownable,
+    RMRKCollectionMetadata,
+    PlatformGated,
+    RMRKEquippable
+{
     uint256 private _totalAssets;
     uint256 private _totalSupply;
     uint256 private immutable _maxSupply;
-    mapping(uint256 => string) private _tokenUri;
+    mapping(uint256 => string) private _tokenUris;
+    mapping(uint256 => address) private _ticketsContracts;
     address private _badges;
 
     constructor(
@@ -48,7 +55,7 @@ contract BonvoExperience is IBonvoExperience, Ownable, RMRKCollectionMetadata, P
         uint256 tokenId
     ) public view virtual returns (string memory) {
         _requireMinted(tokenId);
-        return _tokenUri[tokenId];
+        return _tokenUris[tokenId];
     }
 
     function setPlatform(address platform) public override onlyOwner {
@@ -57,18 +64,28 @@ contract BonvoExperience is IBonvoExperience, Ownable, RMRKCollectionMetadata, P
 
     function setBadges(address badges) public onlyOwner {
         _badges = badges;
-    }    
-    
+    }
+
     function addExperience(
         address owner,
-        string memory metadataURI
+        string memory tokenURI_,
+        string memory mainAssetURI,
+        address ticketsContract
     ) external onlyPlatform returns (uint256) {
         unchecked {
             ++_totalSupply;
         }
         uint256 tokenId = _totalSupply;
         _mint(owner, tokenId, "");
-        _tokenUri[tokenId] = metadataURI;
+        _tokenUris[tokenId] = tokenURI_;
+        _ticketsContracts[tokenId] = ticketsContract;
+
+        unchecked {
+            ++_totalAssets;
+        }
+        uint64 assetId = uint64(_totalAssets);
+
+        _addAssetEntry(assetId, mainAssetURI);
         return tokenId;
     }
 

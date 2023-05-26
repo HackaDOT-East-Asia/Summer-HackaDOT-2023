@@ -164,6 +164,12 @@ contract BonvoUserReputation is
         return tokenId;
     }
 
+    function updateUserData(string memory metadataURI) public {
+        uint256 tokenId = _tokenIdPerAddress[msg.sender];
+        if (tokenId == 0) revert AddressDoesNotHaveReputationNFT();
+        _tokenUri[tokenId] = metadataURI;
+    }
+
     function tokenURI(
         uint256 tokenId
     ) public view virtual returns (string memory) {
