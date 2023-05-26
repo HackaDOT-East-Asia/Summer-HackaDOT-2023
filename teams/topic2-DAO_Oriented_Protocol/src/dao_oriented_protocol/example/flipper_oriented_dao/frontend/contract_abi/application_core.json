@@ -1,0 +1,1598 @@
+{
+  "source": {
+    "hash": "0x77865c7ce2bfc5b272d9812c020681e7a198f43f09e4b5f5478efa3df6f14efd",
+    "language": "ink! 4.0.1",
+    "compiler": "rustc 1.68.0-nightly",
+    "build_info": {
+      "build_mode": "Debug",
+      "cargo_contract_version": "2.0.0",
+      "rust_toolchain": "nightly-x86_64-apple-darwin",
+      "wasm_opt_settings": {
+        "keep_debug_symbols": false,
+        "optimization_passes": "Z"
+      }
+    }
+  },
+  "contract": {
+    "name": "application_core",
+    "version": "0.1.0",
+    "authors": [
+      "shin.takahashi"
+    ]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [
+          {
+            "label": "pre_install_member_manger",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "pre_install_proposal_manager",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "pre_install_election",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "docs": [],
+        "label": "new",
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink_primitives",
+            "ConstructorResult"
+          ],
+          "type": 5
+        },
+        "selector": "0x9bae9d5e"
+      }
+    ],
+    "docs": [],
+    "events": [],
+    "lang_error": {
+      "displayName": [
+        "ink",
+        "LangError"
+      ],
+      "type": 7
+    },
+    "messages": [
+      {
+        "args": [],
+        "docs": [],
+        "label": "configure_pre_install_member_manager",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0x1b70807b"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "configure_pre_install_proposal_manager",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0x4ae97aa1"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "configure_pre_install_election",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0x1ec9307f"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_installed_software",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 11
+        },
+        "selector": "0x72d7c390"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_pre_installed_software",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 11
+        },
+        "selector": "0x542ff541"
+      },
+      {
+        "args": [
+          {
+            "label": "target_contract_address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "function_name",
+            "type": {
+              "displayName": [
+                "String"
+              ],
+              "type": 1
+            }
+          },
+          {
+            "label": "parameter_dsv",
+            "type": {
+              "displayName": [
+                "String"
+              ],
+              "type": 1
+            }
+          }
+        ],
+        "docs": [
+          " parameter_dsv: Specify the delimiter in the \"$X$\" format. ex1) \"aaa$1$bbb\" ex2) \"aaa$1$bbb$1$ccc$2$ddd\""
+        ],
+        "label": "execute_interface",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0xfb575858"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u128"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "install_software",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0xdfc7f2ee"
+      },
+      {
+        "args": [
+          {
+            "label": "target_proposal_id",
+            "type": {
+              "displayName": [
+                "u128"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "uninstall_software",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 8
+        },
+        "selector": "0x86568e39"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_proposal_info_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 16
+        },
+        "selector": "0x773d47b4"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_member_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 21
+        },
+        "selector": "0xe447d7c7"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_election_commision_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 21
+        },
+        "selector": "0x9eb114f2"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "check_election_commisioner",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 24
+        },
+        "selector": "0x54ca8cbd"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_election_info_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 26
+        },
+        "selector": "0xbfad1da2"
+      }
+    ]
+  },
+  "storage": {
+    "root": {
+      "layout": {
+        "struct": {
+          "fields": [
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xaedc625c",
+                              "ty": 0
+                            }
+                          },
+                          "name": "id"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xaedc625c",
+                              "name": "SoftwareKind",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "MemberManager"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "ProposalManager"
+                                },
+                                "2": {
+                                  "fields": [],
+                                  "name": "Election"
+                                },
+                                "3": {
+                                  "fields": [],
+                                  "name": "Other"
+                                }
+                              }
+                            }
+                          },
+                          "name": "kind"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xaedc625c",
+                              "name": "SoftwareType",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "PreInstall"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "NormalInstall"
+                                }
+                              }
+                            }
+                          },
+                          "name": "software_type"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xaedc625c",
+                              "ty": 1
+                            }
+                          },
+                          "name": "name"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xaedc625c",
+                              "ty": 2
+                            }
+                          },
+                          "name": "contract_address"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xaedc625c",
+                              "ty": 1
+                            }
+                          },
+                          "name": "description"
+                        }
+                      ],
+                      "name": "SoftwareInfo"
+                    }
+                  },
+                  "root_key": "0xaedc625c"
+                }
+              },
+              "name": "installed_software_list_with_address"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf70decfe",
+                              "ty": 0
+                            }
+                          },
+                          "name": "id"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xf70decfe",
+                              "name": "SoftwareKind",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "MemberManager"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "ProposalManager"
+                                },
+                                "2": {
+                                  "fields": [],
+                                  "name": "Election"
+                                },
+                                "3": {
+                                  "fields": [],
+                                  "name": "Other"
+                                }
+                              }
+                            }
+                          },
+                          "name": "kind"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xf70decfe",
+                              "name": "SoftwareType",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "PreInstall"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "NormalInstall"
+                                }
+                              }
+                            }
+                          },
+                          "name": "software_type"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf70decfe",
+                              "ty": 1
+                            }
+                          },
+                          "name": "name"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf70decfe",
+                              "ty": 2
+                            }
+                          },
+                          "name": "contract_address"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf70decfe",
+                              "ty": 1
+                            }
+                          },
+                          "name": "description"
+                        }
+                      ],
+                      "name": "SoftwareInfo"
+                    }
+                  },
+                  "root_key": "0xf70decfe"
+                }
+              },
+              "name": "installed_software_list_with_id"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x54e2c219",
+                              "ty": 0
+                            }
+                          },
+                          "name": "id"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0x54e2c219",
+                              "name": "SoftwareKind",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "MemberManager"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "ProposalManager"
+                                },
+                                "2": {
+                                  "fields": [],
+                                  "name": "Election"
+                                },
+                                "3": {
+                                  "fields": [],
+                                  "name": "Other"
+                                }
+                              }
+                            }
+                          },
+                          "name": "kind"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0x54e2c219",
+                              "name": "SoftwareType",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "PreInstall"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "NormalInstall"
+                                }
+                              }
+                            }
+                          },
+                          "name": "software_type"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x54e2c219",
+                              "ty": 1
+                            }
+                          },
+                          "name": "name"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x54e2c219",
+                              "ty": 2
+                            }
+                          },
+                          "name": "contract_address"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x54e2c219",
+                              "ty": 1
+                            }
+                          },
+                          "name": "description"
+                        }
+                      ],
+                      "name": "SoftwareInfo"
+                    }
+                  },
+                  "root_key": "0x54e2c219"
+                }
+              },
+              "name": "pre_installed_software_list_with_id"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "next_software_id"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "next_pre_software_id"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 2
+                }
+              },
+              "name": "pre_install_member_manager"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 2
+                }
+              },
+              "name": "pre_install_proposal_manager"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 2
+                }
+              },
+              "name": "pre_install_election"
+            }
+          ],
+          "name": "ApplicationCore"
+        }
+      },
+      "root_key": "0x00000000"
+    }
+  },
+  "types": [
+    {
+      "id": 0,
+      "type": {
+        "def": {
+          "primitive": "u128"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": {
+        "def": {
+          "primitive": "str"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 3,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "AccountId"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "array": {
+            "len": 32,
+            "type": 4
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": {
+        "def": {
+          "primitive": "u8"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 6
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 6
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "type": {
+        "def": {
+          "tuple": []
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 1,
+                "name": "CouldNotReadInput"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "LangError"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 9
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 9
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 6
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 10
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 6
+          },
+          {
+            "name": "E",
+            "type": 10
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "TheSoftwareIsAlreadyInstalled"
+              },
+              {
+                "index": 1,
+                "name": "TheSoftwareDoesNotExists"
+              },
+              {
+                "index": 2,
+                "name": "CallFromInvalidOrigin"
+              },
+              {
+                "index": 3,
+                "name": "UserDoesNotExists"
+              },
+              {
+                "index": 4,
+                "name": "TheValueCanSetOnlyOnce"
+              },
+              {
+                "index": 5,
+                "name": "TheApplicationCoreAddressStringMustBeSet"
+              },
+              {
+                "index": 6,
+                "name": "InvalidTheApplicationCoreAddressString"
+              },
+              {
+                "index": 7,
+                "name": "CommunicationBaseCallingError"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 1,
+                    "typeName": "String"
+                  }
+                ],
+                "index": 8,
+                "name": "Custom"
+              }
+            ]
+          }
+        },
+        "path": [
+          "application_core",
+          "application_core",
+          "Error"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 12
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 12
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 13
+          }
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "id",
+                "type": 0,
+                "typeName": "u128"
+              },
+              {
+                "name": "kind",
+                "type": 14,
+                "typeName": "SoftwareKind"
+              },
+              {
+                "name": "software_type",
+                "type": 15,
+                "typeName": "SoftwareType"
+              },
+              {
+                "name": "name",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "contract_address",
+                "type": 2,
+                "typeName": "AccountId"
+              },
+              {
+                "name": "description",
+                "type": 1,
+                "typeName": "String"
+              }
+            ]
+          }
+        },
+        "path": [
+          "application_core",
+          "application_core",
+          "SoftwareInfo"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "MemberManager"
+              },
+              {
+                "index": 1,
+                "name": "ProposalManager"
+              },
+              {
+                "index": 2,
+                "name": "Election"
+              },
+              {
+                "index": 3,
+                "name": "Other"
+              }
+            ]
+          }
+        },
+        "path": [
+          "application_core",
+          "application_core",
+          "SoftwareKind"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "PreInstall"
+              },
+              {
+                "index": 1,
+                "name": "NormalInstall"
+              }
+            ]
+          }
+        },
+        "path": [
+          "application_core",
+          "application_core",
+          "SoftwareType"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 17
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 17
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 18
+          }
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "id",
+                "type": 0,
+                "typeName": "u128"
+              },
+              {
+                "name": "kind",
+                "type": 19,
+                "typeName": "ProposalKind"
+              },
+              {
+                "name": "title",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "outline",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "description",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "github_url",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "target_contract",
+                "type": 2,
+                "typeName": "AccountId"
+              },
+              {
+                "name": "target_function",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "parameters",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "status",
+                "type": 20,
+                "typeName": "ProposalStatus"
+              }
+            ]
+          }
+        },
+        "path": [
+          "contract_helper",
+          "traits",
+          "types",
+          "types",
+          "ProposalInfo"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "index": 1,
+                "name": "ResetElectionCommisioner"
+              },
+              {
+                "index": 2,
+                "name": "Other"
+              }
+            ]
+          }
+        },
+        "path": [
+          "contract_helper",
+          "traits",
+          "types",
+          "types",
+          "ProposalKind"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "index": 1,
+                "name": "Proposed"
+              },
+              {
+                "index": 2,
+                "name": "Voting"
+              },
+              {
+                "index": 3,
+                "name": "FinishVoting"
+              },
+              {
+                "index": 4,
+                "name": "Executed"
+              },
+              {
+                "index": 5,
+                "name": "Denied"
+              },
+              {
+                "index": 6,
+                "name": "Finished"
+              }
+            ]
+          }
+        },
+        "path": [
+          "contract_helper",
+          "traits",
+          "types",
+          "types",
+          "ProposalStatus"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 22
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 22
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 23
+          }
+        }
+      }
+    },
+    {
+      "id": 23,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "id",
+                "type": 0,
+                "typeName": "u128"
+              },
+              {
+                "name": "name",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "address",
+                "type": 2,
+                "typeName": "AccountId"
+              }
+            ]
+          }
+        },
+        "path": [
+          "contract_helper",
+          "traits",
+          "types",
+          "types",
+          "MemberInfo"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 25
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 25
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "type": {
+        "def": {
+          "primitive": "bool"
+        }
+      }
+    },
+    {
+      "id": 26,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 27
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 27
+          },
+          {
+            "name": "E",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 28
+          }
+        }
+      }
+    },
+    {
+      "id": 28,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "id",
+                "type": 0,
+                "typeName": "u128"
+              },
+              {
+                "name": "proposal_id",
+                "type": 0,
+                "typeName": "u128"
+              },
+              {
+                "name": "minimum_voter_turnout_percentage",
+                "type": 29,
+                "typeName": "u64"
+              },
+              {
+                "name": "passing_percentage",
+                "type": 29,
+                "typeName": "u64"
+              },
+              {
+                "name": "number_of_votes",
+                "type": 29,
+                "typeName": "u64"
+              },
+              {
+                "name": "count_of_yes",
+                "type": 29,
+                "typeName": "u64"
+              },
+              {
+                "name": "count_of_no",
+                "type": 29,
+                "typeName": "u64"
+              },
+              {
+                "name": "list_of_voters",
+                "type": 30,
+                "typeName": "Vec<AccountId>"
+              },
+              {
+                "name": "list_of_electoral_commissioner",
+                "type": 30,
+                "typeName": "Vec<AccountId>"
+              },
+              {
+                "name": "is_passed",
+                "type": 31,
+                "typeName": "Option<bool>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "contract_helper",
+          "traits",
+          "types",
+          "types",
+          "ElectionInfo"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "type": {
+        "def": {
+          "primitive": "u64"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 31,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 25
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 25
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    }
+  ],
+  "version": "4"
+}
