@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "protocol/application_core",
+    "protocol/pre_install/default_contract",
+    "protocol/pre_install/default_election",
+    "protocol/pre_install/default_member",
+    "protocol/pre_install/default_proposal",
+    "protocol/logics",
+    "example/flipper_oriented_dao/contracts/dao_oriented_flipper",
+    "example/community_protocol/contracts/community_protocol",
+    "example/community_protocol/contracts/update_member_manager",
+    "example/community_protocol/contracts/community_list_manager",
+]
