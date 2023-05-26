@@ -56,3 +56,7 @@ Our team members belong to LS Unit of Bankware Global. LS Unit is a research and
 With the announcement of Korea’s STO guidelines, we have been devising a platform to tokenize real-world underlying assets since the beginning of this year.
 We are well aware of the charm of Substrate and various advantages of Polkadot blockchain ecosystems such as XCM, and we would like to actively use them.
 The output we are submitting to Hackadot is a demo version that implements some of the features of the platform we are envisioning.
+* Park Sangwook ([Github](https://github.com/ikisis)) : Scenario, Prototyping Security token
+* Kim Yeongbae ([Github](https://github.com/whybbbbb)) : XCM call, Configuration of Parachain, Relaychain nodes
+* Kim Heejae ([Github](https://github.com/HeeJaeKim)) : Security Token Contract (Wasm, Ink!)
+* Lee Junyoung ([Github](https://github.com/jUnYOUngLee96)) : Customization of Multisig Account
