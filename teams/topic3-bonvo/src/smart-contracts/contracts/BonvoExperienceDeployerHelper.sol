@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.18;
 
-import "@rmrk-team/evm-contracts/contracts/implementations/nativeTokenPay/RMRKEquippableImpl.sol";
 import "./interfaces/IBonvoUserReputation.sol";
 import "./interfaces/IBonvoExperience.sol";
 import "./interfaces/IBonvoExperienceDeployerHelper.sol";
 import "./BonvoExperienceTicket.sol";
-import "./BonvoExperience.sol";
 import "./access/PlatformGated.sol";
 
 error ExperienceIdMismatch();
