@@ -1,6 +1,6 @@
 # NFT Camera
 test
-##Hard Ware
+## Hard Ware
 test
-###MATERIALS
+### MATERIALS
 test
