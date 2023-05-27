@@ -43,17 +43,17 @@ const buildBytesForRegister = (metadataURI) => {
 const getEncodedData = async (api, contractAddress, contractCall) => {
   const ethProvider = new ethers.WebSocketProvider(evmProvider);
 
-  const gasLimit = await ethProvider.estimateGas({
+  const gasLimit = (await ethProvider.estimateGas({
     to: contractAddress,
     data: contractCall,
     from: aliceEVM
     // value: ethers.parseEther('0.01'),
-  });
+  })) * 2n;
   console.log(`Gas required for call is ${gasLimit.toString()}`);
 
   const callParams = {
     V2: {
-      gasLimit: gasLimit + gasLimit, // Estimated plus some extra gas
+      gasLimit: gasLimit, // Estimated plus some extra gas
       action: { Call: contractAddress }, // Contract Address
     //   value: ethers.parseEther('0.01'), // 0.01 DEV
       input: contractCall, // Swap encoded calldata
@@ -64,7 +64,7 @@ const getEncodedData = async (api, contractAddress, contractCall) => {
 
   const encodedCall = tx.method.toHex();
   console.log(`EVM Calldata: ${encodedCall}`);
-  return encodedCall;
+  return [encodedCall, gasLimit];
 };
 
 const generateCallData = async (callDataType) => {
@@ -81,14 +81,14 @@ const generateCallData = async (callDataType) => {
   api.disconnect();
 };
 
-const buildXCMMessage = async (transactBytes) => {
+const buildXCMMessage = async (transactBytes, gasLimit) => {
   const substrateProvider = new WsProvider(relayProvider);
   const api = await ApiPromise.create({ provider: substrateProvider });
 
   // 1. Input Data
-  const amountToWithdraw = BigInt(1 * 10 ** 15); // 0.001 DEV
+  const amountToWithdraw = BigInt(1 * 10 ** 16); // 0.01 DEV
   const devMultiLocation = { parents: 0, interior: { X1: { PalletInstance: 3 } } };
-  const weightTransact = BigInt(4350000000); // 25000 * Gas limit of EVM call
+  const weightTransact = Number(gasLimit) * 50000 ; // 50000 * Gas limit of EVM call
   const multiLocAccount = '0x4e21340c3465ec0aa91542de3d4c5f4fc1def526';
 
   // 2. XCM Destination (Moonbase Alpha Parachain ID 1000)
@@ -175,8 +175,9 @@ const sendXCM = async (xcmCallData) => {
 
 
 const run = async () => {
-  const transactBytes = await generateCallData(CallDataType.Allowance);
-  const xcmMessage = await buildXCMMessage(transactBytes);
+
+  const [transactBytes, gasLimit] = await generateCallData(CallDataType.Allowance);
+  const xcmMessage = await buildXCMMessage(transactBytes, gasLimit);
   await sendXCM(xcmMessage);
 };
 
