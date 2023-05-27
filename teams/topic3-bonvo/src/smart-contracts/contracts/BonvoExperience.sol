@@ -7,7 +7,7 @@ import "@rmrk-team/evm-contracts/contracts/RMRK/utils/RMRKCollectionMetadata.sol
 import "./access/PlatformGated.sol";
 import "./interfaces/IBonvoExperience.sol";
 
-contract BonvoExperience is
+contract BonvoExperiencesCollection is
     IBonvoExperience,
     Ownable,
     RMRKCollectionMetadata,

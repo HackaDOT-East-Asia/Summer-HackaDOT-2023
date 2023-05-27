@@ -93,7 +93,7 @@ contract BonvoPlatform is Ownable {
         private _propertyToDayToIsBooked;
 
     // EXPERIENCES VARIABLES
-    address private _experiencesContract;
+    address private _experiencesCollectionContract;
     address private _deployerHelperContract;
     mapping(uint256 experienceId => address ticketsContract)
         private _experienceToTicketsContract;
@@ -159,12 +159,10 @@ contract BonvoPlatform is Ownable {
     }
 
     function setExperiencesContracts(
-        address userReputationContract,
         address experiencesContract,
         address deployerHelperContract
     ) public onlyOwner {
-        _userReputationContract = userReputationContract;
-        _experiencesContract = experiencesContract;
+        _experiencesCollectionContract = experiencesContract;
         _deployerHelperContract = deployerHelperContract;
     }
 
@@ -424,7 +422,7 @@ contract BonvoPlatform is Ownable {
         _ticketsContractToExperienceId[experienceTicketsAddress] = experienceId;
 
         // Add NFT in a collection of all experiences, this will be used to add badges to the experience.
-        uint256 nftExperienceId = IBonvoExperience(_experiencesContract)
+        uint256 nftExperienceId = IBonvoExperience(_experiencesCollectionContract)
             .addExperience(
                 _msgSender(),
                 collectionMetadataURI,

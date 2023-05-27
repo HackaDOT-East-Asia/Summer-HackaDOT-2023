@@ -3,10 +3,13 @@ import { expect } from 'chai';
 import { loadFixture, time } from '@nomicfoundation/hardhat-network-helpers';
 import {
   BonvoBadge,
+  BonvoExperiencesCollection,
+  BonvoExperienceDeployerHelper,
   BonvoPlatform,
   BonvoProperty,
   BonvoToken,
   BonvoUserReputation,
+  BonvoExperienceTicket,
 } from '../typechain-types';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 import { BigNumber } from 'ethers';
@@ -16,11 +19,13 @@ const REGISTER_FEE = ethers.utils.parseEther('1');
 const PLATFORM_FEE_BPS = 500; // 5%
 
 async function fixture(): Promise<{
-  escrow: BonvoPlatform;
+  platform: BonvoPlatform;
   property: BonvoProperty;
   userReputation: BonvoUserReputation;
   badge: BonvoBadge;
   token: BonvoToken;
+  bonvoExperiencesCollection: BonvoExperiencesCollection;
+  bonvoExperienceDeployerHelper: BonvoExperienceDeployerHelper;
 }> {
   const [deployer] = await ethers.getSigners();
 
@@ -61,9 +66,9 @@ async function fixture(): Promise<{
   );
   await userReputation.deployed();
 
-  const escrowFactory = await ethers.getContractFactory('BonvoPlatform');
-  const escrow = <BonvoPlatform>(
-    await escrowFactory.deploy(
+  const platformFactory = await ethers.getContractFactory('BonvoPlatform');
+  const platform = <BonvoPlatform>(
+    await platformFactory.deploy(
       token.address,
       property.address,
       userReputation.address,
@@ -74,28 +79,50 @@ async function fixture(): Promise<{
       deployer.address,
     )
   );
-  await escrow.deployed();
+  await platform.deployed();
 
-  await property.setPlatform(escrow.address);
-  await userReputation.setPlatform(escrow.address);
-  await badge.setPlatform(escrow.address);
+  const bonvoExperiencesCollectionFactory = await ethers.getContractFactory('BonvoExperiencesCollection');
+  const bonvoExperiencesCollection = <BonvoExperiencesCollection>(
+    await bonvoExperiencesCollectionFactory.deploy(
+      ethers.constants.MaxUint256,
+      'ipfs://collectionMetadata',
+      platform.address,
+      badge.address,
+    )
+  );
 
-  return { escrow, property, userReputation, badge, token };
+  const bonvoExperienceDeployerHelperFactory = await ethers.getContractFactory('BonvoExperienceDeployerHelper');
+  const bonvoExperienceDeployerHelper = <BonvoExperienceDeployerHelper>(
+    await bonvoExperienceDeployerHelperFactory.deploy(platform.address)
+  );
+
+  await platform.setExperiencesContracts(bonvoExperiencesCollection.address, bonvoExperienceDeployerHelper.address);
+
+
+  await property.setPlatform(platform.address);
+  await userReputation.setPlatform(platform.address);
+  await badge.setPlatform(platform.address);
+
+  return { platform, property, userReputation, badge, token, bonvoExperiencesCollection, bonvoExperienceDeployerHelper };
 }
 
 describe('Bonvo', async () => {
-  let escrow: BonvoPlatform;
+  let platform: BonvoPlatform;
   let property: BonvoProperty;
   let userReputation: BonvoUserReputation;
   let badge: BonvoBadge;
   let token: BonvoToken;
+  let bonvoExperiencesCollection: BonvoExperiencesCollection;
+  let bonvoExperienceDeployerHelper: BonvoExperienceDeployerHelper;
   let deployer: SignerWithAddress;
   let landlord: SignerWithAddress;
   let tenant: SignerWithAddress;
+  let experienceOwner: SignerWithAddress;
+  let experienceTaker: SignerWithAddress;
 
   beforeEach(async function () {
-    [deployer, landlord, tenant] = await ethers.getSigners();
-    ({ escrow, property, userReputation, badge, token } = await loadFixture(fixture));
+    [deployer, landlord, tenant, experienceOwner, experienceTaker] = await ethers.getSigners();
+    ({ platform, property, userReputation, badge, token, bonvoExperiencesCollection, bonvoExperienceDeployerHelper } = await loadFixture(fixture));
   });
 
   it('can get names and symbols', async function () {
@@ -105,8 +132,8 @@ describe('Bonvo', async () => {
 
   it('can register', async function () {
     await token.mint(landlord.address, REGISTER_FEE);
-    await token.connect(landlord).approve(escrow.address, REGISTER_FEE);
-    await expect(escrow.connect(landlord).registerUser('ipfs://userMetadata'))
+    await token.connect(landlord).approve(platform.address, REGISTER_FEE);
+    await expect(platform.connect(landlord).registerUser('ipfs://userMetadata'))
       .to.emit(userReputation, 'Transfer')
       .withArgs(ethers.constants.AddressZero, landlord.address, 1);
     expect(await userReputation.tokenURI(1)).to.eql('ipfs://userMetadata');
@@ -115,18 +142,26 @@ describe('Bonvo', async () => {
   describe('With registered users', async () => {
     beforeEach(async function () {
       await token.mint(landlord.address, REGISTER_FEE);
-      await token.connect(landlord).approve(escrow.address, REGISTER_FEE);
-      await escrow.connect(landlord).registerUser('ipfs://userMetadataA');
+      await token.connect(landlord).approve(platform.address, REGISTER_FEE);
+      await platform.connect(landlord).registerUser('ipfs://userMetadataA');
 
       await token.mint(tenant.address, REGISTER_FEE);
-      await token.connect(tenant).approve(escrow.address, REGISTER_FEE);
-      await escrow.connect(tenant).registerUser('ipfs://userMetadataB');
+      await token.connect(tenant).approve(platform.address, REGISTER_FEE);
+      await platform.connect(tenant).registerUser('ipfs://userMetadataB');
+
+      await token.mint(experienceOwner.address, REGISTER_FEE);
+      await token.connect(experienceOwner).approve(platform.address, REGISTER_FEE);
+      await platform.connect(experienceOwner).registerUser('ipfs://userMetadataC');
+
+      await token.mint(experienceTaker.address, REGISTER_FEE);
+      await token.connect(experienceTaker).approve(platform.address, REGISTER_FEE);
+      await platform.connect(experienceTaker).registerUser('ipfs://userMetadataD');
     });
 
     it('can add property', async function () {
       await token.mint(landlord.address, ADD_PROPERTY_FEE);
-      await token.connect(landlord).approve(escrow.address, ADD_PROPERTY_FEE);
-      await expect(escrow.connect(landlord).addProperty('ipfs://propertyMetadata'))
+      await token.connect(landlord).approve(platform.address, ADD_PROPERTY_FEE);
+      await expect(platform.connect(landlord).addProperty('ipfs://propertyMetadata'))
         .to.emit(property, 'Transfer')
         .withArgs(ethers.constants.AddressZero, landlord.address, 1);
 
@@ -137,8 +172,8 @@ describe('Bonvo', async () => {
       let propertyId: BigNumber;
       beforeEach(async function () {
         await token.mint(landlord.address, ADD_PROPERTY_FEE);
-        await token.connect(landlord).approve(escrow.address, ADD_PROPERTY_FEE);
-        await escrow.connect(landlord).addProperty('ipfs://propertyMetadata');
+        await token.connect(landlord).approve(platform.address, ADD_PROPERTY_FEE);
+        await platform.connect(landlord).addProperty('ipfs://propertyMetadata');
         propertyId = await property.totalSupply();
       });
 
@@ -156,8 +191,8 @@ describe('Bonvo', async () => {
       it('can list property', async function () {
         const pricePerDay = ethers.utils.parseEther('100');
         const deposit = ethers.utils.parseEther('300');
-        await escrow.connect(landlord).listProperty(propertyId, pricePerDay, deposit);
-        expect(await escrow.getListing(propertyId)).to.eql([
+        await platform.connect(landlord).listProperty(propertyId, pricePerDay, deposit);
+        expect(await platform.getListing(propertyId)).to.eql([
           pricePerDay,
           deposit,
           landlord.address,
@@ -174,13 +209,13 @@ describe('Bonvo', async () => {
         beforeEach(async function () {
           // Create a second property:
           await token.mint(landlord.address, ADD_PROPERTY_FEE);
-          await token.connect(landlord).approve(escrow.address, ADD_PROPERTY_FEE);
-          await escrow.connect(landlord).addProperty('ipfs://propertyMetadata2');
+          await token.connect(landlord).approve(platform.address, ADD_PROPERTY_FEE);
+          await platform.connect(landlord).addProperty('ipfs://propertyMetadata2');
           propertyId2 = await property.totalSupply();
 
           // list both
-          await escrow.connect(landlord).listProperty(propertyId, pricePerDay1, deposit1);
-          await escrow.connect(landlord).listProperty(propertyId2, pricePerDay2, deposit2);
+          await platform.connect(landlord).listProperty(propertyId, pricePerDay1, deposit1);
+          await platform.connect(landlord).listProperty(propertyId2, pricePerDay2, deposit2);
 
           // Add images to both
           await property
@@ -196,7 +231,7 @@ describe('Bonvo', async () => {
         });
 
         it('can get listings', async function () {
-          const listings = await escrow.getAllListings();
+          const listings = await platform.getAllListings();
           expect(listings).to.eql([
             [propertyId, 'ipfs://propertyMetadata', pricePerDay1, deposit1, landlord.address],
             [propertyId2, 'ipfs://propertyMetadata2', pricePerDay2, deposit2, landlord.address],
@@ -213,11 +248,11 @@ describe('Bonvo', async () => {
             startDateBn.add(2 * 24 * 60 * 60),
           ];
           await token.mint(tenant.address, pricePerDay1.mul(3).add(deposit1));
-          await token.connect(tenant).approve(escrow.address, pricePerDay1.mul(3).add(deposit1));
-          await escrow.connect(tenant).book(propertyId, dates);
-          const bookingId = await escrow.getTotalBookings();
+          await token.connect(tenant).approve(platform.address, pricePerDay1.mul(3).add(deposit1));
+          await platform.connect(tenant).book(propertyId, dates);
+          const bookingId = await platform.getTotalBookings();
 
-          expect(await escrow.getBooking(bookingId)).to.eql([
+          expect(await platform.getBooking(bookingId)).to.eql([
             bookingId,
             propertyId,
             dates,
@@ -238,13 +273,13 @@ describe('Bonvo', async () => {
             const startDateBn = bn(Math.floor(startDate.getTime() / 1000));
             dates = [startDateBn, startDateBn.add(24 * 60 * 60), startDateBn.add(2 * 24 * 60 * 60)];
             await token.mint(tenant.address, pricePerDay1.mul(3).add(deposit1));
-            await token.connect(tenant).approve(escrow.address, pricePerDay1.mul(3).add(deposit1));
-            await escrow.connect(tenant).book(propertyId, dates);
-            bookingId = await escrow.getTotalBookings();
+            await token.connect(tenant).approve(platform.address, pricePerDay1.mul(3).add(deposit1));
+            await platform.connect(tenant).book(propertyId, dates);
+            bookingId = await platform.getTotalBookings();
           });
 
           it('can get bookings for tenant', async function () {
-            expect(await escrow.getBookingsForTenant(tenant.address)).to.eql([
+            expect(await platform.getBookingsForTenant(tenant.address)).to.eql([
               [
                 bookingId,
                 propertyId,
@@ -261,8 +296,8 @@ describe('Bonvo', async () => {
             await time.increase(4 * 24 * 60 * 60); // 4 days later
             const initialBeneficiaryBalance = await token.balanceOf(deployer.address);
 
-            await escrow.connect(tenant).confirmRentalAsTenant(bookingId);
-            await escrow.connect(landlord).confirmRentalAsLandlord(bookingId);
+            await platform.connect(tenant).confirmRentalAsTenant(bookingId);
+            await platform.connect(landlord).confirmRentalAsLandlord(bookingId);
             const platformFee = pricePerDay1.mul(3).mul(PLATFORM_FEE_BPS).div(10000);
             // Tenant got deposit back
             expect(await token.balanceOf(tenant.address)).to.equal(deposit1);
@@ -279,14 +314,14 @@ describe('Bonvo', async () => {
           describe('With finished booking', async () => {
             beforeEach(async function () {
               await time.increase(4 * 24 * 60 * 60); // 4 days later
-              await escrow.connect(tenant).confirmRentalAsTenant(bookingId);
-              await escrow.connect(landlord).confirmRentalAsLandlord(bookingId);
+              await platform.connect(tenant).confirmRentalAsTenant(bookingId);
+              await platform.connect(landlord).confirmRentalAsLandlord(bookingId);
             });
 
             it('can add badges', async function () {
-              await escrow.connect(tenant).giveBadgeToProperty(bookingId, 3); // Clean property
-              await escrow.connect(tenant).giveBadgeToLandlord(bookingId, 1); // Friendly landlord
-              await escrow.connect(landlord).giveBadgeToTenant(bookingId, 2); // Punctual tenant
+              await platform.connect(tenant).giveBadgeToProperty(bookingId, 3); // Clean property
+              await platform.connect(tenant).giveBadgeToLandlord(bookingId, 1); // Friendly landlord
+              await platform.connect(landlord).giveBadgeToTenant(bookingId, 2); // Punctual tenant
 
               expect(await property.getAllInfo(propertyId)).to.eql([
                 'ipfs://propertyMetadata',
@@ -321,7 +356,64 @@ describe('Bonvo', async () => {
         });
       });
     });
+
+    it('can create experience', async function () {
+      await expect(platform.connect(experienceOwner).createExperience('Crazy Museum', 'CM', 'ipfs://experience1', 'ipfs://experience1.png', 1000)).to.emit(
+        platform,
+        'NewExperience',
+      )
+      const ticketsContractAddress = await platform.getTicketsContract(1);
+      expect(await platform.getAllExperiences()).to.eql([
+        [ethers.BigNumber.from(1), ticketsContractAddress]
+      ])
+    });
+
+    describe('With created experiences', async () => {
+      let exp1Tickets: BonvoExperienceTicket;
+      let exp2Tickets: BonvoExperienceTicket;
+      let dates: BigNumber[];
+
+      beforeEach(async function () {
+        await platform.connect(experienceOwner).createExperience('Crazy Museum', 'CM', 'ipfs://experience1Meta', 'ipfs://experience1.png', 1000);
+        await platform.connect(experienceOwner).createExperience('Jazz at the Park', 'JP', 'ipfs://experience2Meta', 'ipfs://experience2.png', 2000);
+
+        const ticketsFactory = await ethers.getContractFactory('BonvoExperienceTicket');
+        exp1Tickets = ticketsFactory.attach(await platform.getTicketsContract(1));
+        exp2Tickets = ticketsFactory.attach(await platform.getTicketsContract(2));
+
+        const startDate = new Date();
+        startDate.setUTCHours(0, 0, 0, 0);
+        const startDateBn = bn(Math.floor(startDate.getTime() / 1000));
+        dates = [
+          startDateBn,
+          startDateBn.add(24 * 60 * 60),
+          startDateBn.add(2 * 24 * 60 * 60),
+        ];
+      });
+
+      it('can open tickets', async function () {
+        await exp1Tickets.connect(experienceOwner).openTicketsForDates(10, dates);
+        expect(await exp1Tickets.getAvailableTicketsForDate(dates[0])).to.equal(10);
+      });
+
+      it('can buy and use tickets', async function () {
+        await exp1Tickets.connect(experienceOwner).openTicketsForDates(10, dates);
+        
+        await exp1Tickets.connect(experienceTaker).buyTickets(experienceTaker.address, 2, dates[0]);
+        expect(await exp1Tickets.getAvailableTicketsForDate(dates[0])).to.equal(8);
+        expect(await exp1Tickets.totalSupply()).to.equal(2);
+
+        await exp1Tickets.connect(experienceTaker).useTicket(1, dates[0], "0x1234");
+        expect(await exp1Tickets.getTicketMemo(1)).to.equal("0x1234");
+      });
+
+      it('did create nfts on experience collection', async function () {
+        expect(await bonvoExperiencesCollection.totalSupply()).to.equal(2);
+        expect(await bonvoExperiencesCollection.tokenURI(1)).to.equal('ipfs://experience1Meta');
+      });
+    });
   });
+
 });
 
 function bn(x: number): BigNumber {

@@ -57,13 +57,16 @@ contract BonvoExperienceTicket is
         _price = price;
     }
 
+    function totalSupply() public view returns (uint256) {
+        return _totalSupply;
+    }
+
     function openTicketsForDates(
         uint256 quantity,
         uint256[] memory dates
     ) public onlyOwnerOrContributor {
         uint256 length = dates.length;
         for (uint256 i; i < length; ) {
-            _totalTicketsPerDate[dates[i]] += quantity;
             _totalTicketsPerDate[dates[i]] += quantity;
             unchecked {
                 ++i;
@@ -92,6 +95,7 @@ contract BonvoExperienceTicket is
 
         for (uint256 i = nextToken; i < totalSupplyOffset; ) {
             _safeMint(to, i, "");
+            _datePerTicket[i] = date;
             _ticketsIdsPerUser[to].push(i);
             unchecked {
                 ++i;
