@@ -24,7 +24,7 @@ const buildBytesForRegister = (metadataURI) => {
   // 0000000000000000000000000000000000000000000000000000000000000053 // Length
   // 68747470733a2f2f6261666b72656968687762656171693464613273686d7177 // metadata URI as hex
   // 6b63706b617137747866703465706e376d776b6d6b3365787a7534697277646a
-  // 3761752e697066732e647765622e6c696e6b2f00000000000000000000000000
+  // 3761752e697066732e647765622e6c696e6b2f00000000000000000000000000 
   const method = '0x704f1b94';
   const offset = '0000000000000000000000000000000000000000000000000000000000000020';
   const length = metadataURI.length.toString(16).padStart(64, '0');
@@ -76,7 +76,6 @@ const getEncodedData = async (api, ethProvider, contractAddress, contractCall) =
   // 6. Get SCALE Encoded Calldata
   const encodedCall = tx.method.toHex();
   console.log(`Encoded Calldata: ${encodedCall}`);
-
   api.disconnect();
 };
 
