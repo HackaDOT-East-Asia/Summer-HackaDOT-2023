@@ -32,7 +32,16 @@ Make sure the Raspberry Pi recognizes the camera.
 ```
 vcgencmd get_camera  
 ```
-
+### 2.Increase swap space
+Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2024.
+```
+CONF_SWAPSIZE=2024
+```
+Check that the SWAP space has increased.
+```
+sudo /etc/init.d/dphys-swapfile restart
+swapon -s
+```
 ### 3.Touch Screen
 Download and unzip LCD_show_35hdmi.tar.gz.
 http://osoyoo.com/driver/LCD_show_35hdmi.tar.gz
@@ -65,14 +74,7 @@ sudo vi 40-libinput.conf
 再起動。
 タッチ位置とカーソル位置が合った。
 
-### 4.Increase swap space
-swapon -s
-102396 -> 現在102Mbyte
-
-/etc/dphys-swapfileの CONF_SWAPSIZE=100 を CONF_SWAPSIZE=2024に変更。
-sudo /etc/init.d/dphys-swapfile restart
-swapon -s
-2072572 -> スワップが2072Mbyteに変更された。
+。
 
 ### 5.Chromium
 
