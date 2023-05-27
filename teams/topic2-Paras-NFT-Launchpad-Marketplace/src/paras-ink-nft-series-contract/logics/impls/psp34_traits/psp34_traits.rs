@@ -19,28 +19,19 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-use ink::prelude::{
-    string::String as PreludeString,
-    vec::Vec,
-};
+use ink::prelude::{string::String as PreludeString, string::ToString, vec::Vec};
 
-use crate::impls::launchpad::types::Data;
+use crate::impls::nft_series::types::Data;
 pub use crate::traits::psp34_traits::Psp34Traits;
 
 use openbrush::{
     contracts::{
         ownable::*,
-        psp34::extensions::{
-            enumerable::*,
-            metadata::*,
-        },
+        psp34::extensions::{enumerable::*, metadata::*},
         reentrancy_guard::*,
     },
     modifiers,
-    traits::{
-        Storage,
-        String,
-    },
+    traits::Storage,
 };
 
 pub trait Internal {
@@ -60,13 +51,8 @@ where
 {
     /// Set new value for the baseUri
     #[modifiers(only_owner)]
-    default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error> {
-        let id = self
-            .data::<psp34::Data<enumerable::Balances>>()
-            .collection_id();
-        self.data::<metadata::Data>()
-            ._set_attribute(id, String::from("baseUri"), uri.into_bytes());
-        Ok(())
+    default fn set_base_uri(&mut self, _uri: PreludeString) -> Result<(), PSP34Error> {
+        return Err(PSP34Error::Custom("NotImplemented".as_bytes().to_vec()));
     }
 
     /// Only Owner can set multiple attributes to a token
@@ -77,7 +63,7 @@ where
         metadata: Vec<(PreludeString, PreludeString)>,
     ) -> Result<(), PSP34Error> {
         if token_id == 0 {
-            return Err(PSP34Error::Custom("InvalidInput".as_bytes().to_vec()))
+            return Err(PSP34Error::Custom("InvalidInput".as_bytes().to_vec()));
         }
         for (attribute, value) in &metadata {
             add_attribute_name(self, &attribute.clone().into_bytes());
@@ -125,14 +111,26 @@ where
     /// Get URI from token ID
     default fn token_uri(&self, token_id: u64) -> PreludeString {
         let _ = self.token_exists(Id::U64(token_id));
-        let value = self.get_attribute(
-            self.data::<psp34::Data<enumerable::Balances>>()
-                .collection_id(),
-            String::from("baseUri"),
-        );
-        let mut token_uri = PreludeString::from_utf8(value.unwrap()).unwrap();
-        token_uri = token_uri + &PreludeString::from("1.json");
-        token_uri
+
+        let token_series_id = self
+            .data::<Data>()
+            .token_to_token_series
+            .get(token_id)
+            .unwrap();
+
+        let token_series_metadata = self
+            .data::<Data>()
+            .token_series
+            .get(token_series_id)
+            .unwrap();
+
+        let mut token_uri = token_series_metadata.base_uri;
+        if token_series_metadata.iterative {
+            token_uri = token_uri + &token_id.to_string() + &PreludeString::from(".json");
+            token_uri
+        } else {
+            token_uri
+        }
     }
 }
 
@@ -142,7 +140,7 @@ fn add_attribute_name<T: Storage<Data>>(instance: &mut T, attribute_input: &Vec<
         let attribute_name = instance.data::<Data>().attribute_names.get(&(index + 1));
         if attribute_name.is_some() && attribute_name.unwrap() == *attribute_input {
             exist = true;
-            break
+            break;
         }
     }
     if !exist {

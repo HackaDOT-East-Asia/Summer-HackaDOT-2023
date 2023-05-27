@@ -45,13 +45,20 @@ describe("Minting psp34 tokens", () => {
     projectAccount = keyring.addFromUri("//Charlie");
     nftFactory = new NFT_factory(api, deployer);
     contract = new NFT(
-      (await nftFactory.new(["NFT"], ["SH34"], [BASE_URI])).address,
+      (
+        await nftFactory.new(
+          ["NFT"],
+          ["SH34"],
+          bob.address, // marketplace treasury
+          200
+        )
+      ).address,
       deployer,
       api
     );
   }
 
-  it("Create collection works", async () => {
+  it("Create contract works", async () => {
     await setup();
     expect(
       (await contract.query.totalSupply()).value.unwrap().toNumber()
@@ -59,21 +66,77 @@ describe("Minting psp34 tokens", () => {
     expect((await contract.query.owner()).value.ok).to.equal(deployer.address);
   });
 
-  it("Use mintNext works", async () => {
+  it("Create collection  works", async () => {
+    await setup();
+
+    let createCollectionResult = await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateCollection(null, null, null, null, null, null);
+
+    emit(createCollectionResult, "NFTCreateCollection", {
+      collectionId: 1,
+      creatorAddress: projectAccount.address,
+      title: null,
+      description: null,
+      media: null,
+      cover: null,
+      twitter: null,
+      website: null,
+    });
+  });
+
+  it("Create series works", async () => {
+    await setup();
+
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateCollection(null, null, null, null, null, null);
+
+    const createSeriesResult = await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateSeries(1, BASE_URI, null, 10000, [], false);
+
+    emit(createSeriesResult, "NFTCreateSeries", {
+      baseUri: BASE_URI,
+      iterative: false,
+      price: null,
+      royalty: [],
+      copies: 10000,
+      tokenSeriesId: 1,
+      collectionId: 1,
+      creatorAddress: projectAccount.address,
+    });
+
+    let tokenSeriesMetadata = (await contract.query.getSeries(1)).value.ok;
+
+    expect(tokenSeriesMetadata.mintedCopies).to.be.eq(0);
+    expect(tokenSeriesMetadata.copies).to.be.eq(10000);
+  });
+
+  it("Mint from token series works", async () => {
     await setup();
     const tokenId: Id = IdBuilder.U64(1);
+
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateCollection(null, null, null, null, null, null);
+
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateSeries(1, BASE_URI, null, 10000, [], false);
 
     expect(
       (await contract.query.totalSupply()).value.unwrap().toNumber()
     ).to.equal(0);
 
     // mint
-    const gasRequired = (await contract.withSigner(bob).query.mintNext())
-      .gasRequired;
+    const gasRequired = (
+      await contract.withSigner(projectAccount).query.nftMint(1, bob.address)
+    ).gasRequired;
 
     let mintResult = await contract
-      .withSigner(bob)
-      .tx.mintNext({ value: 0, gasLimit: gasRequired });
+      .withSigner(projectAccount)
+      .tx.nftMint(1, bob.address, { value: 0, gasLimit: gasRequired });
 
     // verify minting results. The totalSupply value is BN
     expect(
@@ -95,12 +158,21 @@ describe("Minting psp34 tokens", () => {
   it("Token transfer works", async () => {
     await setup();
 
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateCollection(null, null, null, null, null, null);
+
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateSeries(1, BASE_URI, null, 10000, [], false);
+
     // Bob mints
-    let gasRequired = (await contract.withSigner(bob).query.mintNext())
-      .gasRequired;
+    let gasRequired = (
+      await contract.withSigner(projectAccount).query.nftMint(1, bob.address)
+    ).gasRequired;
     let mintResult = await contract
-      .withSigner(bob)
-      .tx.mintNext({ value: 0, gasLimit: gasRequired });
+      .withSigner(projectAccount)
+      .tx.nftMint(1, bob.address, { value: 0, gasLimit: gasRequired });
 
     const firstTokenId = IdBuilder.U64(1);
 
@@ -137,11 +209,21 @@ describe("Minting psp34 tokens", () => {
   it("Token approval works", async () => {
     await setup();
 
-    // Bob mints
-    let { gasRequired } = await contract.withSigner(bob).query.mintNext();
     await contract
-      .withSigner(bob)
-      .tx.mintNext({ value: 0, gasLimit: gasRequired });
+      .withSigner(projectAccount)
+      .tx.nftCreateCollection(null, null, null, null, null, null);
+
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftCreateSeries(1, BASE_URI, null, 10000, [], false);
+
+    // Bob mints
+    let { gasRequired } = await contract
+      .withSigner(projectAccount)
+      .query.nftMint(1, bob.address);
+    await contract
+      .withSigner(projectAccount)
+      .tx.nftMint(1, bob.address, { value: 0, gasLimit: gasRequired });
 
     const firstTokenId = IdBuilder.U64(1);
 
@@ -176,50 +258,6 @@ describe("Minting psp34 tokens", () => {
       id: firstTokenId,
       approved: true,
     });
-  });
-
-  it("Cannot mint after mint_end true", async () => {
-    await setup();
-
-    expect(
-      (await contract.query.totalSupply()).value.unwrap().toNumber()
-    ).to.equal(0);
-
-    await contract.withSigner(deployer).tx.setMintEnd(true);
-
-    const mintEnd = contract.query.getMintEnd();
-
-    expect((await mintEnd).value.ok).to.equal(true);
-
-    // mint
-    const result = await contract.withSigner(bob).query.mintNext();
-
-    expect(result.value.ok.err.custom).to.equal("0x4d696e74456e64");
-  });
-
-  it("Cannot mint twice", async () => {
-    await setup();
-    expect(
-      (await contract.query.totalSupply()).value.unwrap().toNumber()
-    ).to.equal(0);
-
-    let alreadyMinted = await contract.query.getIsAccountMinted(bob.address);
-
-    expect(alreadyMinted.value.ok).to.equal(false);
-    // mint
-    const { gasRequired } = await contract.withSigner(bob).query.mintNext();
-    await contract
-      .withSigner(bob)
-      .tx.mintNext({ value: 0, gasLimit: gasRequired });
-
-    alreadyMinted = await contract.query.getIsAccountMinted(bob.address);
-    expect(alreadyMinted.value.ok).to.equal(true);
-
-    const result = await contract.withSigner(bob).query.mintNext();
-
-    expect(result.value.ok.err.custom).to.equal(
-      "0x43616e6e6f744d696e744d6f72655468616e4f6e6365"
-    );
   });
 });
 
