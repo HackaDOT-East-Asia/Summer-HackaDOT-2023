@@ -43,38 +43,57 @@ sudo /etc/init.d/dphys-swapfile restart
 swapon -s
 ```
 ### 3.Touch Screen
-Download and unzip LCD_show_35hdmi.tar.gz.
+Save /boot/config.txt.
+
+```
+cd /boot
+sudo cp -p config.txt config.txt.bak
+
+```
+Download and unzip LCD_show_35hdmi.tar.gz.  
 http://osoyoo.com/driver/LCD_show_35hdmi.tar.gz
-
-cd
-cd Desktop
-mv LCD_show_35hdmi.tar.gz ../
-cd
-sudo chmod 777 LCD_show_35hdni.tar.gz
+```
+cd $HOME
 tar -xzvf LCD_show_35hdmi.tar.gz
+
+```
+Change screen resolution to 810x540.
+
+```
 cd LCD_show_35hdmi
-sudo apt-get update
+sudo ./LCD35_810*540
 
-まとめると
-./LCD35_720*480実行後に実行前のconfig.txtに戻して、その末尾に./LCD35_720*480実行後のconfig.txtで追記された行を追加する。
-そしてsudo raspi-configでLegacy Cameraをenableにして再起動。
-これでLegacy Cameraも使えてタッチスクリーンも映るようになった。
+```
+Return /boot/config.txt to the original file and add the following at the end.
+If you don't do this, the camera will not be recognized.
 
-/boot/config.txtの末尾に
+```
+hdmi_force_hotplug=1
+hdmi_drive=2
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 810 540 60 6 0 0 0 
+dtoverlay=ads7846,cs=0,penirq=25,penirq_pull=2,speed=10000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=199,xmax=3999,ymin=199,ymax=3999 
+
+```
+Add the following to the end of /boot/config.txt to rotate the display 90 degrees.
+```
 display_hdmi_rotate=1
-を追記して再起動。
-画面が右へ90度回転して表示された。
 
-以下を実行してタッチを縦表示に対応させる
-cd /usr/share/X11/xorg.conf.d
-sudo cp -p 40-libinput.conf 40-libinput.conf.230505
-sudo vi 40-libinput.conf
-  MatchIsTouchscreen "on"の下に以下行を追加
-  Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
-再起動。
-タッチ位置とカーソル位置が合った。
+```
+Add Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1" to /usr/share/X11/xorg.conf.d/40-libinput.conf as follows to rotate touch recognition by 90 degrees To do.
+```
+Section "InputClass"
+        Identifier "libinput touchscreen catchall"
+        MatchIsTouchscreen "on"
+        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+EndSection
 
-。
+```
+Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.
+Check that the touchscreen recognizes touches correctly.
 
 ### 5.Chromium
 
