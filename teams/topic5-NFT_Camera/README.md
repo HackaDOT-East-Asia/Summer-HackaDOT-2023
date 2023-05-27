@@ -1,4 +1,6 @@
 # NFT CAMERA
+This is a camera for creating NFT art collections.
+## DEMO
 ## SOFTWARE
 ### 1.Raspberry Pi OS
 Install Raspberry Pi OS (32-bit) using Raspberry Pi Imager.  
@@ -70,30 +72,27 @@ EndSection
 ```
 Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.  
 Check that the touchscreen recognizes touches correctly.  
-
-### 5.Chromium
+### 5.Software Keyboard
+Software keyboard is used for Metamask password input.  
 ```
+sudo apt-get install matchbox-keyboard
+sudo apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big xfonts-kaname
 
+```
+Replace /usr/share/matchbox-keyboard/keyboard.xml with keyboard.xml from this repository.  
+Add the Software keyboard to the top panel.
+### 6.Chromium
+```
 sudo apt install chromium
 ```
-
-### 6.Metamask
-
+### 7.Metamask
 Add Metamask to Chromium and create a wallet.  
-Keep some tokens in your wallet for gas fee.  
-
-### 7.ERC721 Minting Boilerplate
-Install Bunzz official erc721-minting-boilerplate.  
-
-
-
-
-
-### 8.Software keyboard
-
-###
-
-
+### 8.Bunzz official ERC721 Minting Boilerplate　　
+https://github.com/lastrust/erc721-minting-boilerplate　
+Choose a blockchain to mint NFTs when installing this boilerplate.  
+I chose Astar Network.  
+Keep some blockchain tokens of your choice in your wallet for the GAS fee.
+# 9.NFT Camera Software
 
 
 
@@ -101,17 +100,33 @@ Install Bunzz official erc721-minting-boilerplate.
 ### MATERIALS
 Raspberry Pi 3 Model B (1)  
 Raspberry Pi Camera V2 (1)  
+16GB Class 10 UHS-I Micro SDHC Memory Card  
+Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07  
+USB Female Type-A Connector (1)  
 Anker Power Core 10000 PD Redux (1)  
+OSOYOO Raspberry Pi Touch Screen 3.5" (1)  
+
+Lauwan Board 600x230mm 5.5mm thick (1)  
+Vinyl Sheet 600x230mm 0.1mm thick (2)  
+
 Adafruit Soft Tactile Button (2)  
 TACT Switch SKHHLPA010 (1)  
+Pin Socket 2x5 2.54mm Pitch (1)  
+
+1mm 2Pin Flat Capper Cable 550mm  
+0.3mm Polyurethane Copper Wire 100mm  
+
+Universal Prototype Board 65x14mm 1.6mm thick  (1)
+Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
+
+
 Machine Screw M2x4 (4)  
+Machine Screw M2x6 (2)  
 Machine Screw M2.6x6 (4)  
 Self-tapping screw M3x6 (10) 
-Lauwan board 600x300mm 5.5mm thick (1)  
-Polyurethane Wire  
-Universal Prototype Board 1.6mm thick  
-Toshiba Exceria 16GB Class 10 UHS-I Micro SDHC Memory Card  
-OSOYOO Raspberry Pi Touch Screen 3.5"
+ 
+3D Printer ABS Filament  
+
 ### TOOLS
 3D Printer  
 Laser cutter  
@@ -120,7 +135,9 @@ Soldering Iron
 Plier  
 Screwdriver  
 Tweezer  
-### BUILD YOUR NFT CAMERA
+Hand Tap M2
+Hand Tap M2.6
+### BUILD NFT CAMERA
 1.  
 
 
@@ -133,8 +150,7 @@ Tweezer
 
 
 ## TEAM
-This is my first time programming with blockchain.
-I always want to make things that entertain people all over the world.
+This is my first time programming with blockchain.  
 
 
 
