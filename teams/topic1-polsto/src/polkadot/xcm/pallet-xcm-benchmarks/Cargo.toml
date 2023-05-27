@@ -1,0 +1,52 @@
+[package]
+name = "pallet-xcm-benchmarks"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.0.0", default-features = false }
+scale-info = { version = "2.1.2", default-features = false, features = ["derive"] }
+frame-support = { default-features = false, git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+frame-system = { default-features = false, git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+sp-runtime = { default-features = false, git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+sp-std = { default-features = false, git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+xcm-executor = { path = "../xcm-executor", default-features = false }
+frame-benchmarking = { default-features = false, git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+xcm = { path = "..", default-features = false }
+log = "0.4.17"
+
+[dev-dependencies]
+pallet-balances = { git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+pallet-assets = { git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+sp-io = { git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+sp-tracing = { git = "https://github.com/paritytech/substrate" , branch = "polkadot-v0.9.37" }
+xcm-builder = { path = "../xcm-builder" }
+xcm = { path = ".." }
+# temp
+pallet-xcm = { path = "../pallet-xcm" }
+polkadot-runtime-common = { path = "../../runtime/common" }
+# westend-runtime = { path = "../../runtime/westend", features = ["runtime-benchmarks"] }
+polkadot-primitives = { path = "../../primitives" }
+
+[features]
+default = ["std"]
+std = [
+	"codec/std",
+	"frame-benchmarking/std",
+	"frame-support/std",
+	"frame-system/std",
+	"sp-runtime/std",
+	"sp-std/std"
+]
+runtime-benchmarks = [
+	"xcm/runtime-benchmarks",
+	"xcm-executor/runtime-benchmarks",
+	"frame-benchmarking/runtime-benchmarks",
+	"frame-support/runtime-benchmarks",
+	"frame-system/runtime-benchmarks",
+]

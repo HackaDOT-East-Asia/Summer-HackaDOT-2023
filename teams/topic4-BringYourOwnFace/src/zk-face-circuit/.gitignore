@@ -1,0 +1,12 @@
+.idea/
+target/
+./circuit/target
+./bridge/.github
+./bridge/.env
+./bridge/target
+./circuit/params
+__pycache__/
+./circuit/params/app.bin
+./circuit/storage/*
+./circuit/contracts/pks/*
+./circuit/contracts/app.vk

@@ -1,0 +1,53 @@
+[package]
+name = "cumulus-client-network"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Cumulus-specific networking protocol"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.60"
+codec = { package = "parity-scale-codec", version = "3.0.0", features = [ "derive" ] }
+futures = "0.3.25"
+futures-timer = "3.0.2"
+parking_lot = "0.12.1"
+tracing = "0.1.37"
+
+# Substrate
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+# Polkadot
+polkadot-node-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+polkadot-parachain = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+
+# Cumulus
+cumulus-relay-chain-interface = { path = "../relay-chain-interface" }
+
+[dev-dependencies]
+portpicker = "0.1.1"
+tokio = { version = "1.24.1", features = ["macros"] }
+url = "2.3.1"
+
+# Substrate
+sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+substrate-test-utils = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+# Polkadot
+polkadot-client = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+polkadot-test-client = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+
+# Cumulus
+cumulus-primitives-core = { path = "../../primitives/core" }
+cumulus-relay-chain-inprocess-interface = { path = "../relay-chain-inprocess-interface" }
+cumulus-test-service = { path = "../../test/service" }

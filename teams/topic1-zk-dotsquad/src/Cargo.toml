@@ -1,0 +1,15 @@
+[package]
+name = "bellman-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bellman = { version = "0.13.1", features = ["multicore"] }
+bls12_381 = "0.7"
+ff = "0.12"
+sha2 = "0.10.1"
+rand = "0.8.4"
+pairing = { version = "0.22" }
+rand_core = "0.6.3"

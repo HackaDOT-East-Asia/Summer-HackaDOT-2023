@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Astar Learning Course",
+    "intro": "This course is designed to learn about Astar Network.",
+    "content": "<h1 className='underline'>About Astar Network</h1>
+    <ul className='list-disc'>
+        <li>
+            <p>Astar Network is a Public Blockchain from Japan</p>
+        </li>
+        <li>
+            <p>Multichain Smart Contract Platform</p>
+        </li>
+    </ul>
+    <div>Currently, there are many independent Layer 1 Blockchains such as Etheruem and Bitcoin, which have created an intranet situation in the Internet, making interconnection difficult.</div>
+    <p>Example:) A process on chain A triggers a process on chain B to be executed.</p>
+    <p></p>
+    <p></p>
+    <p>Astar Network is a blockchain that connects multiple layer 1 blockchains in the Multichain era and aims to be a platform on which applications can be created.</p>
+    <div></div>
+    <h3 className='underline'>Astar Network Features</h3>
+    <ul className='list-disc'>
+        <li>
+            <p>Multichain Application</p>
+        </li>
+        <li>
+            <p>XVM</p>
+        </li>
+        <li>
+            <p>dapp staking</p>
+        </li>
+    </ul>
+    <p>XVM is particularly significant, as it allows smart contracts to be deployed in both EVM and WebAssembly environments, enabling ecosystems that would otherwise be divided to work interactively.</p>
+    <p>This is also good because WebAssembly-compliant smart contract development makes it easier for engineers with skills in traditional programming languages such as C++ and Rust to enter the Web3 world as well.</p>
+    <p>dApp Staking is designed to distribute $ASTR based on the developer's contribution to the ecosystem. It will be updated to version 3 specifications soon.</p>
+    <h3 className='underline'>Where does the AstarNetwork get its support?</h3>
+    <p>In addition to numerous VC firms, he has received investments from web3 advocate and Ethereum and Polkadot co-founder Gavin Wood and Jutta Steiner, former CEO of Parity and Ethereum's former Chief Security Officer.</p>
+    <h3 className='underline'>About Astar Japan Lab</h3>
+    <p>A consortium established to facilitate the creation of use cases on Astar and collaboration with web3 startups.</p>
+    <p>Dentsu, Hakuhodo, Microsoft, Amazon, MUFG, SoftBank, SMBC, Accenture, Mori Building, Fujitsu, Secom Trust Systems, and others are participating in the project and exploring business co-creation.</p>
+    <h3 className='underline'>Startale Labs Japan</h3>
+    <ul className='list-disc'>
+        <li>Product Development</li>
+    </ul>
+    <p>Multi-chain wallet development. Suppress web3 gateway for Japanese users. Ideally, work with existing partners such as DOCOMO, etc., and aim to have the application installed on cell phones by default.</p>
+    <ul className='list-disc'>
+        <li>R&D / Consulting</li>
+    </ul>
+    <p>Based on the experience of developing and operating the only public Layer 1 chain in Japan, the company supports companies that want to create Layer 1, implements peripheral technologies, and develops businesses.</p>
+    <ul className='list-disc'>
+        <li>Provide solution packages with existing partners</li>
+    </ul>
+    <p>A web3 version of RedHat's business model, offering packaged solutions such as Fireblocks, Circle, BitGo and other corporate custody solutions, as well as Astar-based metaverse and NFT solutions, for business to business.</p>
+    ",
+    "statement": "Which of the following options is NOT a characteristic of Astar Network?",
+    "quizs": [
+      "Multichain Application",
+      "XVM",
+      "dapp staking",
+      "Narwhal and Tusk"
+    ],
+    "answer": "3",
+    "imageUrl": "/AstarContent.jpeg",
+    "nftAddress": "a6WkJRaZcy6cVkvRQmRmd1TVhAc1Dfq3d7cmpGUjjn9736d",
+    "creatorAddress": "5DwLfNQqkLpDoKkHqZCC4EMcFjkn2sbEzqF3JVCZHx6zHoqq"
+  },
+  {
+    "title": "Shiden Learning Course",
+    "intro": "This course is designed to learn about Shiden Network.",
+    "content": "<h2 className='underline'>About Shiden Network</h2>
+    <p>Shiden Network is a smart contract platform project on Kusama that serves as an R&D chain for Astar Network.</p>
+    <h3 className='underline'>About Kusama</h3>
+    <p>Kusama is Polkadot's R&D chain. In other words, it is a proprietary blockchain for Polkadot's R&D purposes.</p>
+    <p>Shiden Network is a para-chain that connects to this Kusama.</p>
+    <h3 className='underline'>Shiden Network Features</h3>
+    <p>Shiden Network natively supports multiple Layer 2 solutions from the start, enabling a variety of applications such as Ethereum Virtual Machine (EVM), WebAssembly, and DeFi and NFT.</p>
+    <h3 className='underline'>Programming languages for development</h3>
+    <ul className='list-disc'>
+        <li>1.!ink</li>
+        <li>2.!ask</li>
+    </ul>
+    <h3 className='underline'>Development Frameworks</h3>
+    <ul className='list-disc'>
+        <li>swanky</li>
+    </ul>",
+    "statement": "Which of the following options, Shiden Network is a para-chain that connects to which blockchain?",
+    "quizs": [
+      "Polkadot",
+      "Kusama",
+      "Astar Network"
+    ],
+    "answer": "1",
+    "imageUrl": "/ShidenContent.jpeg",
+    "nftAddress": "bezTq8fCqsG6X49e1KRmeVcatNWNaSHfNM218iHzFKPTxsk",
+    "creatorAddress": "5DwLfNQqkLpDoKkHqZCC4EMcFjkn2sbEzqF3JVCZHx6zHoqq"
+  }
+]

@@ -1,0 +1,85 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-link-default-color {
+  color: #888888;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #f0eee0;
+    background: #0d1117;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: #1d2127;
+    background: #ffffff;
+  }
+}
+*/
+
+.text {
+  white-space: pre-wrap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* quizmodal */
+.dark .ReactModal__Content {
+  background: rgb(31, 41, 55) !important;
+}
+
+/* content */
+.content-container {
+  background: #eee;
+  padding: 15px;
+  margin-bottom: 30px;
+  color: #333;
+}
+.content-container * {
+  margin-bottom: .5rem;
+}
+.content-container *:first-child {
+  margin-top: 0;
+}
+.content-container p {
+}
+.content-container h2 {
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid;
+  margin-top: 1rem;
+}
+.content-container h3 {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1rem;
+}
+.content-container ul {
+}
+.content-container ul > li {
+}

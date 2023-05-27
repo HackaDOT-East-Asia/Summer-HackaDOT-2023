@@ -1,0 +1,32 @@
+[settings]
+timeout = 1000
+bootnode = false
+
+[relaychain]
+default_image = "{{ZOMBIENET_INTEGRATION_TEST_IMAGE}}"
+chain = "rococo-local"
+
+[relaychain.genesis.runtime.runtime_genesis_config.configuration.config]
+  max_validators_per_core = 2
+  needed_approvals = 2
+
+  [[relaychain.nodes]]
+  name = "alice"
+
+  [[relaychain.nodes]]
+  name = "bob"
+  add_to_bootnodes = true
+
+[[parachains]]
+id = 100
+add_to_genesis = false
+
+  [parachains.collator]
+  name = "collator01"
+  image = "{{COL_IMAGE}}"
+  command = "adder-collator"
+
+[types.Header]
+number = "u64"
+parent_hash = "Hash"
+post_state = "Hash"

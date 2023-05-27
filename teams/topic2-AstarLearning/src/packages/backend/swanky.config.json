@@ -1,0 +1,64 @@
+{
+  "node": {
+    "localPath": "bin/swanky-node",
+    "polkadotPalletVersions": "polkadot-v0.9.39",
+    "supportedInk": "v4.2.0"
+  },
+  "accounts": [
+    {
+      "alias": "alice",
+      "mnemonic": "//Alice",
+      "isDev": true,
+      "address": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+    },
+    {
+      "alias": "bob",
+      "mnemonic": "//Bob",
+      "isDev": true,
+      "address": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty"
+    }
+  ],
+  "contracts": {
+    "flipper": {
+      "name": "flipper",
+      "deployments": [],
+      "language": "ink",
+      "build": {
+        "timestamp": 1684327555482,
+        "artifactsPath": "artifacts/flipper/1684327555482"
+      }
+    },
+    "nft": {
+      "name": "nft",
+      "deployments": [],
+      "language": "ink",
+      "build": {
+        "timestamp": 1684335676389,
+        "artifactsPath": "artifacts/nft/1684335676389"
+      }
+    },
+    "content": {
+      "name": "content",
+      "deployments": [],
+      "language": "ink",
+      "build": {
+        "timestamp": 1684327870119,
+        "artifactsPath": "artifacts/content/1684327870119"
+      }
+    }
+  },
+  "networks": {
+    "local": {
+      "url": "ws://127.0.0.1:9944"
+    },
+    "astar": {
+      "url": "wss://rpc.astar.network"
+    },
+    "shiden": {
+      "url": "wss://rpc.shiden.astar.network"
+    },
+    "shibuya": {
+      "url": "wss://rpc.shibuya.astar.network"
+    }
+  }
+}
