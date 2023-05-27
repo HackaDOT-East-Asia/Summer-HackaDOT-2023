@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="ZKFace" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYOF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7o-tv-AIM">
+                    <rect key="frame" x="132.66666666666666" y="109" width="127.99999999999997" height="60"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMW-MN-NqP">
+                    <rect key="frame" x="97.666666666666686" y="179" width="198" height="52.666666666666657"/>
+                    <string key="text">Bring Your Own Face
+To Moonbeam</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting Your  Cross-chain Wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kg-s2-DpP">
+                    <rect key="frame" x="63.333333333333343" y="520.66666666666663" width="266.33333333333326" height="71.666666666666629"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can create wallets in multiple chain at once using Moonbeam’s cross-chain technology" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V08-75-KBW">
+                    <rect key="frame" x="40" y="602.33333333333337" width="313" height="31.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-7g-mxr">
+                    <rect key="frame" x="24" y="740" width="345" height="54"/>
+                    <color key="tintColor" red="0.1294117719" green="0.19607841970000001" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Import your wallet">
+                                <attributes>
+                                    <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <directionalEdgeInsets key="contentInsets" top="20" leading="0.0" bottom="20" trailing="0.0"/>
+                        <color key="baseForegroundColor" red="0.1294117719" green="0.19607841970000001" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onClickImportWalley:" destination="-1" eventType="touchUpInside" id="nJz-d6-8E3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-sh-mjr">
+                    <rect key="frame" x="24" y="673.66666666666663" width="345" height="56.333333333333371"/>
+                    <color key="tintColor" red="0.1294117719" green="0.19607841970000001" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Create a new wallet">
+                                <attributes>
+                                    <color key="NSColor" red="0.12941176470588234" green="0.19607843137254902" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <directionalEdgeInsets key="contentInsets" top="20" leading="0.0" bottom="20" trailing="0.0"/>
+                        <color key="baseForegroundColor" red="0.12941176470588234" green="0.19607843137254902" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onClickCreateWallet:" destination="-1" eventType="touchUpInside" id="QQE-nT-Vlp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sCY-7g-mxr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="150-HR-YZN"/>
+                <constraint firstItem="s8d-sh-mjr" firstAttribute="leading" secondItem="sCY-7g-mxr" secondAttribute="leading" id="16X-Fy-XP1"/>
+                <constraint firstItem="fMW-MN-NqP" firstAttribute="centerX" secondItem="Z7o-tv-AIM" secondAttribute="centerX" id="5fP-pL-lYM"/>
+                <constraint firstItem="1kg-s2-DpP" firstAttribute="centerX" secondItem="V08-75-KBW" secondAttribute="centerX" id="5kI-qj-6hG"/>
+                <constraint firstAttribute="trailing" secondItem="V08-75-KBW" secondAttribute="trailing" constant="40" id="6kb-ia-CXr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sCY-7g-mxr" secondAttribute="trailing" constant="24" id="D9O-y8-AHv"/>
+                <constraint firstItem="sCY-7g-mxr" firstAttribute="top" secondItem="s8d-sh-mjr" secondAttribute="bottom" constant="10" id="IO8-sQ-usA"/>
+                <constraint firstItem="s8d-sh-mjr" firstAttribute="trailing" secondItem="sCY-7g-mxr" secondAttribute="trailing" id="T0E-fI-1eJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sCY-7g-mxr" secondAttribute="bottom" constant="24" id="VEm-JZ-fkm"/>
+                <constraint firstItem="V08-75-KBW" firstAttribute="centerX" secondItem="s8d-sh-mjr" secondAttribute="centerX" id="egw-d0-sz6"/>
+                <constraint firstItem="V08-75-KBW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="fj4-L8-fQf"/>
+                <constraint firstItem="Z7o-tv-AIM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="gdf-8U-9em"/>
+                <constraint firstItem="V08-75-KBW" firstAttribute="top" secondItem="1kg-s2-DpP" secondAttribute="bottom" constant="10" id="ho8-TX-cwv"/>
+                <constraint firstItem="s8d-sh-mjr" firstAttribute="top" secondItem="V08-75-KBW" secondAttribute="bottom" constant="40" id="leZ-QP-k8B"/>
+                <constraint firstItem="fMW-MN-NqP" firstAttribute="top" secondItem="Z7o-tv-AIM" secondAttribute="bottom" constant="10" id="sR2-0n-LVk"/>
+                <constraint firstItem="Z7o-tv-AIM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="syq-EB-Mlv"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
