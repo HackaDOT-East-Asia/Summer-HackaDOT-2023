@@ -102,6 +102,6 @@ You can use https://contracts-ui.substrate.io/ or https://polkadotjs-apps.web.ap
 
 Paras team is span across the globe, with headquarter in Jakarta, Indonesia. A group of passionate people that tries to move the creator's economy forward and bring blockchain to mainstream audience.
 
-Riqi - CEO (https://www.linkedin.com/in/rahmat-albariqi-630400a8)
-Irfi - Lead Engineer (https://www.linkedin.com/in/irfianto/, https://github.com/emarai)
-Ekki - Lead Product Manager (https://www.linkedin.com/in/ekkirinaldi/)
+- Riqi - CEO (https://www.linkedin.com/in/rahmat-albariqi-630400a8)
+- Irfi - Lead Engineer (https://www.linkedin.com/in/irfianto/, https://github.com/emarai)
+- Ekki - Lead Product Manager (https://www.linkedin.com/in/ekkirinaldi/)
