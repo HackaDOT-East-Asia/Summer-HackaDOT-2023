@@ -102,7 +102,6 @@ contract BonvoPlatform is Ownable {
 
     uint256 private _totalExperiences;
 
-
     modifier onlyUser() {
         _checkIsUser();
         _;
@@ -310,7 +309,6 @@ contract BonvoPlatform is Ownable {
         return _totalBookings;
     }
 
-
     // EXPERIENCE GETTERS
     function totalExperiences() public view returns (uint256) {
         return _totalExperiences;
@@ -422,8 +420,9 @@ contract BonvoPlatform is Ownable {
         _ticketsContractToExperienceId[experienceTicketsAddress] = experienceId;
 
         // Add NFT in a collection of all experiences, this will be used to add badges to the experience.
-        uint256 nftExperienceId = IBonvoExperience(_experiencesCollectionContract)
-            .addExperience(
+        uint256 nftExperienceId = IBonvoExperience(
+            _experiencesCollectionContract
+        ).addExperience(
                 _msgSender(),
                 collectionMetadataURI,
                 mainAssetURI,

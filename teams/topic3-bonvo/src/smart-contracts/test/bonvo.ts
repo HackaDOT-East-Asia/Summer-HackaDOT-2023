@@ -81,7 +81,9 @@ async function fixture(): Promise<{
   );
   await platform.deployed();
 
-  const bonvoExperiencesCollectionFactory = await ethers.getContractFactory('BonvoExperiencesCollection');
+  const bonvoExperiencesCollectionFactory = await ethers.getContractFactory(
+    'BonvoExperiencesCollection',
+  );
   const bonvoExperiencesCollection = <BonvoExperiencesCollection>(
     await bonvoExperiencesCollectionFactory.deploy(
       ethers.constants.MaxUint256,
@@ -91,19 +93,31 @@ async function fixture(): Promise<{
     )
   );
 
-  const bonvoExperienceDeployerHelperFactory = await ethers.getContractFactory('BonvoExperienceDeployerHelper');
+  const bonvoExperienceDeployerHelperFactory = await ethers.getContractFactory(
+    'BonvoExperienceDeployerHelper',
+  );
   const bonvoExperienceDeployerHelper = <BonvoExperienceDeployerHelper>(
     await bonvoExperienceDeployerHelperFactory.deploy(platform.address)
   );
 
-  await platform.setExperiencesContracts(bonvoExperiencesCollection.address, bonvoExperienceDeployerHelper.address);
-
+  await platform.setExperiencesContracts(
+    bonvoExperiencesCollection.address,
+    bonvoExperienceDeployerHelper.address,
+  );
 
   await property.setPlatform(platform.address);
   await userReputation.setPlatform(platform.address);
   await badge.setPlatform(platform.address);
 
-  return { platform, property, userReputation, badge, token, bonvoExperiencesCollection, bonvoExperienceDeployerHelper };
+  return {
+    platform,
+    property,
+    userReputation,
+    badge,
+    token,
+    bonvoExperiencesCollection,
+    bonvoExperienceDeployerHelper,
+  };
 }
 
 describe('Bonvo', async () => {
@@ -122,7 +136,15 @@ describe('Bonvo', async () => {
 
   beforeEach(async function () {
     [deployer, landlord, tenant, experienceOwner, experienceTaker] = await ethers.getSigners();
-    ({ platform, property, userReputation, badge, token, bonvoExperiencesCollection, bonvoExperienceDeployerHelper } = await loadFixture(fixture));
+    ({
+      platform,
+      property,
+      userReputation,
+      badge,
+      token,
+      bonvoExperiencesCollection,
+      bonvoExperienceDeployerHelper,
+    } = await loadFixture(fixture));
   });
 
   it('can get names and symbols', async function () {
@@ -273,7 +295,9 @@ describe('Bonvo', async () => {
             const startDateBn = bn(Math.floor(startDate.getTime() / 1000));
             dates = [startDateBn, startDateBn.add(24 * 60 * 60), startDateBn.add(2 * 24 * 60 * 60)];
             await token.mint(tenant.address, pricePerDay1.mul(3).add(deposit1));
-            await token.connect(tenant).approve(platform.address, pricePerDay1.mul(3).add(deposit1));
+            await token
+              .connect(tenant)
+              .approve(platform.address, pricePerDay1.mul(3).add(deposit1));
             await platform.connect(tenant).book(propertyId, dates);
             bookingId = await platform.getTotalBookings();
           });
@@ -358,14 +382,21 @@ describe('Bonvo', async () => {
     });
 
     it('can create experience', async function () {
-      await expect(platform.connect(experienceOwner).createExperience('Crazy Museum', 'CM', 'ipfs://experience1', 'ipfs://experience1.png', 1000)).to.emit(
-        platform,
-        'NewExperience',
-      )
+      await expect(
+        platform
+          .connect(experienceOwner)
+          .createExperience(
+            'Crazy Museum',
+            'CM',
+            'ipfs://experience1',
+            'ipfs://experience1.png',
+            1000,
+          ),
+      ).to.emit(platform, 'NewExperience');
       const ticketsContractAddress = await platform.getTicketsContract(1);
       expect(await platform.getAllExperiences()).to.eql([
-        [ethers.BigNumber.from(1), ticketsContractAddress]
-      ])
+        [ethers.BigNumber.from(1), ticketsContractAddress],
+      ]);
     });
 
     describe('With created experiences', async () => {
@@ -374,8 +405,24 @@ describe('Bonvo', async () => {
       let dates: BigNumber[];
 
       beforeEach(async function () {
-        await platform.connect(experienceOwner).createExperience('Crazy Museum', 'CM', 'ipfs://experience1Meta', 'ipfs://experience1.png', 1000);
-        await platform.connect(experienceOwner).createExperience('Jazz at the Park', 'JP', 'ipfs://experience2Meta', 'ipfs://experience2.png', 2000);
+        await platform
+          .connect(experienceOwner)
+          .createExperience(
+            'Crazy Museum',
+            'CM',
+            'ipfs://experience1Meta',
+            'ipfs://experience1.png',
+            1000,
+          );
+        await platform
+          .connect(experienceOwner)
+          .createExperience(
+            'Jazz at the Park',
+            'JP',
+            'ipfs://experience2Meta',
+            'ipfs://experience2.png',
+            2000,
+          );
 
         const ticketsFactory = await ethers.getContractFactory('BonvoExperienceTicket');
         exp1Tickets = ticketsFactory.attach(await platform.getTicketsContract(1));
@@ -384,11 +431,7 @@ describe('Bonvo', async () => {
         const startDate = new Date();
         startDate.setUTCHours(0, 0, 0, 0);
         const startDateBn = bn(Math.floor(startDate.getTime() / 1000));
-        dates = [
-          startDateBn,
-          startDateBn.add(24 * 60 * 60),
-          startDateBn.add(2 * 24 * 60 * 60),
-        ];
+        dates = [startDateBn, startDateBn.add(24 * 60 * 60), startDateBn.add(2 * 24 * 60 * 60)];
       });
 
       it('can open tickets', async function () {
@@ -398,13 +441,13 @@ describe('Bonvo', async () => {
 
       it('can buy and use tickets', async function () {
         await exp1Tickets.connect(experienceOwner).openTicketsForDates(10, dates);
-        
+
         await exp1Tickets.connect(experienceTaker).buyTickets(experienceTaker.address, 2, dates[0]);
         expect(await exp1Tickets.getAvailableTicketsForDate(dates[0])).to.equal(8);
         expect(await exp1Tickets.totalSupply()).to.equal(2);
 
-        await exp1Tickets.connect(experienceTaker).useTicket(1, dates[0], "0x1234");
-        expect(await exp1Tickets.getTicketMemo(1)).to.equal("0x1234");
+        await exp1Tickets.connect(experienceTaker).useTicket(1, dates[0], '0x1234');
+        expect(await exp1Tickets.getTicketMemo(1)).to.equal('0x1234');
       });
 
       it('did create nfts on experience collection', async function () {
@@ -413,7 +456,6 @@ describe('Bonvo', async () => {
       });
     });
   });
-
 });
 
 function bn(x: number): BigNumber {
