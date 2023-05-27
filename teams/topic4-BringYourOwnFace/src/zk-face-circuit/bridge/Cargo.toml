@@ -1,0 +1,33 @@
+[package]
+name = "bridge"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "bridge"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3-log = { version = "0.8.1" }
+pyo3 = "0.18.1"
+circuit = { path = "../circuit" }
+halo2-base = { version = "0.2.2", default-features = false, features = [
+    "halo2-pse",
+    "display",
+], git = "https://github.com/axiom-crypto/halo2-lib.git" }
+halo2-ecc = { version = "0.2.2", default-features = false, features = [
+    "halo2-pse",
+    "display",
+], git = "https://github.com/axiom-crypto/halo2-lib.git" }
+hex = "0.4.3"
+snark-verifier = { git = "https://github.com/zkemail/snark-verifier.git", version = "0.1.0", branch = "main", default-features = false, features = [
+    "loader_evm",
+    "loader_halo2",
+    "halo2-pse",
+] }
+snark-verifier-sdk = { git = "https://github.com/zkemail/snark-verifier.git", version = "0.0.1", branch = "main", default-features = false, features = [
+    "loader_evm",
+    "loader_halo2",
+    "halo2-pse",
+] }

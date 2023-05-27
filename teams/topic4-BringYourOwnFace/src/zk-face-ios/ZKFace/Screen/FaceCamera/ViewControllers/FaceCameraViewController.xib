@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaceCameraViewController" customModule="ZKFace" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="Zj6-ul-FPz" id="TMJ-bu-SWZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceOval" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-ps-lBU">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-U4-LQP">
+                    <rect key="frame" x="176.33333333333334" y="747.66666666666663" width="40.333333333333343" height="40.333333333333371"/>
+                    <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" image="camera.fill" catalog="system" title="" cornerStyle="capsule">
+                        <directionalEdgeInsets key="contentInsets" top="10" leading="10" bottom="10" trailing="10"/>
+                        <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onClickShot:" destination="-1" eventType="touchUpInside" id="zWv-BI-xuZ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fit your face in the oval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-LE-j31">
+                    <rect key="frame" x="94" y="705.66666666666663" width="205" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-ul-FPz">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cbg-ps-lBU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1nq-KT-977"/>
+                <constraint firstAttribute="bottom" secondItem="cbg-ps-lBU" secondAttribute="bottom" id="4mJ-8E-HlN"/>
+                <constraint firstItem="cbg-ps-lBU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6UE-HS-eGW"/>
+                <constraint firstAttribute="trailing" secondItem="cbg-ps-lBU" secondAttribute="trailing" id="A2I-Su-P80"/>
+                <constraint firstItem="Zj6-ul-FPz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GAj-cI-8hI"/>
+                <constraint firstItem="GH9-LE-j31" firstAttribute="centerX" secondItem="bmt-U4-LQP" secondAttribute="centerX" id="HcU-3R-MSb"/>
+                <constraint firstItem="bmt-U4-LQP" firstAttribute="top" secondItem="GH9-LE-j31" secondAttribute="bottom" constant="24" id="NoN-ST-QjN"/>
+                <constraint firstItem="bmt-U4-LQP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hhu-8s-y5W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bmt-U4-LQP" secondAttribute="bottom" constant="30" id="vcy-By-K02"/>
+                <constraint firstItem="Zj6-ul-FPz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zt2-1x-o7Y"/>
+            </constraints>
+            <point key="canvasLocation" x="-11" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="faceOval" width="360" height="800"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
