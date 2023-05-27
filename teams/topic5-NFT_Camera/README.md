@@ -92,7 +92,7 @@ https://github.com/lastrust/erc721-minting-boilerplate　
 Choose a blockchain to mint NFTs when installing this boilerplate.  
 I chose Astar Network.  
 Keep some blockchain tokens of your choice in your wallet for the GAS fee.
-# 9.NFT Camera Software
+### 9.NFT Camera Software
 
 
 
@@ -150,7 +150,10 @@ Hand Tap M2.6
 
 
 ## TEAM
-This is my first time programming with blockchain.  
+This is the first time I have invented using blockchain.
+I am a maker.
+https://www.youtube.com/channel/UCnVPipXRWcSeEOvjLuMXxLA
+
 
 
 
