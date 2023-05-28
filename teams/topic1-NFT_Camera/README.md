@@ -16,15 +16,17 @@ Raspberry Pi Camera V2
 SanDisk microSD 32GB Extreme Pro UHS-I U3 V30 A1  
 OSOYOO Raspberry Pi Touch Screen 3.5"  
  
-The NFT camera does not require 32GB of microSD capacity, but the faster the read and write speed, the better.  
+The NFT camera does not require 32GB of microSD capacity, but the faster the read/write speed, the better.  
 Depending on the read/write speed of the microSD, the startup time of NFT Camera will change by a few minutes.  
 
 Install Raspberry Pi OS (32-bit) using Raspberry Pi Imager.  
 
 ### 2.Raspberry Pi Camera V2
 Make sure the Raspberry Pi recognizes the camera.  
-```
-vcgencmd get_camera  
+```shell-session
+$ vcgencmd get_camera
+supported=1 detected=1, libcamera interfaces=0
+
 ```
 ### 2.Increase Swap Space
 Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2024.  
