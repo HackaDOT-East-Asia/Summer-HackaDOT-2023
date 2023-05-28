@@ -29,13 +29,13 @@ In the near future, we will add all the other operations and allow the platform 
 ## Deployed Contracts
 
 All contracts deployed on Moonbase Alpha:
-Plaform: `0x1657CBCe5304B48B397A7FF53c38Ef3535a81070`
-Property: `0xa4F37C5590c78fFBC9F4Ec76664f4EAf32d2E0f6`
-UserReputation: `0xB6A67B45159f923CDf3c9AbC8D5D900DB7e7D0d8`
-Badge: `0x2F08e082FF89E41b9e80aea2658d04F13A348e53`
-Token: `0x7B9B40908ce6B559227B7FC9752B2b2CA5abe48b`
-BonvoExperiencesCollection: `0x97fc05009a9F61cd69F236225e25bD61F96B9098`
-BonvoExperienceDeployerHelper: `0x358C187e26E6BC07d7E96462b61367e0Db15E0D3`
+* Plaform: `0x1657CBCe5304B48B397A7FF53c38Ef3535a81070`
+* Property: `0xa4F37C5590c78fFBC9F4Ec76664f4EAf32d2E0f6`
+* UserReputation: `0xB6A67B45159f923CDf3c9AbC8D5D900DB7e7D0d8`
+* Badge: `0x2F08e082FF89E41b9e80aea2658d04F13A348e53`
+* Token: `0x7B9B40908ce6B559227B7FC9752B2b2CA5abe48b`
+* BonvoExperiencesCollection: `0x97fc05009a9F61cd69F236225e25bD61F96B9098`
+* BonvoExperienceDeployerHelper: `0x358C187e26E6BC07d7E96462b61367e0Db15E0D3`
 
 
 ## Deploy Instructions
