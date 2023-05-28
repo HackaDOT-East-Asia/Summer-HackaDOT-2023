@@ -38,7 +38,7 @@ supported=1 detected=1, libcamera interfaces=0
 
 ### 3.Increase Swap Space
 Increase the swap space to prevent memory shortage.  
-Check the SWAP space.  
+Check current swap space.  
 ```
 $ swapon -s
 ```
@@ -46,13 +46,13 @@ Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2048.
 ```
 CONF_SWAPSIZE=2048
 ```
-Check that the SWAP space has increased.  
+Check that the swap space has increased.  
 ```
 $ sudo /etc/init.d/dphys-swapfile restart
 $ swapon -s
 ```
 
-### 3.Touch Screen
+### 4.Touch Screen
 Save /boot/config.txt.  
 
 ```
@@ -105,6 +105,7 @@ EndSection
 ```
 Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.  
 Check that the touchscreen recognizes touches correctly.  
+
 ### 5.Software Keyboard
 Software keyboard is used for Metamask password input.  
 ```
@@ -114,17 +115,21 @@ sudo apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-
 ```
 Replace /usr/share/matchbox-keyboard/keyboard.xml with keyboard.xml from this repository.  
 Add the Software keyboard to the top panel.
+
 ### 6.Chromium
 ```
 sudo apt install chromium
 ```
 ### 7.Metamask
 Add Metamask to Chromium and create a wallet.  
+
 ### 8.Bunzz official ERC721 Minting Boilerplate　　
+
 https://github.com/lastrust/erc721-minting-boilerplate　
 Choose a blockchain to mint NFTs when installing this boilerplate.  
 I chose Astar Network.  
 Keep some blockchain tokens of your choice in your wallet for the GAS fee.
+
 ### 9.NFT Camera Software
 
 
