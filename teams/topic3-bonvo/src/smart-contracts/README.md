@@ -1,6 +1,6 @@
 ## Experiences Flow
 
-![Experiences Flow](/./BonvoXP.png "Experiences Flow")
+![Experiences Flow](./BonvoXP.png "Experiences Flow")
 
 1. The blue flow indicates the creation of a new experience.
     * The Bonvo Platform will mint a new NFT with experience metadata into the Bonvo Experiences Collection. These NFTs will be used to receive Soulbound Reputation Badges by users of the Experience.
