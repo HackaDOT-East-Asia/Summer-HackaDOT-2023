@@ -1,4 +1,4 @@
-![test](./stl/USB Connector Bottom - NFT Camera .stl)
+![test](./stl/USB%20Connector%20Bottom%20-%20NFT%20Camera%20.stl)
 
 # NFT CAMERA
 This is a camera for creating NFT art collections.  
