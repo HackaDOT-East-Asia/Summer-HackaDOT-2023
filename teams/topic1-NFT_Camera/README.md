@@ -1,5 +1,3 @@
-[![3D Model](https://sketchfab.com/3d-models/cat-in-a-box-726067b21dcc439895aec9c3d2410881)](https://sketchfab.com/3d-models/cat-in-a-box-726067b21dcc439895aec9c3d2410881)
-
 # NFT CAMERA
 This is a camera for creating NFT art collections.  
 
@@ -12,8 +10,14 @@ When you press the Mint button, a photo will be shot and the photo will be store
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
 
 ## SOFTWARE
-### 1.Raspberry Pi OS
+### 1.Raspberry Pi OS  
+Raspberry Pi 3 Model B  
+Raspberry Pi Camera V2  
+16GB Class 10 UHS-I Micro SDHC Memory Card  
+OSOYOO Raspberry Pi Touch Screen 3.5"  
+
 Install Raspberry Pi OS (32-bit) using Raspberry Pi Imager.  
+
 ### 2.Raspberry Pi Camera V2
 Make sure the Raspberry Pi recognizes the camera.  
 ```
@@ -108,33 +112,25 @@ Keep some blockchain tokens of your choice in your wallet for the GAS fee.
 
 ## HARDWARE
 ### MATERIALS
-Raspberry Pi 3 Model B (1)  
-Raspberry Pi Camera V2 (1)  
-16GB Class 10 UHS-I Micro SDHC Memory Card  
-Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07  
+Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07 (1)  
 USB Female Type-A Connector (1)  
 Anker Power Core 10000 PD Redux (1)  
-OSOYOO Raspberry Pi Touch Screen 3.5" (1)  
 
 Lauwan Board 600x230mm 5.5mm thick (1)  
-Vinyl Sheet 600x230mm 0.1mm thick (2)  
+Vinyl Sheet 600x230mm 0.1mm thick (2)
+Machine Screw M2x4 (4)  
+Machine Screw M2x6 (2)  
+Machine Screw M2.6x6 (4)  
+Self-tapping screw M3x6 (10)   
 
 Adafruit Soft Tactile Button (2)  
 TACT Switch SKHHLPA010 (1)  
 Pin Socket 2x5 2.54mm Pitch (1)  
-
+Universal Prototype Board 65x14mm 1.6mm thick  (1)
+Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
 1mm 2Pin Flat Capper Cable 550mm  
 0.3mm Polyurethane Copper Wire 100mm  
 
-Universal Prototype Board 65x14mm 1.6mm thick  (1)
-Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
-
-
-Machine Screw M2x4 (4)  
-Machine Screw M2x6 (2)  
-Machine Screw M2.6x6 (4)  
-Self-tapping screw M3x6 (10) 
- 
 3D Printer ABS Filament  
 
 ### TOOLS
@@ -147,26 +143,10 @@ Screwdriver
 Tweezer  
 Hand Tap M2
 Hand Tap M2.6
+Glue or Double-sided tape
 ### BUILD NFT CAMERA
-1.  
-
-
-
-
-
-
-
-
-
 
 ## TEAM
 This is my first work using blockchain.
 I am a maker.
 https://www.youtube.com/channel/UCnVPipXRWcSeEOvjLuMXxLA
-
-
-
-
-
-
-
