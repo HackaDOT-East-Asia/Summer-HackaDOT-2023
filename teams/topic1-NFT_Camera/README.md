@@ -1,4 +1,4 @@
-![test](./stl/USB%20Connector%20Bottom%20-%20NFT%20Camera%20.stl)
+[![3D Model](https://sketchfab.com/3d-models/cat-in-a-box-726067b21dcc439895aec9c3d2410881)](https://sketchfab.com/3d-models/cat-in-a-box-726067b21dcc439895aec9c3d2410881)
 
 # NFT CAMERA
 This is a camera for creating NFT art collections.  
