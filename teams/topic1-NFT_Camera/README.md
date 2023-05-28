@@ -36,16 +36,22 @@ supported=1 detected=1, libcamera interfaces=0
 
 ```
 
-### 2.Increase Swap Space
-Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2024.  
+### 3.Increase Swap Space
+Increase the swap space to prevent memory shortage.  
+Check the SWAP space.  
 ```
-CONF_SWAPSIZE=2024
+$ swapon -s
+```
+Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2048.  
+```
+CONF_SWAPSIZE=2048
 ```
 Check that the SWAP space has increased.  
 ```
-sudo /etc/init.d/dphys-swapfile restart
-swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart
+$ swapon -s
 ```
+
 ### 3.Touch Screen
 Save /boot/config.txt.  
 
