@@ -10,7 +10,7 @@ When you press the Mint button, a photo will be shot and the photo will be store
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
 
 ## SOFTWARE
-### 1.Raspberry Pi  
+### 1.Raspberry Pi OS Installation 
 Raspberry Pi 3 Model B  
 Raspberry Pi Camera V2  
 SanDisk microSD 32GB Extreme Pro U3 V30 A1  
@@ -24,13 +24,18 @@ Install Raspberry Pi OS (32-bit) on microSD using Raspberry Pi Imager on PC.
 Insert the microSD into the Raspberry Pi and boot.  
 Add a user, set the password, configure and connect to the WiFi network.  
 
-### 2.Raspberry Pi Camera V2
+### 2.Enable Raspberry Pi Camera
+```
+$ sudo raspi-config
+```
+3 Inter face Options -> I1 Legacy Camera Enable/disable legacy camera support -> Yes -> OK -> Finish -> Yes -> Reboot  
 Make sure the Raspberry Pi recognizes the camera.  
-```shell-session
+```
 $ vcgencmd get_camera
 supported=1 detected=1, libcamera interfaces=0
 
 ```
+
 ### 2.Increase Swap Space
 Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2024.  
 ```
