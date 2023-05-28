@@ -13,8 +13,11 @@ Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT w
 ### 1.Raspberry Pi  
 Raspberry Pi 3 Model B  
 Raspberry Pi Camera V2  
-16GB Class 10 UHS-I Micro SDHC Memory Card  
+SanDisk microSD 32GB Extreme Pro UHS-I U3 V30 A1  
 OSOYOO Raspberry Pi Touch Screen 3.5"  
+ 
+The NFT camera does not require 32GB of microSD capacity, but the faster the read and write speed, the better.  
+Depending on the read/write speed of the microSD, the startup time of NFT Camera will change by a few minutes.  
 
 Install Raspberry Pi OS (32-bit) using Raspberry Pi Imager.  
 
