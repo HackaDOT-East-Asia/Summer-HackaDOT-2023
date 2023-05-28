@@ -34,7 +34,6 @@ Make sure the Raspberry Pi recognizes the camera.
 ```
 $ vcgencmd get_camera
 supported=1 detected=1, libcamera interfaces=0
-
 ```
 
 ### 4.Increase Swap Space
@@ -58,27 +57,20 @@ Use OSOYOO Raspberry Pi Touch Screen 3.5".
 Change screen resolution to 810x540.
 When you run the shell to enable the touchscreen, the camera is not recognized.  
 Therefore, save /boot/config.txt.  
-
 ```
 $ cd /boot
 $ sudo cp -p config.txt config.txt.bak
-
 ```
 Download and unzip LCD_show_35hdmi.tar.gz.    
-
 ```
 $ cd $HOME
 $ curl -OL http://osoyoo.com/driver/LCD_show_35hdmi.tar.gz
 $ tar -xzvf LCD_show_35hdmi.tar.gz
-
 ```
 Change screen resolution to 810x540.  
-
 ```
 $ cd LCD_show_35hdmi
 $ sudo ./LCD35_810*540
-
-
 ```
 Overwrite the saved config.txt to /boot/config.txt.
 ```
@@ -92,13 +84,11 @@ hdmi_drive=2
 hdmi_group=2
 hdmi_mode=87
 hdmi_cvt 810 540 60 6 0 0 0 
-dtoverlay=ads7846,cs=0,penirq=25,penirq_pull=2,speed=10000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=199,xmax=3999,ymin=199,ymax=3999 
-
+dtoverlay=ads7846,cs=0,penirq=25,penirq_pull=2,speed=10000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=199,xmax=3999,ymin=199,ymax=3999
 ```
 Add the following line to the end of /boot/config.txt to rotate the display 90 degrees.  
 ```
 display_hdmi_rotate=1
-
 ```
 Add Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1" to /usr/share/X11/xorg.conf.d/40-libinput.conf as follows to rotate touch recognition by 90 degrees To do.  
 ```
@@ -111,6 +101,7 @@ Add Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1" to /usr/share/X11/xorg.co
 ```
 Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.  
 Check that the touchscreen recognizes touches correctly.  
+
 
 
 
