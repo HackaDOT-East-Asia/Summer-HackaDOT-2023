@@ -21,9 +21,22 @@ Depending on the read/write speed of the microSD, the startup time of NFT Camera
 
 ### 2.Raspberry Pi OS Installation 
 Install Raspberry Pi OS (32-bit) on microSD using Raspberry Pi Imager on PC. 
- 
+
 Insert the microSD into the Raspberry Pi and boot.  
 Add a user, set the password, configure and connect to the WiFi network.  
+
+The version of the Linux OS when I installed it is as follows.  
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Raspbian
+Description:	Raspbian GNU/Linux 11 (bullseye)
+Release:	11
+Codename:	bullseye
+$
+$ uname -a
+Linux raspberrypi 4.15.18-v7 #1 SMP Mon May 7 16:35:40 CST 2018 armv7l GNU/Linux
+```
 
 ### 3.Enable Raspberry Pi Camera
 ```
