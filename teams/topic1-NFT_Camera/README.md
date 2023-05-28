@@ -10,7 +10,7 @@ When you press the Mint button, a photo will be shot and the photo will be store
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
 
 ## SOFTWARE
-### 1.Raspberry Pi OS  
+### 1.Raspberry Pi  
 Raspberry Pi 3 Model B  
 Raspberry Pi Camera V2  
 16GB Class 10 UHS-I Micro SDHC Memory Card  
