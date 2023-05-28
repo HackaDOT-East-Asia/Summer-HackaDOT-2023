@@ -110,31 +110,41 @@ Add Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1" to /usr/share/X11/xorg.co
         Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
         MatchDevicePath "/dev/input/event*"
         Driver "libinput"
-
 ```
 Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.  
 Check that the touchscreen recognizes touches correctly.  
 
-
-
-
-### 6.Software Keyboard
+### 6.Software Keyboard Installation
 Software keyboard is used for Metamask password input.  
 ```
-sudo apt-get install matchbox-keyboard
-sudo apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big xfonts-kaname
-
+$ sudo apt-get install matchbox-keyboard
+Y
+$ sudo apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big xfonts-kaname
+Y
+$ sudo reboot
 ```
 Replace /usr/share/matchbox-keyboard/keyboard.xml with keyboard.xml from this repository.  
-Add the Software keyboard to the top panel.
 
-### 7.Chromium
+
+キーボードの下にmetamaskが行く問題は？
+Add the Software keyboard to the top panel.
+ここにkeyboardの写真入れよう。
+
+
+
+### 7.Chromium Installation
 ```
-sudo apt install chromium
+$ sudo apt install chromium
+Y
 ```
 
 ### 8.Metamask
 Add Metamask to Chromium and create a wallet.  
+
+
+
+
+
 
 ### 9.Bunzz official ERC721 Minting Boilerplate　　
 
@@ -144,6 +154,10 @@ I chose Astar Network.
 Keep some blockchain tokens of your choice in your wallet for the GAS fee.
 
 ### 10.NFT Camera Software
+
+
+
+上部パネルの編集
 
 
 
