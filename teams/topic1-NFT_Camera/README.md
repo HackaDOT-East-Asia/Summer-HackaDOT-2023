@@ -4,7 +4,7 @@ This is a camera for creating NFT art collections.
 ## DEMO
 
 ## WARNING
-I stopped adding a preview feature to NFT Camera.  
+I didn't a preview feature to NFT Camera.  
 So shoot carefully.  
 When you press the Mint button, a photo will be shot and the photo will be stored in IPFS at the same time.  
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
