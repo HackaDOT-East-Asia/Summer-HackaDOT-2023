@@ -14,18 +14,6 @@
 3. The green flow shows the badge flow.
     * After using the ticket, the holder can drop a reputation badge to the linked experience NFT, which will serve to indicate the quality of the experience, either good or bad.
 
-The badge functionality, and charding tokens for tickets is yet to be implemented in the contract side. All the other flows are complete.
-
-## Relay Chain Calls
-We are adding the possibility to interact with the Bonvo Experiences contracts directly from the relay chain. Currently we have to steps implemented: approving of ERC20 token, and registering a new user. 
-
-This requires a 3 step process:
-1. Build the EVM transaction data
-2. Build the XCM message which will withdraw DEV tokens, buy execution and run the EVM transaction.
-3. Sign and send from the relay chain. The signing is done using Polkadot.js or Talisman. Other wallets which interact directly with the relay chain can be added.
-
-In the near future, we will add all the other operations and allow the platform to be used either from EVM or the Relay Chain.
-
 ## Deployed Contracts
 
 All contracts deployed on Moonbase Alpha:
@@ -40,19 +28,11 @@ BonvoExperienceDeployerHelper: `0x358C187e26E6BC07d7E96462b61367e0Db15E0D3`
 
 ## Deploy Instructions
 
-# Smart Contracts
-1. Go to the `smart-contracts` folder: `cd smart-contracts`
-2. Install packages with `yarn` or `npm i`
-3. Test contracts compile: `yarn hardhat compile`
-4. Check contract size: `yarn hardhat size-contracts`
-5. Run tests: `yarn test`
-6. Run prettier: `yarn prettier`
-7. Copy .env.example into .env and set your variables
-8. Use `contracts/`, `tests/` and `scripts/` to build your code.
-9. Deploy on testnet: `yarn hardhat run scripts/deploy.ts --network moonbaseAlpha`
-
-# Proof of Concept Frontend
-1. Go to the `frontend-crosschain` folder: `cd frontend-crosschain`
-2. Install packages with `yarn` or `npm i`
-3. Run web: `yarn start`
-4. From the web, you will be able to click a button and sign a relay chain transaction to approve the platform to spend the Bonvo Tokens on your behalf.
+1. Install packages with `yarn` or `npm i`
+2. Test contracts compile: `yarn hardhat compile`
+3. Check contract size: `yarn hardhat size-contracts`
+4. Run tests: `yarn test`
+5. Run prettier: `yarn prettier`
+6. Copy .env.example into .env and set your variables
+7. Use `contracts/`, `tests/` and `scripts/` to build your code.
+8. Deploy on testnet: `yarn hardhat run scripts/deploy.ts --network moonbaseAlpha`
