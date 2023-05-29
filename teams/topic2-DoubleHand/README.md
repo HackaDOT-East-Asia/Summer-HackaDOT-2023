@@ -2,7 +2,7 @@
 
 ## 1. Youtube link to a Demo video
 
-[Demo video is here](https://youtu.be/zGJyoyoBBqg)
+[Demo video]()
 
 ## 2. Short Description of our project
 
@@ -10,19 +10,23 @@ Welcome to our immersive NFT gaming platform, a web-based application meticulous
 
 Our mission is to enhance user familiarity with the dApp staking process, transforming it from a potentially daunting task to a fun, rewarding, and stimulating gaming experience. We believe that blockchain and gaming are a natural fit, and our NFT game combines these elements to foster a better understanding of dApp staking while injecting an element of excitement into the process.
 
-## 3. How to run 【Shibuya Netnetwork】
+## 3. How to run [ Local Netnetwork ]
 
-- install modules
-
-  Please run `yarn` command on a root directory.
+- build contract
 
   ```bash
-  yarn
+  cd rps_merge
+  cargo contract build
+  # Now deploy on local network
   ```
 
 - run frontend
 
-- compile smartcontract (content & NFT)
+  ```bash
+  cd ui
+  yarn install
+  yarn dev
+  ```
 
 ## 4. Description of our team
 
@@ -37,7 +41,7 @@ We a team composed with three developer and one designer.
 <strong>HJ 1</strong>
 
 - Blockchain Developer
-- Smart Contract
+- Tech Lead
 
 <strong>HJ 2</strong>
 
