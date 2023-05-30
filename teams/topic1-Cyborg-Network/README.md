@@ -1,5 +1,5 @@
 # Project Cyborg
-
+![Alt text](image.jpg)
 ## Demo
 
 <!--- TODO: update --->
