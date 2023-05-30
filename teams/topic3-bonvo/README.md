@@ -1,4 +1,4 @@
-## Experiences Flow
+## Bonvo Experiences Flow
 
 ![Experiences Flow](./BonvoXP.png "Experiences Flow")
 
@@ -15,6 +15,11 @@
     * After using the ticket, the holder can drop a reputation badge to the linked experience NFT, which will serve to indicate the quality of the experience, either good or bad.
 
 The badge functionality, and charding tokens for tickets is yet to be implemented in the contract side. All the other flows are complete.
+
+## Video Demo
+[![Bonvo Hackadot 2023](https://github.com/Bonvo-dot/Summer-HackaDOT-2023/assets/8482195/9ceb5715-69e5-4e69-8915-7ece08bb5a22)](https://www.youtube.com/watch?v=WTwQ8smZl-Y)
+
+Link: https://www.youtube.com/watch?v=WTwQ8smZl-Y
 
 ## Relay Chain Calls
 We are adding the possibility to interact with the Bonvo Experiences contracts directly from the relay chain. Currently we have to steps implemented: approving of ERC20 token, and registering a new user. 
