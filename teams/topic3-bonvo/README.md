@@ -1,3 +1,10 @@
+
+
+## Video Demo
+[![Bonvo Hackadot 2023](https://github.com/Bonvo-dot/Summer-HackaDOT-2023/assets/8482195/9ceb5715-69e5-4e69-8915-7ece08bb5a22)](https://www.youtube.com/watch?v=WTwQ8smZl-Y)
+
+Link: https://www.youtube.com/watch?v=WTwQ8smZl-Y
+
 ## Bonvo Experiences Flow
 
 ![Experiences Flow](./BonvoXP.png "Experiences Flow")
@@ -15,11 +22,6 @@
     * After using the ticket, the holder can drop a reputation badge to the linked experience NFT, which will serve to indicate the quality of the experience, either good or bad.
 
 The badge functionality, and charding tokens for tickets is yet to be implemented in the contract side. All the other flows are complete.
-
-## Video Demo
-[![Bonvo Hackadot 2023](https://github.com/Bonvo-dot/Summer-HackaDOT-2023/assets/8482195/9ceb5715-69e5-4e69-8915-7ece08bb5a22)](https://www.youtube.com/watch?v=WTwQ8smZl-Y)
-
-Link: https://www.youtube.com/watch?v=WTwQ8smZl-Y
 
 ## Relay Chain Calls
 We are adding the possibility to interact with the Bonvo Experiences contracts directly from the relay chain. Currently we have to steps implemented: approving of ERC20 token, and registering a new user. 
@@ -61,3 +63,51 @@ All contracts deployed on Moonbase Alpha:
 2. Install packages with `yarn` or `npm i`
 3. Run web: `yarn start`
 4. From the web, you will be able to click a button and sign a relay chain transaction to approve the platform to spend the Bonvo Tokens on your behalf.
+
+
+# Team description
+
+### Steven Pineda
+> Back End Lead Developer
+
+Friendly, disciplined, and with high adaptability. Very curious and passionate about learning new programming languages and tools, also about philosophy, history and science in general. Polyglot and salsa dancer. Husband, father, stoic, frequent reader, and cat owner. Doing software professionally for the last decade. Co author of 4 NFT related ERCs.
+
+- LinkedIn profile: https://www.linkedin.com/in/steven-pineda/ 
+- Github Profile: https://github.com/steven2308 
+
+### Matias Guagliardo
+> Project Manager
+
+I am a self taught Project Manager, creating and delivering software development projects, participating in the different phases, from ideation stage to the delivery of an application or product.
+I also have vast experience in a variety of fields including Quality Content moderation and Fraud Analysis, excellent customer service in the hospitality and retail sector. I am a Specialist in Multilingual Support across these industries.
+I have acquired expertise in different skills too, such as: sales, customer support, language teaching and marketing activities, managing teams on a daily basis and working with partners to increase revenue and improve customer experience.
+I consider myself as a resilient, organized and adaptable person, with a great attention to detail, and an excellent team worker.
+I consider myself as a resilient, organized and adaptable person, with a great attention to detail, and an excellent team worker.
+
+- Linkedin Profile: https://www.linkedin.com/in/mat%C3%ADas-guagliardo-b496a2122/ 
+- Github Profile: https://github.com/Mattteus1
+
+### Martin Berguer
+> Front End Lead Developer
+
+I am a Software engineer and Machine Learning Masters degree student. I have more than nine years of experience in Full stack Development, working in a wide spectrum of projects, from bioinformatics to AI and IoT. I started my professional experience working as a PHP Teacher at the University I was studying at, and then I switched to java, then node, until I started working with my favorite tech stack so far which is python and react. But, beyond that, I am a crypto enthusiast and I love what blockchain represents and the problems it could solve in the future, and that’s the main reason why I have been interested in building a challenging project on top of the moonbeam ecosystem.
+- LinkedIn profile: https://www.linkedin.com/in/mberguer/
+- Github perfile: https://github.com/MBerguer 
+
+### Damian Vazquez
+> Full-stack developer
+
+Meet Damian, a passionate full-stack developer who is dedicated to integrating web3 technologies into the market. With a strong belief in building transparent relationships using blockchain.
+Equipped with expertise in both front-end and back-end development, Damian leverages their skills to create innovative solutions that enhance user experiences. By harnessing the power of web3 technologies, Damian aims to foster trust, security, and decentralization in the market. With a deep understanding of emerging trends and a commitment to continuous learning.
+- Linkedin Profile: https://www.linkedin.com/in/damian-vazquez-4a262a28/ 
+- Github Profile: https://github.com/damivazbien 
+
+
+
+
+
+
+
+
+
+
