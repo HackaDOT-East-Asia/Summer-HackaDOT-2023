@@ -130,16 +130,15 @@
       <default display="[" />
       <shifted display="{" />
     </key>
-
     <key width="1000">
-      <default display="image:/usr/share/matchbox-keyboard/arrow.png" action="backspace" />
+      <default display="⇦" action="backspace" />
     </key>
   </row>
 
   <row>
     <key width="1000">
-      <default display="image:/usr/share/matchbox-keyboard/shift.png" action="modifier:shift" />
-      <caps display="image:/usr/share/matchbox-keyboard/shift_caps.png" action="modifier:shift" />
+      <default display="⇧" action="modifier:shift" />
+      <caps    display="⬆" action="modifier:shift" />
     </key>
 
     <key obey-caps='true' fill='false'>
@@ -260,7 +259,7 @@
     </key>
 
     <key width="2290">
-      <default display="image:/usr/share/matchbox-keyboard/return.png" action="return"/>
+      <default display="⏎" action="return"/>
     </key>
   </row>
 </layout>
