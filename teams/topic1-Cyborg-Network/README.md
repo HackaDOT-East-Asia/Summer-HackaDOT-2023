@@ -15,7 +15,7 @@ Cyborg network is a decentralized edge computing platform that leverages blockch
 
 
 
-#Inspiration
+### Inspiration
 
 
 
@@ -23,7 +23,7 @@ Our team was motivated by a shared vision of leveraging blockchain technology to
 
 
 
-#Current Problems
+### Current Problems
 
 
 
@@ -31,27 +31,13 @@ The problem lies in the potential risks associated with centralized providers in
 
 
 
-#Our Solution
+### Our Solution
 
 Cyborg Network is a revolution in edge computing. It introduces a decentralized approach that empowers users by giving them control over their data and computing resources. Through smart edge tracking and cryptographic encryption, the network automates app deployment, placing a strong emphasis on user-centricity and transparency. This disruptive solution aims to challenge the dominance of centralized providers in the field of edge computing.
 
 
 
-#Why is the technology you have used really necessary for us?
-
-
-
-We have chosen the General Track by Soonami since our project does not align with any of the other bounty tracks as we are developing on Polkadot and Substrate. The technology we have chosen to use is absolutely necessary for our project due to its unique capabilities and advantages. By developing on Substrate, a powerful framework for building blockchains, we gain a high level of control and flexibility in designing and implementing our application. This allows us to tailor the technology precisely to our project's requirements, ensuring optimal performance and functionality.
-
-Furthermore, we have made the strategic decision to create our own layer 1 Blockchain. This decision is crucial because it enables us to address the inherent challenges in the cloud and edge computing space that arise from centralized infrastructure management. By leveraging a decentralized approach, we can overcome these limitations and establish seamless connectivity between edge servers worldwide.
-
-
-
-The technology we are utilizing empowers us to build a cutting-edge platform that revolutionizes the way edge computing operates. It allows us to provide unparalleled connectivity and resource distribution, leading to enhanced performance, improved reliability, and greater user control. By harnessing the capabilities of this technology, we are confident in our ability to deliver a truly transformative solution for the edge computing industry.
-
-
-
-#How we built it
+### How we built it
 
 
 
@@ -63,7 +49,7 @@ Tools used: Substrate, Rust, Javascript.
 
 
 
-#Challenges we ran into
+### Challenges we ran into
 
 
 
@@ -71,7 +57,7 @@ The most significant hurdle we encountered was establishing connectivity between
 
 
 
-#Accomplishments that we're proud of
+### Accomplishments that we're proud of
 
 
 
@@ -83,11 +69,7 @@ Furthermore, we have implemented a server implementation in Rust. This server co
 
 
 
-We are presenting the Edge Connect pallet for this hackathon.
-
-
-
-#What we have learned
+### What we have learned
 
 
 
