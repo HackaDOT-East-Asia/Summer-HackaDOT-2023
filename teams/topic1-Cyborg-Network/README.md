@@ -3,7 +3,7 @@
 ## Demo
 
 <!--- TODO: update --->
-[Youtube Demo Link](https://www.youtube.com/)
+[Cyborg PoC Demo video](https://youtu.be/sSNg0Q_DJyk)
 
 ## Description
 
