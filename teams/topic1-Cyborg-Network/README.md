@@ -79,11 +79,40 @@ Through our journey, we have gained valuable insights into the security risks in
 
 ### Build Cyborg Node
 
+Compile the code
+```sh
+cargo build --release
+```
+
+Execute the off chain worker module
+```sh
+./target/release/cyborg-node --dev --offchain-worker always
+```
+
 ### Build Cyberhub
+
+Run the server
+```sh
+cargo run
+```
 
 ### Build Cyborg Smart Client
 
-<!--- TODO: update --->
+Compile the code
+
+```sh
+cargo build --release
+```
+
+Create a config using any token string
+```sh
+Cargo run create config "any name"
+```
+
+Execute CSC using the existing Config
+```sh
+./target/release/bin run
+```
 
 ## About Cyborg Team
 
