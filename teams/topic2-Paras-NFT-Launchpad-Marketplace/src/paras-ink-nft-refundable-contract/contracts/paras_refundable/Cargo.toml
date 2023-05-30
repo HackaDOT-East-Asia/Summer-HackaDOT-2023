@@ -1,0 +1,34 @@
+[package]
+name = "paras_refundable"
+version = "0.3.0"
+authors = ["Paras <dev@paras.id>"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.1.0", default-features = false}
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+
+openbrush = { tag = "3.1.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
+psp34_extension_pkg = { path = "../../logics", default-features = false }
+
+
+[lib]
+name = "paras_refundable"
+path = "lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"cdylib",
+]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+    "psp34_extension_pkg/std",
+]
+ink-as-dependency = []
