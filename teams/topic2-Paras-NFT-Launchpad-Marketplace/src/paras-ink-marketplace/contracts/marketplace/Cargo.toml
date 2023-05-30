@@ -1,0 +1,31 @@
+[package]
+name = "marketplace"
+version = "0.4.0"
+authors = ["Stake Technologies <devops@stake.co.jp>"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.1.0", default-features = false }
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+openbrush = { tag = "3.1.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["ownable", "psp34", "reentrancy_guard"] }
+pallet_marketplace = { path = "../../logics", default-features = false }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+    "pallet_marketplace/std",
+]
+ink-as-dependency = []
+
+[profile.dev]
+overflow-checks = false
+[profile.release]
+overflow-checks = false
