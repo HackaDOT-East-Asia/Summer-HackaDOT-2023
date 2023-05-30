@@ -2,7 +2,7 @@
 
 ## 1. Youtube link to a Demo video
 
-[Demo video]()
+[Demo video](https://youtu.be/4zMfZnulojE)
 
 ## 2. Short Description of our project
 
@@ -21,10 +21,16 @@ Our mission is to enhance user familiarity with the dApp staking process, transf
   ```
 
 - run frontend
-
   ```bash
   cd ui
   yarn install
+  ```
+  Create .env file in `ui/.env`
+  ```bash
+  NEXT_PUBLIC_RPS_CONTRACT_ADDRESS=<deployed contract address>
+  ```
+  Start App
+  ```bash
   yarn dev
   ```
 

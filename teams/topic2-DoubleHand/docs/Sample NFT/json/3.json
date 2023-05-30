@@ -1,0 +1,38 @@
+{
+  "name": "DoubleHand #3",
+  "description": "NFT game that brings more excitement to dApp staking",
+  "image": " ",
+  "dna": " ",
+  "edition": 1,
+  "date": ,
+  "attributes": [
+    {
+      "trait_type": "Your Hand",
+      "value": "Rock"
+    },
+    {
+      "trait_type": "Colors",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Right hand",
+      "value": "Paper"
+    },
+    {
+      "trait_type": "Left hand",
+      "value": "Paper"
+    },
+    {
+      "trait_type": "eye",
+      "value": "04"
+    },
+    {
+      "trait_type": "mouth",
+      "value": "03"
+    },
+    {
+      "trait_type": "leg",
+      "value": "01"
+    },
+  ],
+}
