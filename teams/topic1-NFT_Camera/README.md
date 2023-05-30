@@ -3,9 +3,10 @@
 This is a camera for creating NFT art collections.  
 
 ## DEMO
+[NFT Minting Demo](https://www.youtube.com/watch?v=xJzr7CZCeNg)
 
-
-TOFUNFT
+## MINTED NFTS
+[TOFUNFT](https://tofunft.com/user/0x162F8D8be3DBf23faa647f3C4cB73855D939B7ea/items/in-wallet)
 
 
 
