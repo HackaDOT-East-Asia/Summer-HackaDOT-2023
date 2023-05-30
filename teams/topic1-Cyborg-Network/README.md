@@ -121,16 +121,16 @@ Execute CSC using the existing Config
 We are a team of Web3 enthusiasts who share the vision of creating real-world utility using blockchain technology. Our passion for decentralized computing and the potential of edge computing inspired us to build the Cyborg network.
 
 
-* Barath Kanna ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/barath-kanna-23a23a172/)) : Remote edge server, backend API, integration
+### Barath Kanna ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/barath-kanna-23a23a172/)) : Remote edge server, backend API, integration
 
 Barath is an experienced entrepreneur who has a deep understanding of the technical challenges and opportunities in these areas and has significant experience in the blockchain sector. As a leader, he spearheads the team's vision and directs the overarching strategy of the Cyborg Network.
 
 
-* Kresna Sucandra ([Github](https://github.com/SHA888) ; [LinkedIn](https://www.linkedin.com/in/kresna-sucandra/)) : Substrate nodes, pallet, offchain worker, runtime
+### Kresna Sucandra ([Github](https://github.com/SHA888) ; [LinkedIn](https://www.linkedin.com/in/kresna-sucandra/)) : Substrate nodes, pallet, offchain worker, runtime
 
 Kresna is a specialist in blockchain and decentralized systems, with notable expertise as a Rust/Substrate developer in various blockchain projects. After working with prominent blockchain projects, Kresna now oversees the development and execution of Cyborg Network's technological framework.
 
 
-* Megha Varshini ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/megha-varshini-tamilarasan-b1247a212/)) : Operational, Education, Media
+### Megha Varshini ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/megha-varshini-tamilarasan-b1247a212/)) : Operational, Education, Media
 
 Megha has an impressive history in business development and operations, with experience spanning the startups. She is responsible for managing daily operations, forging partnerships, and ensuring the continued growth and success of the Cyborg Network.
