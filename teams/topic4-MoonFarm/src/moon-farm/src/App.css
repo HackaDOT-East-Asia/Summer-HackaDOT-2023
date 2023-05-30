@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.btn {
+  @apply text-2xl mt-3 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn:hover {
+  @apply hover:-translate-y-1 hover:scale-110 hover:bg-cyan-800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-amber {
+  @apply text-2xl mt-3 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-amber-400 shadow-lg shadow-amber-400/50 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 hover:-translate-y-1 hover:scale-110 hover:bg-amber-600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-rose {
+  @apply text-2xl mt-3 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-rose-600 shadow-lg shadow-rose-600/50 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 hover:-translate-y-1 hover:scale-110 hover:bg-rose-600;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-blue {
+  @apply bg-blue-500 text-white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+
+div {
+  font-family: "Cute Font", cursive;
+}
+
+html {
+  @apply bg-purple-1000;
+}
+
+.bg-purple-1000 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(37,28,69,var(--tw-bg-opacity));
+}
+
+.h1 {
+  @apply py-2 text-5xl text-white;
+}
+
+.h2 {
+  @apply text-2xl mt-1 text-white text-center dark:text-white;
+}
+
+.h3 {
+  @apply text-3xl font-bold text-violet-500 dark:text-white;
+}
+
+.p {
+  @apply text-2xl mt-1 text-gray-500 dark:text-gray-400;
+}
+
+.div {
+  @apply flex flex-col bg-gray-100 border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] w-3/6 overflow-auto m-auto;
+}
+
+.input {
+  @apply border rounded px-2 py-1 placeholder:italic placeholder:text-gray-700 bg-amber-300 w-3/4 border border-slate-300 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-2xl;
 }
