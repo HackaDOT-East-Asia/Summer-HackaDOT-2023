@@ -7,7 +7,7 @@
 
 ## Description
 
-Introduction
+#Introduction
 
 
 
@@ -15,7 +15,7 @@ Cyborg network is a decentralized edge computing platform that leverages blockch
 
 
 
-Inspiration
+#Inspiration
 
 
 
@@ -23,7 +23,7 @@ Our team was motivated by a shared vision of leveraging blockchain technology to
 
 
 
-Current Problems
+#Current Problems
 
 
 
@@ -31,13 +31,13 @@ The problem lies in the potential risks associated with centralized providers in
 
 
 
-Our Solution
+#Our Solution
 
 Cyborg Network is a revolution in edge computing. It introduces a decentralized approach that empowers users by giving them control over their data and computing resources. Through smart edge tracking and cryptographic encryption, the network automates app deployment, placing a strong emphasis on user-centricity and transparency. This disruptive solution aims to challenge the dominance of centralized providers in the field of edge computing.
 
 
 
-Why is the technology you have used really necessary for us?
+#Why is the technology you have used really necessary for us?
 
 
 
@@ -51,7 +51,7 @@ The technology we are utilizing empowers us to build a cutting-edge platform tha
 
 
 
-How we built it
+#How we built it
 
 
 
@@ -63,7 +63,7 @@ Tools used: Substrate, Rust, Javascript.
 
 
 
-Challenges we ran into
+#Challenges we ran into
 
 
 
@@ -71,7 +71,7 @@ The most significant hurdle we encountered was establishing connectivity between
 
 
 
-Accomplishments that we're proud of
+#Accomplishments that we're proud of
 
 
 
@@ -87,7 +87,7 @@ We are presenting the Edge Connect pallet for this hackathon.
 
 
 
-What we have learned
+#What we have learned
 
 
 
