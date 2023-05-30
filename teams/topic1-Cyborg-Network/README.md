@@ -87,8 +87,8 @@ Through our journey, we have gained valuable insights into the security risks in
 
 ## About Cyborg Team
 
-Our team members [...]
+Our team members 
 
-* Barath Kanna ([Github](https://github.com/)) : Remote edge server, backend API, integration
-* Kresna Sucandra ([Github](https://github.com/SHA888)) : Substrate nodes, pallet, offchain worker, runtime
-* Megha Varshini ([Github](https://github.com/)) : Operational, Education, Media
+* Barath Kanna ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/barath-kanna-23a23a172/)) : Remote edge server, backend API, integration
+* Kresna Sucandra ([Github](https://github.com/SHA888) ; [LinkedIn](https://www.linkedin.com/in/kresna-sucandra/)) : Substrate nodes, pallet, offchain worker, runtime
+* Megha Varshini ([Github](https://github.com/) ; [LinkedIn](https://www.linkedin.com/in/megha-varshini-tamilarasan-b1247a212/)) : Operational, Education, Media
