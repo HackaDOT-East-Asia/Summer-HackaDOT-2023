@@ -8,13 +8,13 @@ This is a camera for creating NFT art collections.
 ## MINTED NFTS
 [TOFUNFT](https://tofunft.com/user/0x162F8D8be3DBf23faa647f3C4cB73855D939B7ea/items/in-wallet)
 
-
-
 ## WARNING
-I didn't add a preview feature to NFT Camera.  
-So shoot carefully.  
 When you press the Mint button, a photo will be shot and the photo will be stored in IPFS at the same time.  
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
+Currently I don't have a way to burn minted NFTs.
+So shoot carefully.  
+This is a prototype.  
+
 
 ## SOFTWARE
 ### 1.Equipment
@@ -131,12 +131,7 @@ Y
 $ sudo reboot
 ```
 Replace /usr/share/matchbox-keyboard/keyboard.xml with keyboard.xml from this repository.  
-
-
-キーボードの下にmetamaskが行く問題は？
 Add the Software keyboard to the top panel.
-ここにkeyboardの写真入れよう。
-
 
 
 ### 7.Chromium Installation
@@ -148,27 +143,53 @@ Y
 ### 8.Metamask
 Add Metamask to Chromium and create a wallet.  
 
+### 9.Bunzz official ERC721 Minting Boilerplate
+The software of NFT Camera is software modified from Bunzz's ERC721 Minting Boilerplate.  
+Install up to 4. Update constant.js of ERC721 Minting Boilerplate.  
+https://github.com/lastrust/erc721-minting-boilerplate  
 
+I chose Astar Network, so anyone who chooses Astar Network can use erc721-minting-boilerplate-main/src/utils/constant.js from the NFT Camera repository.  
 
+```
+$ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+$ node -v
+v16.20.0 
+$ npm -v
+8.19.4
+$ sudo npm install -g yarn
+$ yarn -v
+1.22.19
+$ cd erc721-minting-boilerplate-main/
+$ npm i react-scripts
+$ yarn install
+$ cd $HOME
+$ python -m pip install --upgrade pip setuptools
+$ pip install websockets
+```
 
-
-
-### 9.Bunzz official ERC721 Minting Boilerplate　　
-
-https://github.com/lastrust/erc721-minting-boilerplate　
 Choose a blockchain to mint NFTs when installing this boilerplate.  
 I chose Astar Network.  
 Keep some blockchain tokens of your choice in your wallet for the GAS fee.
 
-### 10.NFT Camera Software
+### 10.NFT Camera Software Installation
+Replace the files in the erc721-minting-boilerplate-main folder of this repository with your current files.  
+Place the following three files of this repository in the $HOME directory.  
+```
+shutdown.py
+shutdown.sh
+start.sh
+```
 
-
-
-上部パネルの編集
-
-
+### 11.Autostart Settings
+Place the autostart of this repository in the $HOME/.config/lxsession/LXDE-pi directory.  
 
 ## HARDWARE
+
+For your reference, I will introduce the hardware materials and tools.
+Refer to the STL folder for 3D data.
+
+
 ### MATERIALS
 Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07 (1)  
 USB Female Type-A Connector (1)  
@@ -191,9 +212,7 @@ Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
 
 3D Printer ABS Filament  
 
-熱収縮チューブ 
-カプトンテープ　無くても良い 
-マジックテープ
+Magic Tape 85x25mm
 
 ### TOOLS
 3D Printer  
@@ -207,7 +226,7 @@ Hand Tap M2
 Hand Tap M2.6
 Glue or Double-sided tape
 Black Fineliner Pen
-### BUILD NFT CAMERA
+Kapton tape
 
 ## TEAM
 This is my first work using blockchain.
