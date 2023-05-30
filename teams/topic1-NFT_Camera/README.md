@@ -148,6 +148,8 @@ The software of NFT Camera is software modified from Bunzz's ERC721 Minting Boil
 Install up to 4. Update constant.js of ERC721 Minting Boilerplate.  
 https://github.com/lastrust/erc721-minting-boilerplate  
 
+Choose a blockchain to mint NFTs when installing this boilerplate.    
+Keep some blockchain tokens of your choice in your wallet for the GAS fee.
 I chose Astar Network, so anyone who chooses Astar Network can use erc721-minting-boilerplate-main/src/utils/constant.js from the NFT Camera repository.  
 
 ```
@@ -168,13 +170,9 @@ $ python -m pip install --upgrade pip setuptools
 $ pip install websockets
 ```
 
-Choose a blockchain to mint NFTs when installing this boilerplate.  
-I chose Astar Network.  
-Keep some blockchain tokens of your choice in your wallet for the GAS fee.
-
 ### 10.NFT Camera Software Installation
 Replace the files in the erc721-minting-boilerplate-main folder of this repository with your current files.  
-Place the following three files of this repository in the $HOME directory.  
+And place the following three files of this repository in the $HOME directory.  
 ```
 shutdown.py
 shutdown.sh
@@ -186,9 +184,8 @@ Place the autostart of this repository in the $HOME/.config/lxsession/LXDE-pi di
 
 ## HARDWARE
 
-For your reference, I will introduce the hardware materials and tools.
-Refer to the STL folder for 3D data.
-
+For your reference, I will introduce the hardware materials and tools.  
+Refer to the STL folder for 3D data.  
 
 ### MATERIALS
 Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07 (1)  
@@ -229,6 +226,6 @@ Black Fineliner Pen
 Kapton tape
 
 ## TEAM
-This is my first work using blockchain.
-I am a maker.
+This is my first work using blockchain.  
+I am a maker.  
 https://www.youtube.com/channel/UCnVPipXRWcSeEOvjLuMXxLA
