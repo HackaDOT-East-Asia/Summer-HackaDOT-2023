@@ -1,4 +1,4 @@
-# Project Cyborg
+# Cyborg Network
 ![Alt text](image.jpg)
 ## Demo
 
