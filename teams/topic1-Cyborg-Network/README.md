@@ -87,7 +87,7 @@ Through our journey, we have gained valuable insights into the security risks in
 
 ## About Cyborg Team
 
-Our team members 
+### Our team members 
 
 We are a team of Web3 enthusiasts who share the vision of creating real-world utility using blockchain technology. Our passion for decentralized computing and the potential of edge computing inspired us to build the Cyborg network.
 
