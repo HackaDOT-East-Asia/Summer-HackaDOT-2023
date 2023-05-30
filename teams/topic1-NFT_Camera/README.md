@@ -1,7 +1,13 @@
+![1920x1080](https://github.com/humancontroller/Summer-HackaDOT-2023/assets/131235865/f800ef65-029d-4288-ab05-e1b380cb9b2a)
 # NFT CAMERA
 This is a camera for creating NFT art collections.  
 
 ## DEMO
+
+
+TOFUNFT
+
+
 
 ## WARNING
 I didn't add a preview feature to NFT Camera.  
@@ -184,7 +190,9 @@ Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
 
 3D Printer ABS Filament  
 
-熱収縮チューブ  
+熱収縮チューブ 
+カプトンテープ　無くても良い 
+マジックテープ
 
 ### TOOLS
 3D Printer  
