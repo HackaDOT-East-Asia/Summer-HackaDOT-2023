@@ -121,9 +121,7 @@ Execute CSC using the existing Config
 We are a team of Web3 enthusiasts who share the vision of creating real-world utility using blockchain technology. Our passion for decentralized computing and the potential of edge computing inspired us to build the Cyborg network.
 
 
-### Barath Kanna ([Github](https://github.com/) ; <a href="https://www.linkedin.com/in/kresna-sucandra/">
-    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"
-  </a>&nbsp;&nbsp;) : Remote edge server, backend API, integration
+### Barath Kanna ([Github](https://github.com/) ;  [LinkedIn](https://www.linkedin.com/in/barath-kanna-23a23a172/)) : Remote edge server, backend API, integration
 
 Barath is an experienced entrepreneur who has a deep understanding of the technical challenges and opportunities in these areas and has significant experience in the blockchain sector. As a leader, he spearheads the team's vision and directs the overarching strategy of the Cyborg Network.
 
