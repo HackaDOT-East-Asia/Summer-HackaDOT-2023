@@ -13,7 +13,7 @@ When you press the Mint button, a photo will be shot and the photo will be store
 Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
 Currently I don't have a way to burn minted NFTs.
 So shoot carefully.  
-This is a prototype and a product in development.
+This is a prototype.  
 
 
 ## SOFTWARE
@@ -224,3 +224,8 @@ Hand Tap M2.6
 Glue or Double-sided tape
 Black Fineliner Pen
 Kapton tape
+
+## TEAM
+This is my first work using blockchain.  
+I am a maker.  
+https://www.youtube.com/channel/UCnVPipXRWcSeEOvjLuMXxLA
