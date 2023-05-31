@@ -1,226 +1,105 @@
-![1920x1080](https://github.com/humancontroller/Summer-HackaDOT-2023/assets/131235865/f800ef65-029d-4288-ab05-e1b380cb9b2a)
-# NFT CAMERA
-This is a camera for creating NFT art collections.  
+# Hackathon 2023
 
-## DEMO
-[NFT Minting Demo](https://www.youtube.com/watch?v=xJzr7CZCeNg)
+![](https://i.postimg.cc/N0nGNtzh/photo-2023-03-08-00-43-38.jpg)
 
-## MINTED NFTS
-[TOFUNFT](https://tofunft.com/user/0x162F8D8be3DBf23faa647f3C4cB73855D939B7ea/items/in-wallet)
+## Agenda
 
-## WARNING
-When you press the Mint button, a photo will be shot and the photo will be stored in IPFS at the same time.  
-Next, when you touch Confirm on Metamask displayed on the touch panel, the NFT will be minted.  
-Currently I don't have a way to burn minted NFTs.
-So shoot carefully.  
-This is a prototype and a product in development.
+|  Date   |      Agenda      |  
+|:----------|:-------------:|
+| April 5 - April 23 |  Open for the Application (Mentor Selection) | 
+| April 30, 29:00PM(GMT+9) | Online Orientation | 
+| May 2 - May 12 | Online Workshop |
+| May 16 - May 24 | Office Hours | 
+| May 28, 23:59PM(GMT+9)| Code & Demo Submission Deadline | 
+| May 28 - May 31| Finalists Screening |
+| May 31 | Team Announcement for Live-Demoday |
+| June 9, 15:00 PM(GMT+9) | Final Demo Day & After-party |
+| Demo Day | TOP10 Announcement (on-site / Live-streamed) |
 
+## Venue
 
-## SOFTWARE
-### 1.Equipment
-Raspberry Pi 3 Model B  
-Raspberry Pi Camera V2  
-SanDisk microSD 32GB Extreme Pro U3 V30 A1  
-OSOYOO Raspberry Pi Touch Screen 3.5"  
- 
-The NFT camera does not require 32GB of microSD capacity, but the faster the read/write speed, the better.  
-Depending on the read/write speed of the microSD, the startup time of NFT Camera will change by a few minutes.
+[Weple 168](https://www.instagram.com/weple168)
 
-### 2.Raspberry Pi OS Installation 
-Install Raspberry Pi OS (32-bit) on microSD using Raspberry Pi Imager on PC. 
+![image](https://user-images.githubusercontent.com/39883171/228563089-79f6fbd3-88fc-412b-bb64-ea4f29fa3520.png)
 
-Insert the microSD into the Raspberry Pi and boot.  
-Add a user, set the password, configure and connect to the WiFi network.  
+## Judging Criteria
 
-The version of the Linux OS when I installed it is as follows.  
-```
-$ lsb_release -a
-No LSB modules are available.
-Distributor ID:	Raspbian
-Description:	Raspbian GNU/Linux 11 (bullseye)
-Release:	11
-Codename:	bullseye
-$
-$ uname -a
-Linux raspberrypi 4.15.18-v7 #1 SMP Mon May 7 16:35:40 CST 2018 armv7l GNU/Linux
-```
+Eligible submissions will be evaluated by a panel of judges selected by the organizer [Section 8.1]. Judges may be third party employees and may change before or during the evaluation period. Judging may take place in one or more rounds with one or more judging panels, at the discretion of the administrator.
 
-### 3.Enable Raspberry Pi Camera
-```
-$ sudo raspi-config
-```
-3 Inter face Options -> I1 Legacy Camera Enable/disable legacy camera support -> Yes -> OK -> Finish -> Yes -> Reboot  
-Make sure the Raspberry Pi recognizes the camera.  
-```
-$ vcgencmd get_camera
-supported=1 detected=1, libcamera interfaces=0
-```
+We have multi-staged judging criteria and multiple different judging criteria for each stage: 
+50% of the prize will be paid out to Top3 teams winner on Demo Day among 10 teams
+Top3 teams’ project will be evaluated after 3 month from Demo Day by judges and remaining 50% will be rewarded
 
-### 4.Increase Swap Space
-Increase the swap space to prevent memory shortage.  
-Check current swap space.  
-```
-$ swapon -s
-```
-Change CONF_SWAPSIZE in /etc/dphys-swapfile from 100 to 2048.  
-```
-CONF_SWAPSIZE=2048
-```
-Check that the swap space has increased.  
-```
-$ sudo /etc/init.d/dphys-swapfile restart
-$ swapon -s
-```
+### On Demo Day
 
-### 5.Touch Screen Settings
-Use OSOYOO Raspberry Pi Touch Screen 3.5".  
-Change screen resolution to 810x540.
-When you run the shell to enable the touchscreen, the camera is not recognized.  
-Therefore, save /boot/config.txt.  
-```
-$ cd /boot
-$ sudo cp -p config.txt config.txt.bak
-```
-Download and unzip LCD_show_35hdmi.tar.gz.    
-```
-$ cd $HOME
-$ curl -OL http://osoyoo.com/driver/LCD_show_35hdmi.tar.gz
-$ tar -xzvf LCD_show_35hdmi.tar.gz
-```
-Change screen resolution to 810x540.  
-```
-$ cd LCD_show_35hdmi
-$ sudo ./LCD35_810*540
-```
-Overwrite the saved config.txt to /boot/config.txt.
-```
-$ cd /boot
-$ sudo cp -p config.txt.bak config.txt
-```
-Add the following lines to the end of /boot/config.txt.
-```
-hdmi_force_hotplug=1
-hdmi_drive=2
-hdmi_group=2
-hdmi_mode=87
-hdmi_cvt 810 540 60 6 0 0 0 
-dtoverlay=ads7846,cs=0,penirq=25,penirq_pull=2,speed=10000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=199,xmax=3999,ymin=199,ymax=3999
-```
-Add the following line to the end of /boot/config.txt to rotate the display 90 degrees.  
-```
-display_hdmi_rotate=1
-```
-Add Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1" to /usr/share/X11/xorg.conf.d/40-libinput.conf as follows to rotate touch recognition by 90 degrees To do.  
-```
-        Identifier "libinput touchscreen catchall"
-        MatchIsTouchscreen "on"
-        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
-        MatchDevicePath "/dev/input/event*"
-        Driver "libinput"
-```
-Reboot the Raspberry Pi and check that the screen has been rotated 90 degrees.  
-Check that the touchscreen recognizes touches correctly.  
+Entries will be judged on the following weighted criteria, and at the sole and absolute discretion of the judges:
 
-### 6.Software Keyboard Installation
-Software keyboard is used for Metamask password input.  
-```
-$ sudo apt-get install matchbox-keyboard
-Y
-$ sudo apt-get install ttf-kochi-gothic xfonts-intl-japanese xfonts-intl-japanese-big xfonts-kaname
-Y
-$ sudo reboot
-```
-Replace /usr/share/matchbox-keyboard/keyboard.xml with keyboard.xml from this repository.  
-Add the Software keyboard to the top panel.
+- **Technical Evaluation (30%)**: What is the level of skill or knowledge 
+- **Contribution to and advancement of Web3 (30%)**: How does the submission contribute to and advance Web 3.0 as a whole?
+- **On stage presentation (20%)**: Is it good enough to provide the judges with a clear understanding of your presentation?
+- **Creativity and Uniqueness (10%)**: To what extent is the presentation new and novel with respect to existing technologies?
+- **Feasibility (10%)**: How feasible is the idea? How adaptable is it to other integrations? How robust is the business model? **All teams should include milestones of their project**
 
 
-### 7.Chromium Installation
-```
-$ sudo apt install chromium
-Y
-```
+### After Demo Day
+- Project prospect & progress evaluation
+    - Judges will evaluate the progress after the Demo Day
+    - All top3 teams must continuously contribute to the project and have reached the next milestone that they’ve presented on Demo Day
 
-### 8.Metamask
-Add Metamask to Chromium and create a wallet.  
+The judges' scores will determine the eventual winners of the corresponding prizes. The Participant(s) who are eligible for an Award, and whose Submissions receive the highest overall scores based on the applicable Judging Criteria, will become potential winners of that Award.
 
-### 9.Bunzz official ERC721 Minting Boilerplate
-The software of NFT Camera is software modified from Bunzz's ERC721 Minting Boilerplate.  
-Install up to 4. Update constant.js of ERC721 Minting Boilerplate.  
-https://github.com/lastrust/erc721-minting-boilerplate  
+**Tie Breaker**. For each of the Awards listed below, if two or more Submissions are tied, the tied Submission with the highest score on the first applicable criterion listed above will be considered the highest scoring Submission. If a tie remains, this process will be repeated, as necessary, by comparing the scores of the tied submissions on the next applicable criterion. If two or more submissions are tied on all applicable criteria, the judging panel will vote on the tied submissions.
 
-Choose a blockchain to mint NFTs when installing this boilerplate.    
-Keep some blockchain tokens of your choice in your wallet for the GAS fee.
-I chose Astar Network, so anyone who chooses Astar Network can use erc721-minting-boilerplate-main/src/utils/constant.js from the NFT Camera repository.  
+## Prize
 
-```
-$ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-$ node -v
-v16.20.0 
-$ npm -v
-8.19.4
-$ sudo npm install -g yarn
-$ yarn -v
-1.22.19
-$ cd erc721-minting-boilerplate-main/
-$ npm i react-scripts
-$ yarn install
-$ cd $HOME
-$ python -m pip install --upgrade pip setuptools
-$ pip install websockets
-```
+All prize will be given as **DOT**. Be note that price of token is volatile. 
 
-### 10.NFT Camera Software Installation
-Replace the files in the erc721-minting-boilerplate-main folder of this repository with your current files.  
-And place the following three files of this repository in the $HOME directory.  
-```
-shutdown.py
-shutdown.sh
-start.sh
-```
+|  Prize  | DOT Amount |  
+|:----------|:-------------:|
+| First Prize(x1) |  2000 DOT | 
+| Second Prize(x1) | 1500 DOT | 
+| Third Prize(x1) | 1000 DOT | 
+| TOP4 10 Finalists (x7) | Remainders |
 
-### 11.Autostart Settings
-Place the autostart of this repository in the $HOME/.config/lxsession/LXDE-pi directory.  
+*Important Notes*
+- 60% Payout on Demo Day + 40% through an Interview in 90 days. In 90 days, judges will vote on TOP3 projects, whether they are continuously contributing to the project and have reached the next milestone that they’ve presented on **Demo Day**.
 
-## HARDWARE
+## Challenge Topics
 
-For your reference, I will introduce the hardware materials and tools.  
-Refer to the STL folder for 3D data.  
+> Each challenge topic is suggested by the mentor respectively. Once the applicants choose a topic, the suggestor of the topic becomes the mentor.
 
-### MATERIALS
-Micro USB / USB Type-A Flat Cable 150mm PG-MUC01M07 (1)  
-USB Female Type-A Connector (1)  
-Anker Power Core 10000 PD Redux (1)  
+- **[Topic 1: Open Track - Build A Parachain (Mentor: Parity Tech)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic1-parity)**
 
-Lauwan Board 600x230mm 5.5mm thick (1)  
-Vinyl Sheet 600x230mm 0.1mm thick (2)
-Machine Screw M2x4 (4)  
-Machine Screw M2x6 (2)  
-Machine Screw M2.6x6 (4)  
-Self-tapping screw M3x6 (10)   
+    In this category, we hope that you will be creative and 1) build the custom chain that you think is most useful to other builders of the Substrate ecosystem! (You may find all live-parachains from Parachain Info or Polkadot Open Stack) 2) build a cross-chain dApp using at least three SDK/Tools to make it interoperable among live-parachains. 
+    
+- **[Topic 2: Build A DApp with ink! Contract (Mentor: Astar)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic2-astar)**
 
-Adafruit Soft Tactile Button (2)  
-TACT Switch SKHHLPA010 (1)  
-Pin Socket 2x5 2.54mm Pitch (1)  
-Universal Prototype Board 65x14mm 1.6mm thick  (1)
-Universal Prototype Board 23.5x11mm 1.6mm thick  (1)
-1mm 2Pin Flat Capper Cable 550mm  
-0.3mm Polyurethane Copper Wire 100mm  
+    In this category, we want you to push the limits of what’s possible. Be creative, break things, make us laugh, make us cry. Test suites, visualizations, Wasm interoperability, and everything in between qualifies for this category. Shock us with your brilliance.
+    
+- **[Topic 3: Build a Connected Contract DApp (Mentor: Moonbeam)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic3-moonbeam)**
 
-3D Printer ABS Filament  
+    Build a connected contract/cross-dapp using Moonbeam and any GMP protocol. Moonbeam is the best place to build a cross-chain / connected contract thanks to its extensive interoperability. Moonbeam’s interoperability within Polkadot is enabled by Polkadot's native GMP, called XCM.
+    
+- **[Topic 4: Use JS to Build NFT Games (Mentor: Unique Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic4-unique)**
+    
+    This challenge empowers web2, JS and mobile developers to build games within the Polkadot ecosystem without blockchain knowledge. They can use all advanced NFT features in their applications - Nesting , sponsoring, scheduling, Re-fungibility and more.
+    
+- **[Topic 5: Use Phat Contract to Build DeFi DApp (Mentor: Phala Network)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic5-phala)**
+    
+    By organizing a decentralized network of computation nodes around the world, it offers high-performance services without relying on any cloud vendor. Phala workers run the programs in Secure Enclaves, a privacy technology already embedded into modern processors, enabling versatile and confidential execution. Together, this creates the infrastructure for a powerful, secure, and scalable trustless computing cloud.
 
-Magic Tape 85x25mm
+- **[Topic 6: Support asymmetric encryption/decryption feature (Mentor: SubWallet)](https://github.com/HackaDOT-East-Asia/Summer-HackaDOT-2023/tree/main/topics/topic6-subwallet)**
 
-### TOOLS
-3D Printer  
-Laser cutter  
-PCB Cutter  
-Soldering Iron  
-Plier  
-Screwdriver  
-Tweezer  
-Hand Tap M2
-Hand Tap M2.6
-Glue or Double-sided tape
-Black Fineliner Pen
-Kapton tape
+    Support asymmetric encryption/decryption feature
+
+## Contact 
+
+[Telegram Official](https://t.me/hackadot/1)
+
+## Other Information
+
+[Hacker's Guide](https://web3foundation.notion.site/A-Hacker-s-Guide-to-the-Polkadot-Galaxy-902a55db98444aa4b9f3911ce3038f5f)
+
+
+
+
